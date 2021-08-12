@@ -1,10 +1,10 @@
 # Shark-Default-Config
 
-This is the main configuration repo for the Shark automated trading platform.
+## This is the main configuration repo for the Shark automated trading platform.
+
+The structure of this file is important (as in indentation with it being yaml).
 
 ```yaml
-
-# The structure of this file is important (as in indentation with it being yaml).
 #
 # <INSTRUMENT_NAME>:
 #  INSTRUMENT_GROUP: "<NAME>"
@@ -14,9 +14,11 @@ This is the main configuration repo for the Shark automated trading platform.
 #   <ARGUMENT>: <arg>
 #   <ARGUMENT>: <arg>
 #   <ARGUMENT>: <arg>
- 
 ```
 
+The structure of this file is important (as in indentation with it being yaml).
+
+```yaml
 AMC:
 
  INSTRUMENT_GROUP: "Materials"
@@ -54,3 +56,4 @@ AMC:
   name: backtest_moving_averages.py
   shares: 1000
   capital: 100000
+```
