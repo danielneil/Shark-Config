@@ -3,7 +3,7 @@
 # The structure of this file is important (as in indentation being yaml).
 
 # <instrument_name>:
-# group: "<group_name>"
+# instrument_group: "<group_name>"
 # <check_unique_name>
 #  description: "<Check description - what appears in the web UI>"
 #  check_command: <check_command>
@@ -13,7 +13,7 @@
 
 AMC:
 
- group: "Materials"
+ instrument_group: "Materials"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -51,7 +51,7 @@ AMC:
  
 ANZ:
 
- group: "Banks"
+ instrument_group: "Banks"
  
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -89,7 +89,7 @@ ANZ:
   
 BHP:
  
- group: "Materials"
+ instrument_group: "Materials"
  
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -127,7 +127,7 @@ BHP:
 
 BXB:
 
- group: "Commercial & Professional Services"
+ instrument_group: "Commercial & Professional Services"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -165,7 +165,7 @@ BXB:
 
 CBA:
 
- group: "Banks"
+ instrument_group: "Banks"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -203,7 +203,7 @@ CBA:
 
 CSL:
 
- group: "Pharmaceuticals, Biotechnology & Life Sciences"
+ instrument_group: "Pharmaceuticals, Biotechnology & Life Sciences"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -241,7 +241,7 @@ CSL:
 
 GMG:
 
- group: "Real Estate" 
+ instrument_group: "Real Estate" 
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -279,7 +279,7 @@ GMG:
    
 IAG:
 
- group: "Insurance"
+ instrument_group: "Insurance"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -317,7 +317,7 @@ IAG:
 
 MQG:
 
- group: "Diversified Financials"
+ instrument_group: "Diversified Financials"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -355,7 +355,7 @@ MQG:
 
 NAB:
 
- group: "Banks"
+ instrument_group: "Banks"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -393,7 +393,7 @@ NAB:
    
 NCM:
 
- group: "Materials"
+ instrument_group: "Materials"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -431,7 +431,7 @@ NCM:
 
 RIO:
 
- group: "Materials"
+ instrument_group: "Materials"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -469,7 +469,7 @@ RIO:
 
 SCG:
 
- group: "Real Estate"
+ instrument_group: "Real Estate"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -507,7 +507,7 @@ SCG:
 
 SUN:
  
- group: "Insurance"
+ instrument_group: "Insurance"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -545,7 +545,7 @@ SUN:
 
 TLS:
 
- group: "Telecommunication Services"
+ instrument_group: "Telecommunication Services"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -583,7 +583,7 @@ TLS:
  
 TCL:
 
- group: "Transportation"
+ instrument_group: "Transportation"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -621,7 +621,7 @@ TCL:
    
 WES:
 
- group: "Retailing"
+ instrument_group: "Retailing"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -659,7 +659,7 @@ WES:
   
 WBC:
 
- group: "Banks"
+ instrument_group: "Banks"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -697,7 +697,7 @@ WBC:
 
 WPL:
 
- group: "Energy"
+ instrument_group: "Energy"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -735,7 +735,7 @@ WPL:
   
 WOW:
 
- group: "Food & Staples Retailing"
+ instrument_group: "Food & Staples Retailing"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
