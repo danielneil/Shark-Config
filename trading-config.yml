@@ -243,7 +243,7 @@ GMG:
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
-  check_command: check_rsi
+  COMMAND: check_rsi
   ticker: GMG
   period: 14
   min: 10
