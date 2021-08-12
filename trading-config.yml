@@ -14,7 +14,7 @@
 AMC:
 
  instrument_group: "Materials"
-
+ 
  RSI Check: 
   description: "RSI [ 14 Day ]"
   check_command: check_rsi
