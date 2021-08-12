@@ -6,7 +6,7 @@
 trading-config.yml
 ```
 
-### The structure of the file is important (as in indentation with it being yaml).
+### The structure of the file is important (being yaml).
 
 ```yaml
 # <INSTRUMENT_NAME>:
