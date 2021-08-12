@@ -41,7 +41,7 @@ AMC:
 
  Simple Moving Average - 5 Days:
   DESCRIPTION: "SMA: [ 5 Day ]"
-  check_command: check_sma
+  COMMAND: check_sma
   ticker: AMC
   period: 5
 
