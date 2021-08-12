@@ -7,7 +7,6 @@
 The structure of the file is important (as in indentation with it being yaml).
 
 ```yaml
-#
 # <INSTRUMENT_NAME>:
 #  INSTRUMENT_GROUP: "<NAME>"
 #  <INDICATOR_GROUP>: "<NAME>"
