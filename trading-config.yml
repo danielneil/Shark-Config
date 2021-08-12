@@ -1,5 +1,5 @@
 # The structure of this file is important (as in indentation with it being yaml).
-
+#
 # <INSTRUMENT_NAME>:
 #  INSTRUMENT_GROUP: "<NAME>"
 #  <INDICATOR_GROUP>: "<NAME>"
