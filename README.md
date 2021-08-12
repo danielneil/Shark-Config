@@ -1,6 +1,6 @@
 # Shark-Default-Config
 
-### Example configuration file for Shark, an automated trading platform.
+### Configuration file for trading configuration 
 
 ```
 trading-config.yml
@@ -19,7 +19,7 @@ trading-config.yml
 #   <ARGUMENT>: <arg>
 ```
 
-### The follow demostrates an instrument (AMC), with three indicators, a backtest, and an opportunity detection.
+### The following demostrates an instrument (AMC), with three indicators, a backtest, and an opportunity detection.
 
 ```yaml
 AMC:
