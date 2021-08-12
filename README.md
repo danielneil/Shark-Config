@@ -1,8 +1,10 @@
 # Shark-Default-Config
 
-## This is the main configuration repo for the Shark automated trading platform.
+## This is the default trading configuration the Shark automated trading platform.
 
-The structure of this file is important (as in indentation with it being yaml).
+* trading-config.yml
+
+The structure of the file is important (as in indentation with it being yaml).
 
 ```yaml
 #
@@ -16,7 +18,7 @@ The structure of this file is important (as in indentation with it being yaml).
 #   <ARGUMENT>: <arg>
 ```
 
-The structure of this file is important (as in indentation with it being yaml).
+The follow demostrates an instrument (AMC), with three indicators, a backtest, and an opportunity detection.
 
 ```yaml
 AMC:
