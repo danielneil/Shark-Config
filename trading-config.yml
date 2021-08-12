@@ -509,7 +509,7 @@ SUN:
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
-  check_command: check_rsi
+  COMMAND: check_rsi
   ticker: SUN
   period: 14
   min: 10
