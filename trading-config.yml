@@ -29,7 +29,7 @@ AMC:
 
  Simple Moving Average - 5 Days:
   DESCRIPTION: "SMA: [ 5 Day ]"
-  check_command: check_sma
+  COMMAND: check_sma
   ticker: AMC
   period: 5
 
@@ -90,7 +90,7 @@ BHP:
  INSTRUMENT_GROUP: "Materials"
  
  RSI Check: 
-  description: "RSI [ 14 Day ]"
+  DESCRIPTION: "RSI [ 14 Day ]"
   COMMAND: check_rsi
   ticker: BHP
   period: 14
