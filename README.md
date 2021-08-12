@@ -19,7 +19,7 @@ trading-config.yml
 #   <ARGUMENT>: <arg>
 ```
 
-### The following is an instrument (AMC) with some sample plugins configured (check_rsi, check_sma, check_strategy, check_backtest)
+### An example configuration with the ticker AMC with several plugins configured (check_rsi, check_sma, check_strategy, check_backtest)
 
 See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
