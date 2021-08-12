@@ -718,7 +718,7 @@ WPL:
   period: 5
 
  Opportunity Detection: 
-  description: "STRATEGY: [ Moving Averages ]"
+  DESCRIPTION: "STRATEGY: [ Moving Averages ]"
   COMMAND: check_strategy
   ticker: WPL
   name: moving_averages.py
