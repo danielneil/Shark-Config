@@ -1,6 +1,4 @@
-# This is how you apply each check to specifics instrument.
-
-# The structure of this file is important (as in indentation being yaml).
+# The structure of this file is important (as in indentation with it being yaml).
 
 # <INSTRUMENT_NAME>:
 #  INSTRUMENT_GROUP: "<NAME>"
