@@ -1,6 +1,6 @@
 # Shark-Default-Config
 
-### Configuration file for trading configuration 
+### Configuration file for trading setup 
 
 ```
 trading-config.yml
