@@ -1,9 +1,9 @@
-# This is how you apply each check to specifics ticker.
+# This is how you apply each check to specifics instrument.
 
 # The structure of this file is important (as in indentation being yaml).
 
-# <ticker>:
-#
+# <instrument_name>:
+# group: "<group_name>"
 # <check_unique_name>
 #  description: "<Check description - what appears in the web UI>"
 #  check_command: <check_command>
@@ -12,6 +12,8 @@
 #  <check_argument>: <arg>
 
 AMC:
+
+ group: "Materials"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -49,6 +51,8 @@ AMC:
  
 ANZ:
 
+ group: "Banks"
+ 
  RSI Check: 
   description: "RSI [ 14 Day ]"
   check_command: check_rsi
@@ -84,7 +88,9 @@ ANZ:
   capital: 100000
   
 BHP:
-
+ 
+ group: "Materials"
+ 
  RSI Check: 
   description: "RSI [ 14 Day ]"
   check_command: check_rsi
@@ -120,6 +126,8 @@ BHP:
   capital: 100000
 
 BXB:
+
+ group: "Commercial & Professional Services"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -157,6 +165,8 @@ BXB:
 
 CBA:
 
+ group: "Banks"
+
  RSI Check: 
   description: "RSI [ 14 Day ]"
   check_command: check_rsi
@@ -192,6 +202,8 @@ CBA:
   capital: 100000
 
 CSL:
+
+ group: "Pharmaceuticals, Biotechnology & Life Sciences"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -229,6 +241,8 @@ CSL:
 
 GMG:
 
+ group: "Real Estate" 
+
  RSI Check: 
   description: "RSI [ 14 Day ]"
   check_command: check_rsi
@@ -264,6 +278,8 @@ GMG:
   capital: 100000
    
 IAG:
+
+ group: "Insurance"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -301,6 +317,8 @@ IAG:
 
 MQG:
 
+ group: "Diversified Financials"
+
  RSI Check: 
   description: "RSI [ 14 Day ]"
   check_command: check_rsi
@@ -336,6 +354,8 @@ MQG:
   capital: 100000
 
 NAB:
+
+ group: "Banks"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -373,6 +393,8 @@ NAB:
    
 NCM:
 
+ group: "Materials"
+
  RSI Check: 
   description: "RSI [ 14 Day ]"
   check_command: check_rsi
@@ -408,6 +430,8 @@ NCM:
   capital: 100000  
 
 RIO:
+
+ group: "Materials"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -445,6 +469,8 @@ RIO:
 
 SCG:
 
+ group: "Real Estate"
+
  RSI Check: 
   description: "RSI [ 14 Day ]"
   check_command: check_rsi
@@ -480,6 +506,8 @@ SCG:
   capital: 100000  
 
 SUN:
+ 
+ group: "Insurance"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -517,6 +545,8 @@ SUN:
 
 TLS:
 
+ group: "Telecommunication Services"
+
  RSI Check: 
   description: "RSI [ 14 Day ]"
   check_command: check_rsi
@@ -552,6 +582,8 @@ TLS:
   capital: 100000 
  
 TCL:
+
+ group: "Transportation"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -589,6 +621,8 @@ TCL:
    
 WES:
 
+ group: "Retailing"
+
  RSI Check: 
   description: "RSI [ 14 Day ]"
   check_command: check_rsi
@@ -624,6 +658,8 @@ WES:
   capital: 100000 
   
 WBC:
+
+ group: "Banks"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
@@ -661,6 +697,8 @@ WBC:
 
 WPL:
 
+ group: "Energy"
+
  RSI Check: 
   description: "RSI [ 14 Day ]"
   check_command: check_rsi
@@ -696,6 +734,8 @@ WPL:
   capital: 100000 
   
 WOW:
+
+ group: "Food & Staples Retailing"
 
  RSI Check: 
   description: "RSI [ 14 Day ]"
