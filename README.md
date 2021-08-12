@@ -1,6 +1,6 @@
 # Shark-Default-Config
 
-## This is the default trading configuration the Shark automated trading platform.
+## This is the example configuration for Shark, an automated trading platform.
 
 * trading-config.yml
 
