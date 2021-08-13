@@ -125,7 +125,7 @@ BHP:
 
 BXB:
 
- GROUP: "Commercial & Professional Services"
+ GROUP: "Commercial and Professional Services"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -201,7 +201,7 @@ CBA:
 
 CSL:
 
- GROUP: "Pharmaceuticals, Biotechnology & Life Sciences"
+ GROUP: "Pharmaceuticals, Biotechnology and Life Sciences"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -733,7 +733,7 @@ WPL:
   
 WOW:
 
- GROUP: "Food & Staples Retailing"
+ GROUP: "Food and Staples Retailing"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
