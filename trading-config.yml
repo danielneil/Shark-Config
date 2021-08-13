@@ -1,7 +1,7 @@
 # The structure of this file is important (being yaml).
 #
 # <INSTRUMENT_NAME>:
-#  INSTRUMENT_GROUP: "<NAME>"
+#  GROUP: "<NAME>"
 #  <INDICATOR_GROUP>: "<NAME>"
 #   DESCRIPTION: "<string that appears on the UI>"
 #   PLUGIN: <check_command>
@@ -11,7 +11,7 @@
 
 AMC:
 
- INSTRUMENT_GROUP: "Materials"
+ GROUP: "Materials"
  
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -49,7 +49,7 @@ AMC:
  
 ANZ:
 
- INSTRUMENT_GROUP: "Banks"
+ GROUP: "Banks"
  
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -87,7 +87,7 @@ ANZ:
   
 BHP:
  
- INSTRUMENT_GROUP: "Materials"
+ GROUP: "Materials"
  
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -125,7 +125,7 @@ BHP:
 
 BXB:
 
- INSTRUMENT_GROUP: "Commercial & Professional Services"
+ GROUP: "Commercial & Professional Services"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -163,7 +163,7 @@ BXB:
 
 CBA:
 
- INSTRUMENT_GROUP: "Banks"
+ GROUP: "Banks"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -201,7 +201,7 @@ CBA:
 
 CSL:
 
- INSTRUMENT_GROUP: "Pharmaceuticals, Biotechnology & Life Sciences"
+ GROUP: "Pharmaceuticals, Biotechnology & Life Sciences"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -239,7 +239,7 @@ CSL:
 
 GMG:
 
- INSTRUMENT_GROUP: "Real Estate" 
+ GROUP: "Real Estate" 
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -277,7 +277,7 @@ GMG:
    
 IAG:
 
- INSTRUMENT_GROUP: "Insurance"
+ GROUP: "Insurance"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -315,7 +315,7 @@ IAG:
 
 MQG:
 
- INSTRUMENT_GROUP: "Diversified Financials"
+ GROUP: "Diversified Financials"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -353,7 +353,7 @@ MQG:
 
 NAB:
 
- INSTRUMENT_GROUP: "Banks"
+ GROUP: "Banks"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -391,7 +391,7 @@ NAB:
    
 NCM:
 
- INSTRUMENT_GROUP: "Materials"
+ GROUP: "Materials"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -429,7 +429,7 @@ NCM:
 
 RIO:
 
- INSTRUMENT_GROUP: "Materials"
+ GROUP: "Materials"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -467,7 +467,7 @@ RIO:
 
 SCG:
 
- INSTRUMENT_GROUP: "Real Estate"
+ GROUP: "Real Estate"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -505,7 +505,7 @@ SCG:
 
 SUN:
  
- INSTRUMENT_GROUP: "Insurance"
+ GROUP: "Insurance"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -543,7 +543,7 @@ SUN:
 
 TLS:
 
- INSTRUMENT_GROUP: "Telecommunication Services"
+ GROUP: "Telecommunication Services"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -581,7 +581,7 @@ TLS:
  
 TCL:
 
- INSTRUMENT_GROUP: "Transportation"
+ GROUP: "Transportation"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -619,7 +619,7 @@ TCL:
    
 WES:
 
- INSTRUMENT_GROUP: "Retailing"
+ GROUP: "Retailing"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -657,7 +657,7 @@ WES:
   
 WBC:
 
- INSTRUMENT_GROUP: "Banks"
+ GROUP: "Banks"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -695,7 +695,7 @@ WBC:
 
 WPL:
 
- INSTRUMENT_GROUP: "Energy"
+ GROUP: "Energy"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
@@ -733,7 +733,7 @@ WPL:
   
 WOW:
 
- INSTRUMENT_GROUP: "Food & Staples Retailing"
+ GROUP: "Food & Staples Retailing"
 
  RSI Check: 
   DESCRIPTION: "RSI [ 14 Day ]"
