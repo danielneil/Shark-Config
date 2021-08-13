@@ -414,7 +414,7 @@ NCM:
   period: 5
 
  Opportunity Detection: 
-  description: "STRATEGY: [ Moving Averages ]"
+  DESCRIPTION: "STRATEGY: [ Moving Averages ]"
   PLUGIN: check_strategy
   ticker: NCM
   name: moving_averages.py
