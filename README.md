@@ -9,6 +9,7 @@ trading-config.yml
 ### The structure of the file is important (being yaml).
 
 ```yaml
+---
 instrument: <instrument>
 
  instrument_group: <ui grouping of plugin>
@@ -27,6 +28,8 @@ instrument: <instrument>
 See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
 ```yaml
+---
+
 instrument: AMC
 
  instrument_group: Materials
