@@ -29,7 +29,7 @@ instrument: AMC
      
   plugin:
    name: check_rsi
-   desc: 
+   desc: RSI Check
    group: "RSI [ 14 Day ]"
    ticker: AMC
    period: 14
@@ -46,23 +46,23 @@ instrument: AMC
   plugin:
    name: check_sma
    desc: Simple Moving Average - 5 Days:
-  DESCRIPTION: "SMA: [ 5 Day ]"
-  ticker: AMC
-  period: 5
+   group: "SMA: [ 5 Day ]"
+   ticker: AMC
+   period: 5
 
-plugin:
- Opportunity Detection: 
-  DESCRIPTION: "STRATEGY: [ Moving Averages ]"
-  PLUGIN: check_strategy
-  ticker: AMC
-  name: moving_averages.py
+  plugin:
+   name: check_strategy
+   desc: "STRATEGY: [ Moving Averages ]"
+   group: "Strategy"  
+   ticker: AMC
+   file: moving_averages.py
    
-   plugin:
- Backtesting:
-  DESCRIPTION: "BACKTEST: [ Moving Averages ]"
-  PLUGIN: check_backtest
-  ticker: AMC
-  name: backtest_moving_averages.py
-  shares: 1000
-  capital: 100000
+  plugin:
+   name: check_backtest
+   desc: "BACKTEST: [ Moving Averages ]"
+   group: "Backtesting" 
+   ticker: AMC
+   file: backtest_moving_averages.py
+   shares: 1000
+   capital: 100000
 ```
