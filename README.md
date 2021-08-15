@@ -1,4 +1,4 @@
-# Shark-Default-Config
+# Shark-Config
 
 ### Configuration file for trading setup 
 
