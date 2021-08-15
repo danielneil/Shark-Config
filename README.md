@@ -29,7 +29,8 @@ instrument: AMC
      
   plugin:
    name: check_rsi
-   desc: "RSI [ 14 Day ]"
+   desc: 
+   group: "RSI [ 14 Day ]"
    ticker: AMC
    period: 14
    min: 10
