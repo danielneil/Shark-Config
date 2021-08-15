@@ -33,16 +33,17 @@ instrument: AMC
 
   plugin:
    name: yahoo_finance_data
-   desc: "Yahoo Finance - Historical Data CSV File"
+   desc: "Yahoo Finance - Download of AMC Historical Data File"
    group: "Yahoo Finance - Historical Data"  
    ticker: AMC.AX
    start_date: 1597479263
    end_date: 1629015263
    interval: 1d
-   includedAdjustedClose: true 
+   adjusted_close: true 
+   frequency: daily
    
   plugin:
-   name: check_rsi
+   name: rsi
    desc: RSI Check - 14 Days
    group: "RSI [ 14 Day ]"
    ticker: AMC
@@ -51,28 +52,28 @@ instrument: AMC
    max: 90
      
   plugin:
-   name: check_sma
+   name: sma
    desc: "Simple Moving Average - 50 Days:"
    group: "SMA: [ 50 Day ]" 
    ticker: AMC
    period: 50
 
   plugin:
-   name: check_sma
+   name: sma
    desc: "Simple Moving Average - 5 Days:"
    group: "SMA: [ 5 Day ]"
    ticker: AMC
    period: 5
 
   plugin:
-   name: check_strategy
+   name: strategy
    desc: "STRATEGY - Moving Averages"
    group: "STRATEGY: [ Moving Averages ]"  
    ticker: AMC
    file: moving_averages.py
    
   plugin:
-   name: check_backtest
+   name: backtest
    desc: "BACKTEST: [ Moving Averages ]"
    group: "Backtesting" 
    ticker: AMC
