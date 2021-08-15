@@ -10,6 +10,7 @@ trading-config.yml
 
 ```yaml
 instrument: <instrument>
+
  instrument_group: <ui grouping of plugin>
      
   plugin:
@@ -27,6 +28,7 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
 
 ```yaml
 instrument: AMC
+
  instrument_group: Materials
      
   plugin:
