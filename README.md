@@ -35,9 +35,12 @@ instrument: AMC
    name: yahoo_finance_data
    desc: "Yahoo Finance - Historical Data CSV File"
    group: "Yahoo Finance - Historical Data"  
-   ticker: AMC
-   file: moving_averages.py
-
+   ticker: AMC.AX
+   start_date: 1597479263
+   end_date: 1629015263
+   interval: 1d
+   includedAdjustedClose: true 
+   
   plugin:
    name: check_rsi
    desc: RSI Check - 14 Days
