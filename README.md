@@ -35,7 +35,7 @@ instrument: AMC
    name: yahoo_finance_data
    desc: "Yahoo Finance - Download of AMC Historical Data File"
    group: "Yahoo Finance - Historical Data"  
-   ticker: AMC.AX
+   instrument: AMC.AX
    start_date: 1597479263
    end_date: 1629015263
    interval: 1d
@@ -46,7 +46,7 @@ instrument: AMC
    name: rsi
    desc: RSI Check - 14 Days
    group: "RSI [ 14 Day ]"
-   ticker: AMC
+   instrument: AMC
    period: 14
    min: 10
    max: 90
@@ -55,28 +55,28 @@ instrument: AMC
    name: sma
    desc: "Simple Moving Average - 50 Days:"
    group: "SMA: [ 50 Day ]" 
-   ticker: AMC
+   instrument: AMC
    period: 50
 
   plugin:
    name: sma
    desc: "Simple Moving Average - 5 Days:"
    group: "SMA: [ 5 Day ]"
-   ticker: AMC
+   instrument: AMC
    period: 5
 
   plugin:
    name: strategy
    desc: "STRATEGY - Moving Averages"
    group: "STRATEGY: [ Moving Averages ]"  
-   ticker: AMC
+   instrument: AMC
    file: moving_averages.py
    
   plugin:
    name: backtest
    desc: "BACKTEST: [ Moving Averages ]"
    group: "Backtesting" 
-   ticker: AMC
+   instrument: AMC
    file: backtest_moving_averages.py
    shares: 1000
    capital: 100000
