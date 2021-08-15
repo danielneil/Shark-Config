@@ -30,7 +30,14 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
 instrument: AMC
 
  instrument_group: Materials
-     
+
+  plugin:
+   name: yahoo_finance_data
+   desc: "Yahoo Finance - Historical Data CSV File"
+   group: "Yahoo Finance - Historical Data"  
+   ticker: AMC
+   file: moving_averages.py
+
   plugin:
    name: check_rsi
    desc: RSI Check - 14 Days
