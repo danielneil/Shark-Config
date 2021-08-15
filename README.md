@@ -9,14 +9,16 @@ trading-config.yml
 ### The structure of the file is important (being yaml).
 
 ```yaml
-# <INSTRUMENT_NAME>:
-#  INSTRUMENT_GROUP: "<name>"
-#  <INDICATOR_GROUP>: "<name>"
-#   DESCRIPTION: "<string that appears on the UI>"
-#   PLUGIN: <plugin_name>
-#   <plugin_arg>: <arg>
-#   <plugin_arg>: <arg>
-#   <plugin_arg>: <arg>
+instrument: <instrument>
+ instrument_group: <ui grouping of plugin>
+     
+  plugin:
+   name: <name_of_plugin>
+   desc: <description to appear on UI>
+   group: <ui grouping of plugin>
+   <arg> : <arg>
+   <arg> : <arg>
+   <arg> : <arg>
 ```
 
 ### Example - strategy configuration for ticker AMC using several plugins (check_rsi, check_sma, check_strategy, check_backtest)
