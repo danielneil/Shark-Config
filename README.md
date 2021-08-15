@@ -24,36 +24,39 @@ trading-config.yml
 See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
 ```yaml
-AMC:
+instrument: AMC
+ instrument_group: Materials
+     
+  plugin:
+   name: check_rsi
+   desc: "RSI [ 14 Day ]"
+   ticker: AMC
+   period: 14
+   min: 10
+   max: 90
+     
+  plugin:
+   name: check_sma
+   desc: "Simple Moving Average - 50 Days:
+   group: "SMA: [ 50 Day ]" 
+   ticker: AMC
+   period: 50
 
- INSTRUMENT_GROUP: "Materials"
- 
- RSI Check: 
-  DESCRIPTION: "RSI [ 14 Day ]"
-  PLUGIN: check_rsi
-  ticker: AMC
-  period: 14
-  min: 10
-  max: 90
-
- Simple Moving Average - 50 Days:
-  DESCRIPTION: "SMA: [ 50 Day ]"
-  PLUGIN: check_sma 
-  ticker: AMC
-  period: 50
-
- Simple Moving Average - 5 Days:
+  plugin:
+   name: check_sma
+   desc: Simple Moving Average - 5 Days:
   DESCRIPTION: "SMA: [ 5 Day ]"
-  PLUGIN: check_sma
   ticker: AMC
   period: 5
 
+plugin:
  Opportunity Detection: 
   DESCRIPTION: "STRATEGY: [ Moving Averages ]"
   PLUGIN: check_strategy
   ticker: AMC
   name: moving_averages.py
    
+   plugin:
  Backtesting:
   DESCRIPTION: "BACKTEST: [ Moving Averages ]"
   PLUGIN: check_backtest
