@@ -29,7 +29,7 @@ instrument: AMC
      
   plugin:
    name: check_rsi
-   desc: RSI Check
+   desc: RSI Check - 14 Days
    group: "RSI [ 14 Day ]"
    ticker: AMC
    period: 14
@@ -38,22 +38,22 @@ instrument: AMC
      
   plugin:
    name: check_sma
-   desc: "Simple Moving Average - 50 Days:
+   desc: "Simple Moving Average - 50 Days:"
    group: "SMA: [ 50 Day ]" 
    ticker: AMC
    period: 50
 
   plugin:
    name: check_sma
-   desc: Simple Moving Average - 5 Days:
+   desc: "Simple Moving Average - 5 Days:"
    group: "SMA: [ 5 Day ]"
    ticker: AMC
    period: 5
 
   plugin:
    name: check_strategy
-   desc: "STRATEGY: [ Moving Averages ]"
-   group: "Strategy"  
+   desc: "STRATEGY - Moving Averages"
+   group: "STRATEGY: [ Moving Averages ]"  
    ticker: AMC
    file: moving_averages.py
    
