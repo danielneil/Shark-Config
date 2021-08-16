@@ -15,7 +15,7 @@ instrument: AMC
    adjusted_close: true
    frequency: daily
    
-  plugin: 
+  plugin:
    name: rsi
    desc: RSI Check - 14 Days
    group: "RSI [ 14 Day ]"
@@ -24,28 +24,28 @@ instrument: AMC
    min: 10
    max: 90
      
-  plugin: 
+  plugin:
    name: sma
    desc: "Simple Moving Average - 50 Days:"
    group: "SMA: [ 50 Day ]" 
    instrument: AMC
    period: 50
 
-  plugin: 
+  plugin:
    name: sma
    desc: "Simple Moving Average - 5 Days:"
    group: "SMA: [ 5 Day ]"
    instrument: AMC
    period: 5
 
-  plugin: 
+  plugin:
    name: strategy
    desc: "STRATEGY - Moving Averages"
    group: "STRATEGY: [ Moving Averages ]"  
    instrument: AMC
    file: moving_averages.py
    
-  plugin: 
+  plugin:
    name: backtest
    desc: "BACKTEST: [ Moving Averages ]"
    group: "Backtesting" 
