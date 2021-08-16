@@ -1,9 +1,7 @@
 ---
 
 instrument: AMC
-
  instrument_group: Materials
-
   plugin:
    name: yahoo_finance_data
    desc: "Yahoo Finance - Download of AMC Historical Data File"
@@ -14,7 +12,6 @@ instrument: AMC
    interval: 1d
    adjusted_close: true
    frequency: daily
-
   plugin:
    name: rsi
    desc: RSI Check - 14 Days
@@ -23,28 +20,24 @@ instrument: AMC
    period: 14
    min: 10
    max: 90
-
   plugin:
    name: sma
    desc: "Simple Moving Average - 50 Days:"
    group: "SMA: [ 50 Day ]"
    instrument: AMC
    period: 50
-
   plugin:
    name: sma
    desc: "Simple Moving Average - 5 Days:"
    group: "SMA: [ 5 Day ]"
    instrument: AMC
    period: 5
-
   plugin:
    name: strategy
    desc: "STRATEGY - Moving Averages"
    group: "STRATEGY: [ Moving Averages ]"
    instrument: AMC
    file: moving_averages.py
-
   plugin:
    name: backtest
    desc: "BACKTEST: [ Moving Averages ]"
