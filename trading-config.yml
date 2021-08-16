@@ -22,13 +22,13 @@ instrument: AMC
    max: 90
   plugin:
    name: sma
-   desc: "Simple Moving Average - 50 Days:"
+   desc: "Simple Moving Average - 50 Days"
    group: "SMA: [ 50 Day ]"
    instrument: AMC
    period: 50
   plugin:
    name: sma
-   desc: "Simple Moving Average - 5 Days:"
+   desc: "Simple Moving Average - 5 Days"
    group: "SMA: [ 5 Day ]"
    instrument: AMC
    period: 5
