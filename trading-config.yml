@@ -23,7 +23,7 @@ instrument: AMC
    period: 14
    min: 10
    max: 90
-     
+
   plugin:
    name: sma
    desc: "Simple Moving Average - 50 Days:"
@@ -44,7 +44,7 @@ instrument: AMC
    group: "STRATEGY: [ Moving Averages ]"  
    instrument: AMC
    file: moving_averages.py
-   
+
   plugin:
    name: backtest
    desc: "BACKTEST: [ Moving Averages ]"
