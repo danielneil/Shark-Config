@@ -14,7 +14,7 @@ instrument: AMC
    interval: 1d
    adjusted_close: true
    frequency: daily
-   
+
   plugin:
    name: rsi
    desc: RSI Check - 14 Days
