@@ -2,7 +2,7 @@
 
 # used to verify the yaml file.
 
-if [ $(which yamllint) -nq 0 ]:
+if [ ! `which yamllint` ]:
   dnf install -y yamllint.noarch
 fi
 
