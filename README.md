@@ -1,6 +1,6 @@
 # Shark-Config
 
-### Configuration
+### Configuration Files
 
 ```
 # Strategy to be placed in this directory
@@ -13,13 +13,13 @@ backtests/
 trading-config.yml
 ```
 
-### Checkout configuration from the Shark server
+### Configuration is checked out from the Shark server
 
 ```
  git clone http://<shark_server>/Shark-Config
 ```
 
-### Push configuration to the Shark server
+### After amendments, configuration is pushed back to the Shark server
 
 push.sh validates the config, and then pushes it to the Shark server.
 
