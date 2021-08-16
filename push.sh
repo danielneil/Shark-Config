@@ -1,10 +1,12 @@
 #!/usr/bin/bash
 
-# used to verify the yaml file.
+# Used to verify the yaml file.
 
-if [ ! `which yamllint` ]:
+if [ ! `which yamllint` ]; then
   dnf install -y yamllint.noarch
 fi
+
+yamllint trading-config.yml
 
 # Pushes the shark config to the shark server.
 
