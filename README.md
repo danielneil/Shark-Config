@@ -6,16 +6,16 @@
 trading-config.yml
 ```
 
-## Push configuration to local Shark server
-
-```
- cd Shark-Config && ./push.sh
-```
-
-## Checkout configuration from local Shark server
+### Checkout configuration from local Shark server
 
 ```
  git clone http://<shark_server>/Shark-Config
+```
+
+### Push configuration to local Shark server
+
+```
+ cd Shark-Config && ./push.sh
 ```
 
 ### The structure of the file is important (being yaml).
