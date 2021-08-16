@@ -5,7 +5,6 @@
 import yaml
 
 ##############################################################    
-
 from io import StringIO
 
 class StringBuilder:
@@ -21,114 +20,64 @@ class StringBuilder:
     def __str__(self):
         return self._file_str.getvalue()
 
-##############################################################                
-            
-def process_sub_config(a_dict,ticker):
+##############################################################    
+def process_instrument_config(i_data):
 
-    for key, value in a_dict.items():
-        
-        # First arg will be the INSTRUMENT_GROUP
-        
-        if str(key) == "GROUP":
-            
-            instrument_group = str(value)
-            industry_groups.append(instrument_group)
-            
-            hosts.Add("\ndefine host {\n")
-            hosts.Add("\tuse stock\n")
-            hosts.Add("\thost_name " + ticker + "\n")
-            hosts.Add("\thostgroups " + instrument_group + "\n")
-            hosts.Add("\taddress 127.0.0.1" + "\n")
-            hosts.Add("\tregister 1" + "\n")
-            hosts.Add("}\n")
-            
-            continue
+    instrument = i_data['instrument']
+    group = i_data['group']
 
-        services.Add("\ndefine service {" + "\n")
-        services.Add("\thost_name " + ticker + "\n")
-        services.Add("\tservice_groups " + str(key) + "\n")
-        
-        # Add the parent node, and we'll prune duplicates after.
-        service_group_defs.append(str(key))
+    hosts.Add("\ndefine host {\n")
+    hosts.Add("\tuse stock\n")
+    hosts.Add("\thost_name " + instrument + "\n")
+    hosts.Add("\thostgroups " + group + "\n")
+    hosts.Add("\taddress 127.0.0.1" + "\n")
+    hosts.Add("\tregister 1" + "\n")
+    hosts.Add("}\n")
 
-        command_str = ""
-        for k,v in value.items():
+    hostGroups.append(str(group))
 
-            yml_item = str(k)
-            yml_value = str(v)
-            
-            # the descript will always be the first element.
-            if yml_item == "DESCRIPTION":
-                services.Add("\tservice_description " + yml_value+ "\n")
-            elif yml_item == "PLUGIN":
+    # Process the list of plugins,
+    process_plugin_config(i_data['plugin'])
 
-                command_str = "check_command " + yml_value
-            
-                if yml_value == "check_backtest":
-
-                    # Add a web link to the details of the backtest.
-                    
-                    hostname = socket.gethostname()
-                    local_ip = socket.gethostbyname(hostname)
-
-                    services.Add("\tnotes_url http://" + local_ip + "/shark/backtest/html/" + ticker + ".html" + "\n")
-                    
-                if yml_value == "check_strategy":
-                    
-                    # If this is the strategy command, add the event handler to perform the BUY order.
-                    services.Add("\tevent_handler enter_trade")
-                    
-            else:
-                 # print the command arguments
-                command_str += "!" + yml_value
-
-        services.Add("\t" + command_str + "\n")
-        services.Add("\tmax_check_attempts 1" + "\n")
-        services.Add("\tcheck_interval 5" + "\n")
-        services.Add("\tretry_interval 3" + "\n")
-        services.Add("\tcheck_period 24x7" + "\n")
-        services.Add("\tnotification_interval 30" + "\n")
-        services.Add("\tnotification_period 24x7" + "\n")
-        services.Add("\tnotification_options w,c,r" + "\n")
-        services.Add("\tcontact_groups admins" + "\n")
-        services.Add("}\n" + "\n")
 
 ##############################################################    
+# Process the plugins
+def process_plugin_config(p_data):
 
-service_group_defs = []
-industry_groups = []
+    for plugin in p_data:
 
-hosts = StringBuilder()
-services = StringBuilder()
+        # Get the standard arguments.
+        plugins.Add(plugin['name'] + "\n")
+        plugins.Add(plugin['desc'] + "\n")
+        plugins.Add(plugin['group'] + "\n")
+        plugins.Add(plugin['instrument'] + "\n")
+
+        # Now process the additional arbitrary arguments.
+        print (plugin[5:1])
+
+##############################################################    
+# Process the yaml file - main entry point.
+hosts = StringBuilder();
+hostGroups = []
+plugins = StringBuilder();
 
 with open ("trading-config.yml", "r") as f:
 
     # Load YAML data from the file
 
-    read_data = yaml.safe_load(f)
+    data = yaml.safe_load(f)
 
     # Iterate the loop to read and print YAML data
 
-    for i in range(0, len(read_data)):
+    for i in range(len(data)):
 
-        for key, value in read_data[i].items():
+        process_instrument_config(data[i])
 
-            if key == "instrument":
-
-                process_instrument
-
-
-                print(key, ":", value)
-
-        print('')
-    
 ##############################################################    
-    
-# Remove duplicates from the industry groups
+# Print the hosts group configuration.
+sorted_host_groups = sorted(set(hostGroups))
 
-srted_industry_groups = sorted(set(industry_groups))
-
-for ig in srted_industry_groups:
+for ig in sorted_host_groups:
 
     print ("\ndefine hostgroup {")
     print ("\thostgroup_name " + ig )
@@ -136,22 +85,10 @@ for ig in srted_industry_groups:
     print ("}")
 
 ##############################################################    
-    
-# Prune the duplicates from the service groups. 
-sg_list = list ( dict.fromkeys(service_group_defs) )
-for sg in sg_list:
+# Print the hosts configuration.
+print (hosts)
 
-    print("\ndefine servicegroup {")
-    print("\tservicegroup_name " + sg )
-    print("\talias " + sg )
-    print("}")
-    
+
 ##############################################################    
-# Print Hosts
-
-print(hosts)
-
-##############################################################   
-# Print Services
-
-print(services)
+# Print the plugin configuration
+print (plugins)
