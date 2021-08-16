@@ -1,8 +1,6 @@
 ---
 - instrument: AMC
-
   group: Materials
-  
   plugin:
   - name: yahoo_finance_data
     desc: "Yahoo Finance - Download of AMC Historical Data File"
@@ -41,4 +39,4 @@
     instrument: AMC
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000 
+    capital: 100000
