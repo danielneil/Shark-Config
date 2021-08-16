@@ -3,7 +3,7 @@
 ### Configuration Files
 
 ```
-# Strategy to be placed in this directory
+# Strategy code to be placed in this directory
 strategies/
 
 # Backtest code to placed in this directory.
