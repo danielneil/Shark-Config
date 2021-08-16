@@ -27,7 +27,7 @@ The structure of the file is important (being yaml).
   - name: <name_of_plugin>
     desc: <description to appear on UI>
     group: <ui grouping of plugin>
-    instrument: AMC.AX
+    instrument: <instrument>
     start_date: 1597479263
     <arg> : <arg>
     <arg> : <arg>
