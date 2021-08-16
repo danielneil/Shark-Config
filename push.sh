@@ -9,3 +9,5 @@ fi
 /usr/bin/yamllint trading-config.yml
 
 # Pushes the shark config to the shark server.
+
+ansible-playbook _sync/site.yml -i _sync/hosts 
