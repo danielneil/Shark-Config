@@ -6,6 +6,12 @@
 trading-config.yml
 ```
 
+## Push configuration to Shark server
+
+```
+ cd /shark/conf/ && ./push.sh
+```
+
 ### The structure of the file is important (being yaml).
 
 ```yaml
