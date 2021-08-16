@@ -1,12 +1,12 @@
 # Shark-Config
 
-### Checkout configuration from local Shark server
+### Checkout configuration from the Shark server
 
 ```
  git clone http://<shark_server>/Shark-Config
 ```
 
-### Push configuration to local Shark server
+### Push configuration to the Shark server
 
 push.sh validates the config, and then pushes it to the Shark server.
 
