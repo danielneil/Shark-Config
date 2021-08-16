@@ -1,11 +1,5 @@
 # Shark-Config
 
-### Configuration file for trading setup 
-
-```
-trading-config.yml
-```
-
 ### Checkout configuration from local Shark server
 
 ```
@@ -14,11 +8,16 @@ trading-config.yml
 
 ### Push configuration to local Shark server
 
+push.sh validates the config, and then pushes it to the Shark server.
+
 ```
  cd Shark-Config && ./push.sh
 ```
 
-### The structure of the file is important (being yaml).
+### Main configuration file - trading-config.yml
+
+The structure of the file is important (being yaml).
+
 
 ```yaml
 ---
