@@ -1,5 +1,18 @@
 # Shark-Config
 
+### Configuration
+
+```
+# Strategy to be placed in this file
+strategies
+
+# Backtest code to placed in this file.
+backtests
+
+# Trading configuration definitions placed in this file.
+trading-config.yml
+```
+
 ### Checkout configuration from the Shark server
 
 ```
