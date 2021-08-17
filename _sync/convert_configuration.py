@@ -71,10 +71,7 @@ def process_plugin_config(p_data, instrument):
         services.Add("\tservice_description " + cmd_desc + "\n")
         services.Add("\tcheck_command " + cmd_name + " " + str(cmd_args) + "\n")
         services.Add("\tservicegroups " + serv_grp + "\n")
-        services.Add("}\n" + "\n")
-
-        
-        services.Add("}")
+        services.Add("}\n")
 
 ##############################################################    
 # Process the yaml file - main entry point.
