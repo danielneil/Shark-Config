@@ -16,4 +16,4 @@ ${SHARK_DIR}/_sync/convert_configuration.py > ${SHARK_DIR}/_sync/sync_role/files
 # Pushes the shark config to the shark server.
 cp -p ${SHARK_DIR}/trading-config.yml ${SHARK_DIR}/_sync/
 
-ansible-playbook _sync/site.yml -i _sync/hosts 
+ansible-playbook ${SHARK_DIR}/_sync/site.yml -i _sync/hosts 
