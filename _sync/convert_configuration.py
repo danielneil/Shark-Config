@@ -71,6 +71,17 @@ def process_plugin_config(p_data, instrument):
         services.Add("\tservice_description " + cmd_desc + "\n")
         services.Add("\tcheck_command " + cmd_name + " " + str(cmd_args) + "\n")
         services.Add("\tservicegroups " + serv_grp + "\n")
+        services.Add("\tmax_check_attempts 1" + "\n")
+        services.Add("\tcheck_interval 5" + "\n")
+        services.Add("\tretry_interval 3" + "\n")
+        services.Add("\tcheck_period 24x7" + "\n")
+        services.Add("\tnotification_interval 30" + "\n")
+        services.Add("\tnotification_period 24x7" + "\n")
+        services.Add("\tnotification_options w,c,r" + "\n")
+        services.Add("\tcontact_groups admins" + "\n")
+        services.Add("}\n" + "\n")
+
+        
         services.Add("}")
 
 ##############################################################    
