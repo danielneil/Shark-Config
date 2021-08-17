@@ -105,7 +105,6 @@ for ig in sorted_host_groups:
 
 ##############################################################    
 # Print the service groups
-
 sorted_service_groups = sorted(set(serviceGroups))
 
 for sg in sorted_service_groups:
@@ -115,11 +114,10 @@ for sg in sorted_service_groups:
     print("\talias " + sg)
     print("}")
 
-##############################################################
-# Print the services
-
-print (services)
-
 ##############################################################    
 # Print the hosts configuration.
 print (hosts)
+
+##############################################################
+# Print the services
+print (services)

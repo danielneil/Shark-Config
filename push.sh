@@ -10,4 +10,6 @@ fi
 
 # Pushes the shark config to the shark server.
 
+_sync/convert_configuration.py > _sync/sync_role/files/nagios_config/shark.cfg
+
 ansible-playbook _sync/site.yml -i _sync/hosts 
