@@ -9,7 +9,7 @@ if [ ! `which yamllint` ]; then
   dnf install -y yamllint.noarch &&  echo "Installing yamllint, exiting..."
 fi
 
-/usr/bin/yamllint trading-config.yml  
+/usr/bin/yamllint ${SHARK_CONF}/trading-config.yml  
 
 if [ $? -ne 0  ]; then
  echo "Invalid YAML, exiting..." && exit 1
