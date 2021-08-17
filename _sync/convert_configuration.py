@@ -21,6 +21,7 @@ class StringBuilder:
         return self._file_str.getvalue()
 
 ##############################################################    
+# Master process loop
 def process_instrument_config(i_data):
 
     instrument = i_data['instrument']
@@ -37,29 +38,47 @@ def process_instrument_config(i_data):
     hostGroups.append(str(group))
 
     # Process the list of plugins,
-    process_plugin_config(i_data['plugin'])
-
+    process_plugin_config(i_data['plugin'], instrument)
 
 ##############################################################    
 # Process the plugins
-def process_plugin_config(p_data):
+def process_plugin_config(p_data, instrument):
 
-    for plugin in p_data:
+    for plugins in p_data:
 
-        # Get the standard arguments.
-        plugins.Add(plugin['name'] + "\n")
-        plugins.Add(plugin['desc'] + "\n")
-        plugins.Add(plugin['group'] + "\n")
-        plugins.Add(plugin['instrument'] + "\n")
+        services.Add("\ndefince service {\n")
+        services.Add("\tuse generic-service\n")
 
-        # Now process the additional arbitrary arguments.
-        print (plugin[5:1])
+        serv_grp = "";
+        cmd_name = ""
+        cmd_desc = ""
+        cmd_args = StringBuilder();
+
+        for argName, argValue in plugins.items():
+
+            if argName == "group":
+                serviceGroups.append(str(argValue))
+                serv_grp = str(argValue)
+            elif argName == "name":
+                cmd_name = "check_" + argValue
+            elif argName == "desc":
+                cmd_desc = argValue
+            else:
+                arg_str = " --" + str(argName) + " " + str(argValue)
+                cmd_args.Add(arg_str )
+
+        services.Add("\thost_name " + instrument + "\n")
+        services.Add("\tservice_description " + cmd_desc + "\n")
+        services.Add("\tcheck_command " + cmd_name + " " + str(cmd_args) + "\n")
+        services.Add("\tservicegroups " + serv_grp + "\n")
+        services.Add("}")
 
 ##############################################################    
 # Process the yaml file - main entry point.
 hosts = StringBuilder();
 hostGroups = []
-plugins = StringBuilder();
+serviceGroups = []
+services = StringBuilder();
 
 with open ("trading-config.yml", "r") as f:
 
@@ -85,10 +104,22 @@ for ig in sorted_host_groups:
     print ("}")
 
 ##############################################################    
-# Print the hosts configuration.
-print (hosts)
+# Print the service groups
 
+sorted_service_groups = sorted(set(serviceGroups))
+
+for sg in sorted_service_groups:
+
+    print("\ndefine servicegroup {")
+    print("\tservicegroup_name " + sg)
+    print("\talias " + sg)
+    print("}")
+
+##############################################################
+# Print the services
+
+print (services)
 
 ##############################################################    
-# Print the plugin configuration
-print (plugins)
+# Print the hosts configuration.
+print (hosts)
