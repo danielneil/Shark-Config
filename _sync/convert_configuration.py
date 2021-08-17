@@ -32,7 +32,6 @@ def process_instrument_config(i_data):
     hosts.Add("\thost_name " + instrument + "\n")
     hosts.Add("\thostgroups " + group + "\n")
     hosts.Add("\taddress 127.0.0.1" + "\n")
-    hosts.Add("\tregister 1" + "\n")
     hosts.Add("}\n")
 
     hostGroups.append(str(group))
