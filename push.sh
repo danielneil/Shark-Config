@@ -6,7 +6,7 @@ SHARK_CONF="${SHARK_DIR}/Shark-Config"
 # Used to verify if the config file.
 
 if [ ! `which yamllint` ]; then
-  dnf install -y yamllint.noarch
+  dnf install -y yamllint.noarch &&  echo "Installing yamllint, exiting..."
 fi
 
 if [ ! `/usr/bin/yamllint trading-config.yml` ]; then
