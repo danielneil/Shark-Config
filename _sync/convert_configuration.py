@@ -45,7 +45,7 @@ def process_plugin_config(p_data, instrument):
 
     for plugins in p_data:
 
-        services.Add("\ndefince service {\n")
+        services.Add("\ndefine service {\n")
         services.Add("\tuse generic-service\n")
 
         serv_grp = "";
