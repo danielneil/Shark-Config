@@ -6,7 +6,7 @@
 # Strategy code to be placed in this directory
 strategies/
 
-# Backtest code to placed in this directory.
+# Backtest code to be placed in this directory.
 backtests/
 
 # Trading configuration definitions placed in this file.
