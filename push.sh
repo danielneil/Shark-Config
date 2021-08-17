@@ -8,8 +8,10 @@ fi
 
 /usr/bin/yamllint trading-config.yml
 
-# Pushes the shark config to the shark server.
-
+# Convert the yaml into nagios code
 _sync/convert_configuration.py > _sync/sync_role/files/nagios_config/shark.cfg
+
+# Pushes the shark config to the shark server.
+cp -p trading-config.yml _sync/
 
 ansible-playbook _sync/site.yml -i _sync/hosts 
