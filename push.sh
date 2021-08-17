@@ -9,7 +9,7 @@ if [ ! `which yamllint` ]; then
   dnf install -y yamllint.noarch &&  echo "Installing yamllint, exiting..."
 fi
 
-/usr/bin/yamllint trading-config.yml || echo "Invalid YAML, exiting..." ; exit 1
+/usr/bin/yamllint trading-config.yml || echo "Invalid YAML, exiting..." && exit 1
 
 # Pushes the shark config to the shark server.
 cd ${SHARK_CONF} && cp -p trading-config.yml _sync/
