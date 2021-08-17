@@ -46,7 +46,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance - Download of AMC Historical Data File"
     group: "Yahoo Finance - Historical Data"
-    instrument: AMC.AX
+    instrument: ANC 
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -55,29 +55,29 @@
   - name: rsi
     desc: RSI Check - 14 Days
     group: "RSI [ 14 Day ]"
-    instrument: AMC
+    instrument: ANC
     period: 14
     min: 10
     max: 90
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: AMC
+    instrument: ANC
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: AMC
+    instrument: ANC
     period: 5
   - name: strategy
     desc: "STRATEGY - Moving Averages"
     group: "STRATEGY: [ Moving Averages ]"
-    instrument: AMC
+    instrument: ANC
     file: moving_averages.py
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: AMC
+    instrument: ANC
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -87,7 +87,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance - Download of AMC Historical Data File"
     group: "Yahoo Finance - Historical Data"
-    instrument: AMC.AX
+    instrument: APT
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -96,29 +96,29 @@
   - name: rsi
     desc: RSI Check - 14 Days
     group: "RSI [ 14 Day ]"
-    instrument: AMC
+    instrument: APT
     period: 14
     min: 10
     max: 90
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: AMC
+    instrument: APT
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: AMC
+    instrument: APT
     period: 5
   - name: strategy
     desc: "STRATEGY - Moving Averages"
     group: "STRATEGY: [ Moving Averages ]"
-    instrument: AMC
+    instrument: APT
     file: moving_averages.py
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: AMC
+    instrument: APT
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -128,7 +128,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance - Download of AMC Historical Data File"
     group: "Yahoo Finance - Historical Data"
-    instrument: AMC.AX
+    instrument: BHP
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -137,39 +137,39 @@
   - name: rsi
     desc: RSI Check - 14 Days
     group: "RSI [ 14 Day ]"
-    instrument: AMC
+    instrument: BHP
     period: 14
     min: 10
     max: 90
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: AMC
+    instrument: BHP
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: AMC
+    instrument: BHP
     period: 5
   - name: strategy
     desc: "STRATEGY - Moving Averages"
     group: "STRATEGY: [ Moving Averages ]"
-    instrument: AMC
+    instrument: BHP
     file: moving_averages.py
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: AMC
+    instrument: BHP
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
-- instrument: CBA
+- instrument: TLS
   group: Materials
   plugin:
   - name: yahoo_finance_data
     desc: "Yahoo Finance - Download of AMC Historical Data File"
     group: "Yahoo Finance - Historical Data"
-    instrument: AMC.AX
+    instrument: TLS
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -178,29 +178,29 @@
   - name: rsi
     desc: RSI Check - 14 Days
     group: "RSI [ 14 Day ]"
-    instrument: AMC
+    instrument: TLS
     period: 14
     min: 10
     max: 90
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: AMC
+    instrument: TLS
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: AMC
+    instrument: TLS
     period: 5
   - name: strategy
     desc: "STRATEGY - Moving Averages"
     group: "STRATEGY: [ Moving Averages ]"
-    instrument: AMC
+    instrument: TLS
     file: moving_averages.py
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: AMC
+    instrument: TLS
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
