@@ -3,13 +3,13 @@
 ### Configuration Files
 
 ```
-# Strategy code to be placed in this directory
+# Strategy code lives here.
 strategies/
 
-# Backtest code to be placed in this directory.
+# Backtest code lives here.
 backtests/
 
-# Trading configuration definitions placed in this file.
+# Trading configuration.
 trading-config.yml
 ```
 
