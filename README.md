@@ -3,14 +3,14 @@
 ### Configuration Files
 
 ```
-# Strategy code lives here.
+# Strategy code lives here (sample code inside too).
 strategies/
 
-# Backtest code lives here.
+# Backtest code lives here (sample code inside too).
 backtests/
 
 # Trading configuration.
-trading-config.yml
+trading-config.yml (sample definitions too).
 ```
 
 ### Configuration is checked out from the Shark server
