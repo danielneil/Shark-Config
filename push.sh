@@ -16,4 +16,4 @@ cp -p ${SHARK_DIR}/trading-config.yml ${SHARK_DIR}/_sync/
 # Convert the yaml into nagios code
 ${SHARK_DIR}/conf/_sync/convert_configuration.py > ${SHARK_DIR}/_sync/sync_role/files/nagios_config/shark.cfg
 
-ansible-playbook ${SHARK_DIR}/_sync/site.yml -i _sync/hosts 
+ansible-playbook ${SHARK_DIR}/conf/_sync/site.yml -i _sync/hosts 
