@@ -3,8 +3,8 @@
   group: Materials
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance - Download of AMC Historical Data File"
-    group: "Yahoo Finance - Historical Data"
+    desc: "Yahoo Finance [ Download of AMC Historical Data File ]"
+    group: "Yahoo Finance [ Historical Data ]"
     instrument: AMC.AX
     start_date: 1597479263
     end_date: 1629015263
