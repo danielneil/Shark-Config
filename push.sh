@@ -11,7 +11,7 @@ fi
 
 /usr/bin/yamllint trading-config.yml
 
-if [ ! `echo $?` ]; then
+if [ ! $? ]; then
   echo "Invalid YAML, exiting..."
   exit 1;
 fi
