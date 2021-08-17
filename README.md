@@ -1,30 +1,15 @@
 # Shark-Config
 
-### Configuration Files
+This is the demo configuration for the Shark Automated Trading Platform.
+
+### Configuration resides in a git repo on the Shark server
 
 ```
-# Strategy code lives here (sample code inside too).
-strategies/
+# Check out the configuration for customisation.
+git clone http://<shark_server>/Shark-Config
 
-# Backtest code lives here (sample code inside too).
-backtests/
-
-# Trading configuration.
-trading-config.yml (sample definitions too).
-```
-
-### Configuration is checked out from the Shark server
-
-```
- git clone http://<shark_server>/Shark-Config
-```
-
-### After amendments, configuration is pushed back to the Shark server
-
-push.sh validates the config, and then pushes it to the Shark server.
-
-```
- cd Shark-Config && ./push.sh
+# Push the configuration back to the Shark server.
+cd Shark-Config && ./push.sh
 ```
 
 ### Main configuration file - trading-config.yml
