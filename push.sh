@@ -15,9 +15,9 @@ if [ ! `/usr/bin/yamllint trading-config.yml` ]; then
 fi
 
 # Pushes the shark config to the shark server.
-cp -p ${SHARK_CONF}/trading-config.yml ${SHARK_DIR}/_sync/
+cd ${SHARK_CONF} && cp -p trading-config.yml _sync/
 
 # Convert the yaml into nagios code
-${SHARK_CONF}/conf/_sync/convert_configuration.py > ${SHARK_CONF}/_sync/sync_role/files/conf.d/shark.cfg
+cd ${SHARK_CONF} && _sync/convert_configuration.py > ${SHARK_CONF}/_sync/sync_role/files/conf.d/shark.cfg
 
-ansible-playbook ${SHARK_CONF}/_sync/site.yml -i _sync/hosts 
+cd ${SHARK_CONF}/_sync && ansible-playbook site.yml -i hosts 
