@@ -1,3 +1,7 @@
 ---
 # tasks file for sync_role
-
+- name: Copying generated configuration to shark server
+  copy:
+   src: nagios_config/shark.cfg
+   dest: /usr/local/nagios/etc/conf.d
+  notify: restart-nagios
