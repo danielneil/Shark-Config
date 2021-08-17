@@ -33,6 +33,16 @@ def process_instrument_config(i_data):
     hosts.Add("\thostgroups " + group + "\n")
     hosts.Add("\taddress 127.0.0.1" + "\n")
     hosts.Add("\tregister 1" + "\n")
+    
+    hosts.Add("\tmax_check_attempts 1" + "\n")
+    hosts.Add("\tcheck_interval 5" + "\n")
+    hosts.Add("\tretry_interval 3" + "\n")
+    hosts.Add("\tcheck_period 24x7" + "\n")
+    hosts.Add("\tnotification_interval 30" + "\n")
+    hosts.Add("\tnotification_period 24x7" + "\n")
+    hosts.Add("\tnotification_options w,c,r" + "\n")
+    hosts.Add("\tcontact_groups admins" + "\n")
+    
     hosts.Add("}\n")
 
     hostGroups.append(str(group))
@@ -71,6 +81,9 @@ def process_plugin_config(p_data, instrument):
         services.Add("\tservice_description " + cmd_desc + "\n")
         services.Add("\tcheck_command " + cmd_name + " " + str(cmd_args) + "\n")
         services.Add("\tservicegroups " + serv_grp + "\n")
+        services.Add("}\n" + "\n")
+
+        
         services.Add("}")
 
 ##############################################################    
