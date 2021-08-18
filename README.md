@@ -33,7 +33,7 @@ The structure of the file is important (being yaml).
     ...
 ```
 
-### Example - configuration for ticker AMC using several plugins (rsi, sma, strategy, backtest)
+### Example - configuration for ticker BTC using several plugins (yahoo_finance_data, sma, backtest)
 
 See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGINS.md) for a list of capabilities.
 
