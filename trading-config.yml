@@ -11,13 +11,6 @@
     interval: 1d
     adjusted_close: true
     frequency: daily
-  - name: rsi
-    desc: RSI Check - 14 Days
-    group: "RSI [ 14 Day ]"
-    instrument: BTC
-    period: 14
-    min: 10
-    max: 90
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -28,11 +21,6 @@
     group: "SMA: [ 5 Day ]"
     instrument: BTC
     period: 5
-  - name: strategy
-    desc: "STRATEGY - Moving Averages"
-    group: "STRATEGY: [ Moving Averages ]"
-    instrument: AMC
-    file: moving_averages.py
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -52,13 +40,6 @@
     interval: 1d
     adjusted_close: true
     frequency: daily
-  - name: rsi
-    desc: RSI Check - 14 Days
-    group: "RSI [ 14 Day ]"
-    instrument: ETH
-    period: 14
-    min: 10
-    max: 90
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -69,11 +50,6 @@
     group: "SMA: [ 5 Day ]"
     instrument: ETH
     period: 5
-  - name: strategy
-    desc: "STRATEGY - Moving Averages"
-    group: "STRATEGY: [ Moving Averages ]"
-    instrument: ETH
-    file: moving_averages.py
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -93,13 +69,6 @@
     interval: 1d
     adjusted_close: true
     frequency: daily
-  - name: rsi
-    desc: RSI Check - 14 Days
-    group: "RSI [ 14 Day ]"
-    instrument: BNB
-    period: 14
-    min: 10
-    max: 90
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -110,11 +79,6 @@
     group: "SMA: [ 5 Day ]"
     instrument: BNB
     period: 5
-  - name: strategy
-    desc: "STRATEGY - Moving Averages"
-    group: "STRATEGY: [ Moving Averages ]"
-    instrument: BNB
-    file: moving_averages.py
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -134,13 +98,6 @@
     interval: 1d
     adjusted_close: true
     frequency: daily
-  - name: rsi
-    desc: RSI Check - 14 Days
-    group: "RSI [ 14 Day ]"
-    instrument: USDT
-    period: 14
-    min: 10
-    max: 90
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -151,11 +108,6 @@
     group: "SMA: [ 5 Day ]"
     instrument: USDT
     period: 5
-  - name: strategy
-    desc: "STRATEGY - Moving Averages"
-    group: "STRATEGY: [ Moving Averages ]"
-    instrument: USDT
-    file: moving_averages.py
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -175,13 +127,6 @@
     interval: 1d
     adjusted_close: true
     frequency: daily
-  - name: rsi
-    desc: RSI Check - 14 Days
-    group: "RSI [ 14 Day ]"
-    instrument: ADA
-    period: 14
-    min: 10
-    max: 90
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -192,11 +137,6 @@
     group: "SMA: [ 5 Day ]"
     instrument: ADA
     period: 5
-  - name: strategy
-    desc: "STRATEGY - Moving Averages"
-    group: "STRATEGY: [ Moving Averages ]"
-    instrument: ADA
-    file: moving_averages.py
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -216,13 +156,6 @@
     interval: 1d
     adjusted_close: true
     frequency: daily
-  - name: rsi
-    desc: RSI Check - 14 Days
-    group: "RSI [ 14 Day ]"
-    instrument: XRP
-    period: 14
-    min: 10
-    max: 90
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -233,11 +166,6 @@
     group: "SMA: [ 5 Day ]"
     instrument: XRP
     period: 5
-  - name: strategy
-    desc: "STRATEGY - Moving Averages"
-    group: "STRATEGY: [ Moving Averages ]"
-    instrument: XRP
-    file: moving_averages.py
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -257,13 +185,6 @@
     interval: 1d
     adjusted_close: true
     frequency: daily
-  - name: rsi
-    desc: RSI Check - 14 Days
-    group: "RSI [ 14 Day ]"
-    instrument: DOGE
-    period: 14
-    min: 10
-    max: 90
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -274,11 +195,6 @@
     group: "SMA: [ 5 Day ]"
     instrument: DOGE
     period: 5
-  - name: strategy
-    desc: "STRATEGY - Moving Averages"
-    group: "STRATEGY: [ Moving Averages ]"
-    instrument: DOGE
-    file: moving_averages.py
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
