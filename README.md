@@ -8,8 +8,8 @@ This is the demo configuration for the Shark Automated Trading Platform.
 # Check out the configuration for customisation.
 git clone http://<shark_server>/Shark-Config
 
-# Push the configuration back to the Shark server.
-cd Shark-Config && ./push.sh
+# Push the configuration back to the Shark server and refresh with the new configuration.
+cd Shark-Config && ./push.sh && ./refresh.sh
 ```
 
 ### Main configuration file - trading-config.yml
