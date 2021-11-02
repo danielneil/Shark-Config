@@ -9,7 +9,7 @@ fi
 
 XMLLINT=`which yamllint`
 
-$XMLLINT ../trading-config.yml
+$XMLLINT trading-config.yml
 
 if [ $? -ne 0  ]; then
  echo "Invalid YAML, exiting..." && exit 1
