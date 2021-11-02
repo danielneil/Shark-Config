@@ -13,8 +13,11 @@ trading-config.yml - Main configuration file.
 backtests/ - Back test code directory
 strategies/ - Strategy codde directory.
 ```
-### After adding configurations, push it back to the server using regulat git.
+### After applying configuration, commit it and then push back to the server as regular git use.
 ```
+# Verify your changes first.
+./bin/verify.sh
+
 git add trading-config.yml backtests strategies
 git commit -m 'RSI2 Configuration, backtest and strategy code'
 git push
@@ -23,7 +26,6 @@ git push
 ```
 ./bin/refresh.sh
 ```
-
 ### Main configuration file - trading-config.yml
 
 The structure of the file is important (being yaml).
