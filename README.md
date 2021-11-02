@@ -18,14 +18,14 @@ strategies/ - Strategy codde directory.
 
 ### After adding configurations, push it back to the server using regulat git.
 ```
-git add *
+git add trading-config.yml backtests strategies
 git commit -m 'RSI2 Configuration, backtest and strategy code'
 git push
 ```
 
-### Refresh the Shark server your new configuration.
+### Refresh the Shark server with your new configuration.
 ```
-../bin/refresh.sh
+./bin/refresh.sh
 ```
 
 ### Main configuration file - trading-config.yml
