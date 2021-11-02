@@ -24,7 +24,7 @@ if __name__ == "__main__":
     ticker = args.ticker 
     sma_period = args.sma
 
-    sma = Shark.Plugins.SMA(ticker, sma_period)
+    sma = Shark.Plugins.GetSMA(ticker, sma_period)
     price = Shark.Plugins.GetPrice(ticker)
     
     if price > sma:
