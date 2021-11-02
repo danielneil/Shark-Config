@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-echo "Verifying Shark's config"
+echo "Verifying YAML"
 
 if [ ! `which yamllint` ]; then
   echo "Install yamllint please, exiting..."
@@ -16,5 +16,5 @@ if [ $? -ne 0  ]; then
  exit 1
 fi
 
-echo "Shark's YAML config looks OK..."
+echo "YAML config looks fine...."
 exit 0
