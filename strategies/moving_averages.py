@@ -29,10 +29,12 @@ if __name__ == "__main__":
     
     if price > sma:
 
-       buy_str = "Buy Opportunity! - " + str(shorter_sma_periods) + " day SMA($" + str(short_sma).rstrip() + ") is above " + str(longer_sma_periods) + " day SMA ($" + str(long_sma).rstrip() + ")"
-       print(buy_str)
+       alert_str = "BUY - Price $" + str(price) + " is above SMA(" + str(sma) + ")"
+       print(alert_str)
        sys.exit(CRITICAL)
-    
-    print("No Opportunity")
-
-    sys.exit(OK)
+   
+    else:
+       
+       alert_str = "SELL - Price $" + str(price) + " is below SMA(" + str(sma) + ")"
+       print(alert_str)
+       sys.exit(CRITICAL)
