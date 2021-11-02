@@ -6,16 +6,9 @@ import sys
 import subprocess
 import argparse
 
-# Nagios constants. 
+import Shark
 
-OK           = 0
-WARNING      = 1
-CRITICAL     = 2
-UNKNOWN      = 3
-
-cmd_arg_help = "Example strategy: Buy when the share price goes above the specified simple moving average period."
-
-strategy_name = "Moving Averages - Cross Over"
+cmd_arg_help = "Strategy: Moving Averages - Cross Over. Alert when the share price goes above/below the specified simple moving average period."
 
 if __name__ == "__main__":
 
