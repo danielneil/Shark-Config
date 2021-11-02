@@ -7,13 +7,13 @@ This is the demo configuration for the Shark Automated Trading Platform.
 # Check out the configuration for customisation.
 git clone http://<shark_server>/Shark-Config.git
 ```
-### Config File Structure
+### Config Structure
 ```
 trading-config.yml - Main configuration file.
 backtests/ - Back test code directory
 strategies/ - Strategy codde directory.
 ```
-### After applying configuration, commit it and then push back to the server as regular git use.
+### Upon making a new configuration, commit it and then push back to the server as per regular git usage.
 ```
 # Verify your changes first.
 ./bin/verify.sh
