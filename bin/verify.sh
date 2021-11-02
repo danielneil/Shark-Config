@@ -14,4 +14,5 @@ $XMLLINT trading-config.yml
 if [ $? -ne 0  ]; then
  echo "Invalid YAML, exiting..." && exit 1
 
-echo "Shark's YAML config looks OK..." && exit 0
+echo "Shark's YAML config looks OK..."
+exit 0
