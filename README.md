@@ -4,11 +4,12 @@ This is the demo configuration for the Shark Automated Trading Platform.
 
 Out of the box it comes with a sample configuration comprising of:
 
-* [Main configuration](https://github.com/danielneil/Shark-Config/blob/master/trading-config.yml) - CRYPTO TOP 20 (by Market Cap).
-    * name: yahoo_finance
-    * name: sma
-    * name: sma
-    * name: backtest 
+* [Main configuration](https://github.com/danielneil/Shark-Config/blob/master/trading-config.yml).
+    * The sample demostrates using various plugins against the CRYPTO TOP 20 (by Market Cap), namely: 
+        * name: yahoo_finance
+        * name: sma
+        * name: sma
+        * name: backtest 
  
 * [Sample Backtest code](https://github.com/danielneil/Shark-Config/blob/master/backtests/backtest_moving_averages.py) - Simple moving averages crossover.
 * [Sample Strategy code](https://github.com/danielneil/Shark-Config/blob/master/strategies/moving_averages.py) - Buy/sell when a simple moving averages cross over occurs.
