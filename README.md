@@ -4,9 +4,9 @@ This is the demo configuration for the Shark Automated Trading Platform.
 
 Out of the box it comes with a sample configuration comprising of:
 
-* Main configuration - CRYPTO TOP 20 (by Market Cap) - 
-* Sample Backtest code - simple moving averages crossover - 
-* Sample straregy code - buy/sell when a simple moving averages cross over occurs -
+* (Main configuration)[] - CRYPTO TOP 20 (by Market Cap).
+* (Sample Backtest code)[] - Simple moving averages crossover.
+* (Sample Straregy code)[] - Buy/sell when a simple moving averages cross over occurs.
 
 ### Configuration resides in a git repo on the Shark server
 ```
