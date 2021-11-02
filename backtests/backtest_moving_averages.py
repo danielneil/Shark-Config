@@ -93,6 +93,15 @@ class MovingAverages(strategy.BacktestingStrategy):
         self.__position.exitMarket()
 
     def onBars(self, bars):
+        
+        ###############################################################
+        # START - THIS IS BASICALLY THE CRUX OF THE BACKTEST'S LOGIC
+        
+        # IF WE ARE NOT IN A POSITION
+        # AND THE SHARE PRICE GOES ABOVE THE SMA(50) - BUY.
+        # IF WE ARE ALREADY IN A POSITION,
+        # AND THE SHARE PRICE GOES BELOW THE SMA(50) - SELL.
+        
         # If a position was not opened, check if we should enter a long position.
         if self.__position is None:
 
@@ -105,7 +114,9 @@ class MovingAverages(strategy.BacktestingStrategy):
         elif cross.cross_below(self.__prices, self.__sma) > 0 and not self.__position.exitActive():
             
             self.__position.exitMarket()
-
+            
+        # END - THIS IS BASICALLY THE CRUX OF THE BACKTEST'S LOGIC
+        ###############################################################
 
 def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
 
