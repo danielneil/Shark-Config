@@ -7,9 +7,9 @@ if [ ! `which yamllint` ]; then
   exit 1
 fi
 
-XMLLINT=`/usr/bin/yamllint`
+XMLLINT=`which yamllint`
 
-${XMLLINT} trading-config.yml  
+$XMLLINT ../trading-config.yml  
 
 if [ $? -ne 0  ]; then
  echo "Invalid YAML, exiting..." && exit 1
