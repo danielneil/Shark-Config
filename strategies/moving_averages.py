@@ -1,12 +1,8 @@
 #!/usr/bin/python
 
-import pandas as pd
-import datetime
-import sys
-import subprocess
 import argparse
-
 import Shark
+import sys
 
 cmd_arg_help = "Strategy: Moving Averages - Cross Over. Alert when the share price goes above/below the specified simple moving average period."
 
