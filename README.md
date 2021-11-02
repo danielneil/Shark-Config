@@ -3,26 +3,22 @@
 This is the demo configuration for the Shark Automated Trading Platform.
 
 ### Configuration resides in a git repo on the Shark server
-
 ```
 # Check out the configuration for customisation.
 git clone http://<shark_server>/Shark-Config.git
 ```
-
 ### Config File Structure
 ```
 trading-config.yml - Main configuration file.
 backtests/ - Back test code directory
 strategies/ - Strategy codde directory.
 ```
-
 ### After adding configurations, push it back to the server using regulat git.
 ```
 git add trading-config.yml backtests strategies
 git commit -m 'RSI2 Configuration, backtest and strategy code'
 git push
 ```
-
 ### Refresh the Shark server with your new configuration.
 ```
 ./bin/refresh.sh
