@@ -13,7 +13,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "Example strategy: Buy when the share price goes above 50 day simple moving average."
+cmd_arg_help = "Example strategy: Buy when the share price goes above the specified simple moving average period."
 
 strategy_name = "Moving Averages - Cross Over"
 
@@ -43,7 +43,7 @@ if __name__ == "__main__":
        buy_str = "Buy Opportunity! - " + str(shorter_sma_periods) + " day SMA($" + str(short_sma).rstrip() + ") is above " + str(longer_sma_periods) + " day SMA ($" + str(long_sma).rstrip() + ")"
        print(buy_str)
        sys.exit(CRITICAL)
-
+    
     print("No Opportunity")
 
     sys.exit(OK)
