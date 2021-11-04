@@ -98,9 +98,9 @@ class MovingAverages(strategy.BacktestingStrategy):
         # START - THIS IS BASICALLY THE CRUX OF THE BACKTEST'S LOGIC
         
         # IF WE ARE NOT IN A POSITION
-        # AND THE SHARE PRICE GOES ABOVE THE SMA(50) - BUY.
+        # AND THE SHARE PRICE GOES ABOVE THE SMA(smaPeriod) - BUY.
         # IF WE ARE ALREADY IN A POSITION,
-        # AND THE SHARE PRICE GOES BELOW THE SMA(50) - SELL.
+        # AND THE SHARE PRICE GOES BELOW THE SMA(smaPeriod) - SELL.
         
         # If a position was not opened, check if we should enter a long position.
         if self.__position is None:
