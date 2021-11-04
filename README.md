@@ -21,9 +21,10 @@ git clone http://<shark_server>/Shark-Config.git
 ```
 ### Config Structure
 ```
-trading-config.yml - Main configuration file.
-backtests/ - Back test code directory.
-strategies/ - Strategy code directory.
+trading-config.yml - Main configuration file, see sample.
+backtests/ - Backtest code directory, see sample.
+strategies/ - Strategy code directory, see sample.
+bin/ - You have no power here (do not touch)
 ```
 ### Upon making a new configuration, commit it and then push back to the server as per regular git usage.
 ```
