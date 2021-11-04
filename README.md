@@ -24,13 +24,9 @@ git clone http://<shark_server>/Shark-Config.git
 trading-config.yml - Main configuration file.
 backtests/ - Back test code directory.
 strategies/ - Strategy code directory.
-bin/ - You have no power here.
 ```
 ### Upon making a new configuration, commit it and then push back to the server as per regular git usage.
 ```
-# Verify your changes first.
-./bin/verify.sh
-
 git add trading-config.yml backtests strategies
 git commit -m 'RSI2 Configuration, backtest and strategy code'
 git push
