@@ -38,7 +38,7 @@ strategy_name = "Moving Averages Crossover Backtest"
 
 class MovingAverages(strategy.BacktestingStrategy):
 
-    def __init__(self, feed, instrument, shares, capital, smaPeriod, tradeLog):
+    def __init__(self, feed, instrument, shares, capital, smaPeriod, tradeLog, dataFile):
 
         super(MovingAverages, self).__init__(feed, capital)
 
@@ -125,7 +125,7 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
 
     # Load the bar feed from the CSV file
     feed = yahoofeed.Feed()
-    feed.addBarsFromCSV(ticker, "/shark/ticker-data/"+ticker+".AX.txt")
+    feed.addBarsFromCSV(ticker, dataFile)
 
     # Create a dict to store the trade log.
     tradeLog = []
@@ -197,6 +197,7 @@ if __name__ == "__main__":
     parser.add_argument("-s", "--shares", help="The number of imaginary shares to purchase.")
     parser.add_argument("-c", "--capital", help="The imaginary amount of capital available (in dollars).")
     parser.add_argument("-n", "--noreport", help="Do not generate the back test report", action="store_false", default=True)
+    parser.add_argument("-n", "--datafile", help="The fully qualified path to the historical CSV file", action="store_false", default=True)
     
     args = parser.parse_args()
 
@@ -215,7 +216,8 @@ if __name__ == "__main__":
     ticker = args.ticker 
     shares = int(args.shares)
     capital = int(args.capital)
+    dataFile = args.datafile
     
     smaPeriod = 50
 
-    run_strategy(ticker, shares, capital, smaPeriod, args.noreport)
+    run_strategy(ticker, shares, capital, smaPeriod, args.noreport, dataFile)
