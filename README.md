@@ -66,9 +66,10 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
 - instrument: BTC
   group: B
   plugin:
-  - name: yf_historical
-    desc: "Yahoo Finance [ Download of BTC Historical Data File ]"
-    group: "Yahoo Finance [ Historical Data ]"
+  - name: data
+    provider: coinbase-pro
+    desc: "Coinbase-Pro [ Download of BTC Historical Data File ]"
+    group: "Coinbase-Pro [ Historical Data ]"
     instrument: BTC
     start_date: 1597479263
     end_date: 1629015263
