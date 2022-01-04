@@ -34,7 +34,7 @@ git push
 ```
 ### Reload the Shark server with your new configuration.
 ```
-./bin/reload-config.sh
+cd bin && ./reload-config.sh
 ```
 ### Main configuration file - trading-config.yml
 
