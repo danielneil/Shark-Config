@@ -19,7 +19,7 @@ Out of the box it comes with a sample configuration comprising of:
 # Check out the configuration.
 git clone http://<shark_server>/
 ```
-### Config Structure
+### Config Directory Structure
 ```
 trading-config.yml - Main configuration file, see sample.
 backtests/ - Backtest code directory, see sample.
