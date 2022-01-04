@@ -4,7 +4,7 @@ This is the demo configuration for the Shark Automated Trading Platform.
 
 Out of the box it comes with a sample configuration comprising of:
 
-* [Main configuration](https://github.com/danielneil/Shark-Config/blob/master/trading-config.yml).
+* [Sample Main configuration](https://github.com/danielneil/Shark-Config/blob/master/trading-config.yml).
     * The sample demostrates using various Shark plugins against the CRYPTO TOP 20 (by Market Cap), namely: 
         * data - Downloads and imports yahoo finance historical data into Shark.
         * sma - Alerts to various simple moving average (sma) specifics.
