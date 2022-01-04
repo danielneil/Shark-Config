@@ -4,7 +4,7 @@ This is the demo configuration for the Shark Automated Trading Platform.
 
 Out of the box it comes with a sample configuration comprising of:
 
-* [Sample Main configuration](https://github.com/danielneil/Shark-Config/blob/master/trading-config.yml).
+* [Sample configuration](https://github.com/danielneil/Shark-Config/blob/master/trading-config.yml).
     * The sample demostrates using various Shark plugins against the CRYPTO TOP 20 (by Market Cap), namely: 
         * data - Downloads and imports yahoo finance historical data into Shark.
         * sma - Alerts to various simple moving average (sma) specifics.
@@ -21,9 +21,9 @@ git clone http://<shark_server>/
 ```
 ### Config Directory Structure
 ```
-trading-config.yml - Main configuration file, see sample.
-backtests/ - Backtest code directory, see sample.
-strategies/ - Strategy code directory, see sample.
+trading-config.yml - Main configuration file, see sample above.
+backtests/ - Backtest code directory, see sample above.
+strategies/ - Strategy code directory, see sample above.
 bin/ - You have no power here (do not touch)
 ```
 ### Upon making a new configuration, git commit it and then git push back to the Shark server.
