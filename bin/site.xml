@@ -4,4 +4,4 @@
   become: true
 
   roles:
-   - reload-config
+   - config
