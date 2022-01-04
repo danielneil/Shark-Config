@@ -5,4 +5,4 @@ if ! $(which /usr/bin/ansible); then
  exit 1;
 fi
 
-ansible-playbook refresh_config/
+ansible-playbook site.yml -i hosts
