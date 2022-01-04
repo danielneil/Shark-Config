@@ -1,0 +1,7 @@
+---
+- name: Reloading shark configuration
+  hosts: shark_server
+  become: true
+
+  roles:
+   - reload-config
