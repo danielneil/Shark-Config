@@ -6,7 +6,7 @@ Out of the box it comes with a sample configuration comprising of:
 
 * [Main configuration](https://github.com/danielneil/Shark-Config/blob/master/trading-config.yml).
     * The sample demostrates using various Shark plugins against the CRYPTO TOP 20 (by Market Cap), namely: 
-        * data - Imports  Coinbase Pro historical data into Shark.
+        * data - Downloads and imports yahoo finance historical data into Shark.
         * sma - Alerts to various simple moving average (sma) specifics.
         * strategy - Demostrates a simple moving averages cross over buy/sell strategy. 
         * backtest - Demostrates the use of a simple back test associated with the above.  
