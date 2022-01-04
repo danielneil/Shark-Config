@@ -5,4 +5,4 @@ if ! $(which ansible-playbook > /dev/null); then
  exit 1;
 fi
 
-ansible-playbook ./site.yml 
+ansible-playbook ./site.yml -i ./hosts
