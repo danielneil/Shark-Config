@@ -32,14 +32,13 @@ git add trading-config.yml backtests strategies
 git commit -m 'DEMO Configuration, RSI2 backtest and strategy code'
 git push
 ```
-### Refresh the Shark server with your new configuration.
+### Reload the Shark server with your new configuration.
 ```
-./bin/refresh.sh
+./bin/reload-config.sh
 ```
 ### Main configuration file - trading-config.yml
 
 The structure of the file is important (being yaml).
-
 
 ```yaml
 ---
