@@ -29,7 +29,7 @@ bin/ - You have no power here (do not touch)
 ### Upon making a new configuration, commit it and then push back to the server as per regular git usage.
 ```
 git add trading-config.yml backtests strategies
-git commit -m 'RSI2 Configuration, backtest and strategy code'
+git commit -m 'DEMO Configuration, RSI2 backtest and strategy code'
 git push
 ```
 ### Refresh the Shark server with your new configuration.
