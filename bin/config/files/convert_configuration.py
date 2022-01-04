@@ -28,7 +28,7 @@ def process_instrument_config(i_data):
     group = i_data['group']
 
     hosts.Add("\ndefine host {\n")
-    hosts.Add("\tuse generic-host\n")
+    hosts.Add("\tuse instrument\n")
     hosts.Add("\thost_name " + instrument + "\n")
     hosts.Add("\thostgroups " + group + "\n")
     hosts.Add("\taddress 127.0.0.1" + "\n")
