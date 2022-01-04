@@ -26,7 +26,7 @@ backtests/ - Backtest code directory, see sample.
 strategies/ - Strategy code directory, see sample.
 bin/ - You have no power here (do not touch)
 ```
-### Upon making a new configuration, commit it and then push back to the server as per regular git usage.
+### Upon making a new configuration, git commit it and then git push back to the Shark server.
 ```
 git add trading-config.yml backtests strategies
 git commit -m 'DEMO Configuration, RSI2 backtest and strategy code'
