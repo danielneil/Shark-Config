@@ -15,7 +15,7 @@ Out of the box it comes with sample configuration comprising of:
 ### Configuration resides in a git repo on the Shark server
 ```
 # Check out the configuration.
-git clone http://<shark_server>/
+git clone http://<shark_server>/Shark-Config
 ```
 ### Config Directory Structure
 ```
