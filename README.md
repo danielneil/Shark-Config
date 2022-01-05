@@ -66,7 +66,7 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ BTC Historical Data ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: BTC
+    ticker: BTC
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -75,17 +75,17 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: BTC
+    ticker: BTC
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: BTC
+    ticker: BTC
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: AMC
+    ticker: AMC
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
