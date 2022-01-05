@@ -3,7 +3,7 @@
   group: B
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of BTC Historical Data File ]"
+    desc: "Yahoo Finance [ BTC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: BTC
     start_date: 1597479263
@@ -32,7 +32,7 @@
   group: E
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of ETH Historical Data File ]"
+    desc: "Yahoo Finance [ ETH Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: ETH
     start_date: 1597479263
@@ -61,7 +61,7 @@
   group: B
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of BNB Historical Data File ]"
+    desc: "Yahoo Finance [ BNB Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: BNB
     start_date: 1597479263
@@ -90,7 +90,7 @@
   group: U
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of USDT Historical Data File ]"
+    desc: "Yahoo Finance [ USDT Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: USDT
     start_date: 1597479263
@@ -119,7 +119,7 @@
   group: A
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of ADA Historical Data File ]"
+    desc: "Yahoo Finance [ ADA Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: ADA
     start_date: 1597479263
@@ -148,7 +148,7 @@
   group: X
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of XRP Historical Data File ]"
+    desc: "Yahoo Finance [ XRP Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: XRP
     start_date: 1597479263
@@ -177,7 +177,7 @@
   group: D
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of DOGE Historical Data File ]"
+    desc: "Yahoo Finance [ DOGE Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: DOGE
     start_date: 1597479263
@@ -206,7 +206,7 @@
   group: U
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of USDC Historical Data File ]"
+    desc: "Yahoo Finance [ USDC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: USDC
     start_date: 1597479263
@@ -235,7 +235,7 @@
   group: D
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of DOT Historical Data File ]"
+    desc: "Yahoo Finance [ DOT Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: DOT
     start_date: 1597479263
@@ -264,7 +264,7 @@
   group: S
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of SOL Historical Data File ]"
+    desc: "Yahoo Finance [ SOL Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: SOL
     start_date: 1597479263
@@ -293,7 +293,7 @@
   group: U
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of UNI Historical Data File ]"
+    desc: "Yahoo Finance [ UNI Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: UNI
     start_date: 1597479263
@@ -322,7 +322,7 @@
   group: B
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of BCH Historical Data File ]"
+    desc: "Yahoo Finance [ BCH Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: BCH
     start_date: 1597479263
@@ -351,7 +351,7 @@
   group: B
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of BUSD Historical Data File ]"
+    desc: "Yahoo Finance [ BUSD Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: BUSD
     start_date: 1597479263
@@ -380,7 +380,7 @@
   group: L
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of LINK Historical Data File ]"
+    desc: "Yahoo Finance [ LINK Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: LINK
     start_date: 1597479263
@@ -409,7 +409,7 @@
   group: L
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of LTC Historical Data File ]"
+    desc: "Yahoo Finance [ LTC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: LTC
     start_date: 1597479263
@@ -438,7 +438,7 @@
   group: L
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of LTC Historical Data File ]"
+    desc: "Yahoo Finance [ LTC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: LUNA
     start_date: 1597479263
@@ -467,7 +467,7 @@
   group: W
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of WBTC Historical Data File ]"
+    desc: "Yahoo Finance [ WBTC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: WBTC
     start_date: 1597479263
@@ -496,7 +496,7 @@
   group: M
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of MATIC Historical Data File ]"
+    desc: "Yahoo Finance [ MATIC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: MATIC
     start_date: 1597479263
@@ -525,7 +525,7 @@
   group: E
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of ETC Historical Data File ]"
+    desc: "Yahoo Finance [ ETC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: ETC
     start_date: 1597479263
@@ -554,7 +554,7 @@
   group: X
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of XLM Historical Data File ]"
+    desc: "Yahoo Finance [ XLM Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: XLM
     start_date: 1597479263
