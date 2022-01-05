@@ -2,10 +2,9 @@
 - instrument: BTC
   group: B
   plugin:
-  - name: data
-    provider: coinbase-pro
-    desc: "Coinbase-Pro [ Download of BTC Historical Data File ]"
-    group: "Coinbase-Pro [ Historical Data ]"
+  - name: yahoo_finance_data
+    desc: "Yahoo Finance [ Download of BTC Historical Data File ]"
+    group: "Yahoo Finance [ Historical Data ]"
     instrument: BTC
     start_date: 1597479263
     end_date: 1629015263
