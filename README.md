@@ -1,8 +1,8 @@
 # Shark-Config
 
-This is the demo configuration for the Shark Algorithmic Trading Platform.
+This is the demo configuration for the Shark algorithmic trading platform.
 
-Out of the box it comes with sample configuration comprising of:
+Out of the box it comes with configuration comprising of:
 
 * [Sample configuration](https://github.com/danielneil/Shark-Config/blob/master/trading-config.yml).
     * The sample demostrates using various Shark plugins against the CRYPTO TOP 20 (by Market Cap), namely: 
