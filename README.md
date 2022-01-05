@@ -64,7 +64,7 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
   group: B
   plugin:
   - name: yahoo_finance_data
-    desc: "Yahoo Finance [ Download of BTC Historical Data ]"
+    desc: "Yahoo Finance [ BTC Historical Data ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: BTC
     start_date: 1597479263
