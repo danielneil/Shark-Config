@@ -59,7 +59,7 @@ def process_plugin_config(p_data, instrument):
                 serviceGroups.append(str(argValue))
                 serv_grp = str(argValue)
             elif argName == "name":
-                cmd_name = "check_" + argValue
+                cmd_name = argValue
             elif argName == "desc":
                 cmd_desc = argValue
             else:
