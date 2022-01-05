@@ -1,6 +1,6 @@
 # Shark-Config
 
-This is the demo configuration for the Shark Automated Trading Platform.
+This is the demo configuration for the Shark Algorithmic Trading Platform.
 
 Out of the box it comes with sample configuration comprising of:
 
