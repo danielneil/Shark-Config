@@ -63,8 +63,7 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
 - instrument: BTC
   group: B
   plugin:
-  - name: data
-    provider: yahoo_finance
+  - name: yahoo_finance_data
     desc: "Yahoo Finance [ Download of BTC Historical Data ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: BTC
