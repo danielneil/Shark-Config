@@ -46,7 +46,7 @@ The structure of the file is important (being yaml).
   - name: <name_of_plugin>
     desc: <description to appear on UI>
     group: <ui grouping of plugin>
-    instrument: <instrument>
+    ticker: <instrument>
     <arg> : <arg
     <arg> : <arg>
     <arg> : <arg>
