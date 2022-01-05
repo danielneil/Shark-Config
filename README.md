@@ -2,7 +2,7 @@
 
 This is the demo configuration for the Shark Automated Trading Platform.
 
-Out of the box it comes with a sample configuration comprising of:
+Out of the box it comes with sample configuration comprising of:
 
 * [Sample configuration](https://github.com/danielneil/Shark-Config/blob/master/trading-config.yml).
     * The sample demostrates using various Shark plugins against the CRYPTO TOP 20 (by Market Cap), namely: 
