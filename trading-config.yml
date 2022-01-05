@@ -5,7 +5,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ BTC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: BTC
+    ticker: BTC
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -14,17 +14,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: BTC
+    ticker: BTC
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: BTC
+    ticker: BTC
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: AMC
+    ticker: AMC
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -34,7 +34,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ ETH Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: ETH
+    ticker: ETH
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -43,17 +43,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: ETH
+    ticker: ETH
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: ETH
+    ticker: ETH
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: ETH
+    ticker: ETH
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -63,7 +63,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ BNB Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: BNB
+    ticker: BNB
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -72,17 +72,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: BNB
+    ticker: BNB
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: BNB
+    ticker: BNB
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: BNB
+    ticker: BNB
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -92,7 +92,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ USDT Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: USDT
+    ticker: USDT
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -101,17 +101,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: USDT
+    ticker: USDT
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: USDT
+    ticker: USDT
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: USDT
+    ticker: USDT
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -121,7 +121,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ ADA Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: ADA
+    ticker: ADA
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -130,17 +130,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: ADA
+    ticker: ADA
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: ADA
+    ticker: ADA
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: ADA
+    ticker: ADA
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -150,7 +150,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ XRP Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: XRP
+    ticker: XRP
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -159,17 +159,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: XRP
+    ticker: XRP
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: XRP
+    ticker: XRP
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: XRP
+    ticker: XRP
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -179,7 +179,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ DOGE Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: DOGE
+    ticker: DOGE
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -188,17 +188,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: DOGE
+    ticker: DOGE
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: DOGE
+    ticker: DOGE
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: DOGE
+    ticker: DOGE
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -208,7 +208,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ USDC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: USDC
+    ticker: USDC
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -217,7 +217,7 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: USDC
+    ticker: USDC
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
@@ -227,7 +227,7 @@
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: USDC
+    ticker: USDC
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -237,7 +237,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ DOT Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: DOT
+    ticker: DOT
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -246,17 +246,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: DOT
+    ticker: DOT
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: DOT
+    ticker: DOT
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: DOT
+    ticker: DOT
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -266,7 +266,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ SOL Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: SOL
+    ticker: SOL
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -275,17 +275,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: SOL
+    ticker: SOL
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: SOL
+    ticker: SOL
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: SOL
+    ticker: SOL
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -295,7 +295,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ UNI Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: UNI
+    ticker: UNI
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -304,17 +304,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: UNI
+    ticker: UNI
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: UNI
+    ticker: UNI
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: UNI
+    ticker: UNI
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -324,7 +324,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ BCH Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: BCH
+    ticker: BCH
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -333,7 +333,7 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: BCH
+    ticker: BCH
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
@@ -343,7 +343,7 @@
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: BCH
+    ticker: BCH
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -353,7 +353,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ BUSD Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: BUSD
+    ticker: BUSD
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -362,12 +362,12 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: BUSD
+    ticker: BUSD
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: BUSD
+    ticker: BUSD
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
@@ -382,7 +382,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ LINK Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: LINK
+    ticker: LINK
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -391,17 +391,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: LINK
+    ticker: LINK
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: LINK
+    ticker: LINK
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: LINK
+    ticker: LINK
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -411,7 +411,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ LTC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: LTC
+    ticker: LTC
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -420,17 +420,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: LTC
+    ticker: LTC
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: LTC
+    ticker: LTC
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: LTC
+    ticker: LTC
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -449,17 +449,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: LUNA
+    ticker: LUNA
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: LUNA
+    ticker: LUNA
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: LUNA
+    ticker: LUNA
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -469,7 +469,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ WBTC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: WBTC
+    ticker: WBTC
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -478,7 +478,7 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: WBTC
+    ticker: WBTC
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
@@ -488,7 +488,7 @@
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: WBTC
+    ticker: WBTC
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -507,17 +507,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: MATIC
+    ticker: MATIC
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: MATIC
+    ticker: MATIC
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: MATIC
+    ticker: MATIC
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -527,7 +527,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ ETC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: ETC
+    ticker: ETC
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -536,17 +536,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: ETC
+    ticker: ETC
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: ETC
+    ticker: ETC
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: ETC
+    ticker: ETC
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
@@ -556,7 +556,7 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ XLM Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    instrument: XLM
+    ticker: XLM
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
@@ -565,17 +565,17 @@
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    instrument: XLM
+    ticker: XLM
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: XLM
+    ticker: XLM
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    instrument: XLM
+    ticker: XLM
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
