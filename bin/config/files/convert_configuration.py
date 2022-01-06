@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Process the yaml configuration file, so we can regenerate it into something nagios understands.
+# Process the yaml configuration file, so we can regenerate it into native Nagios configuration.
 
 import yaml
 
