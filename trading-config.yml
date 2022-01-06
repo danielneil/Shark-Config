@@ -6,8 +6,8 @@
     desc: "Yahoo Finance [ BTC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: BTC
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -35,8 +35,8 @@
     desc: "Yahoo Finance [ ETH Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: ETH
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -64,8 +64,8 @@
     desc: "Yahoo Finance [ BNB Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: BNB
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -93,8 +93,8 @@
     desc: "Yahoo Finance [ USDT Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: USDT
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -122,8 +122,8 @@
     desc: "Yahoo Finance [ ADA Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: ADA
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -151,8 +151,8 @@
     desc: "Yahoo Finance [ XRP Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: XRP
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -180,8 +180,8 @@
     desc: "Yahoo Finance [ DOGE Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: DOGE
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -209,8 +209,8 @@
     desc: "Yahoo Finance [ USDC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: USDC
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -238,8 +238,8 @@
     desc: "Yahoo Finance [ DOT Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: DOT
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -267,8 +267,8 @@
     desc: "Yahoo Finance [ SOL Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: SOL
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -296,8 +296,8 @@
     desc: "Yahoo Finance [ UNI Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: UNI
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -325,8 +325,8 @@
     desc: "Yahoo Finance [ BCH Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: BCH
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -354,8 +354,8 @@
     desc: "Yahoo Finance [ BUSD Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: BUSD
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -383,8 +383,8 @@
     desc: "Yahoo Finance [ LINK Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: LINK
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -412,8 +412,8 @@
     desc: "Yahoo Finance [ LTC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: LTC
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -441,8 +441,8 @@
     desc: "Yahoo Finance [ LTC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: LUNA
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -470,8 +470,8 @@
     desc: "Yahoo Finance [ WBTC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: WBTC
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -499,8 +499,8 @@
     desc: "Yahoo Finance [ MATIC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     instrument: MATIC
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -528,8 +528,8 @@
     desc: "Yahoo Finance [ ETC Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: ETC
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
@@ -557,8 +557,8 @@
     desc: "Yahoo Finance [ XLM Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
     ticker: XLM
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
