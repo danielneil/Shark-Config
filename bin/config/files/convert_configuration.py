@@ -64,7 +64,7 @@ def process_plugin_config(p_data, instrument):
                 cmd_desc = argValue
             else:
                 arg_str = "!" + str(argValue)
-                cmd_args.Add(arg_str )
+                cmd_args.Add(arg_str)
 
         services.Add("\thost_name " + instrument + "\n")
         services.Add("\tservice_description " + cmd_desc + "\n")
