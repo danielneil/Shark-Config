@@ -66,8 +66,8 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ BTC Historical Data ]"
     group: "Yahoo Finance [ Historical Data ]"
-    start_date: 1597479263
-    end_date: 1629015263
+    period1: 1597479263
+    period2: 1629015263
     interval: 1d
     adjusted_close: true
     frequency: daily
