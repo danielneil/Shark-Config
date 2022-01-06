@@ -68,7 +68,7 @@ def process_plugin_config(p_data, instrument):
 
         services.Add("\thost_name " + instrument + "\n")
         services.Add("\tservice_description " + cmd_desc + "\n")
-        services.Add("\tcheck_command " + instrument + "!" + str(cmd_args) + "\n")
+        services.Add("\tcheck_command " + cmd_name + "!" + str(instrument) + str(cmd_args) + "\n")
         services.Add("\tservicegroups " + serv_grp + "\n")
         services.Add("}\n")
 
