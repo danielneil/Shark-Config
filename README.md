@@ -70,7 +70,6 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
     period2: 1629015263
     interval: 1d
     adjusted_close: true
-    frequency: daily
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
