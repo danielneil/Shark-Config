@@ -66,7 +66,6 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ BTC Historical Data ]"
     group: "Yahoo Finance [ Historical Data ]"
-    ticker: BTC
     start_date: 1597479263
     end_date: 1629015263
     interval: 1d
