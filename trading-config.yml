@@ -8,7 +8,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -35,7 +35,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -62,7 +62,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -89,7 +89,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -116,7 +116,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -143,7 +143,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -170,7 +170,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -197,7 +197,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -224,7 +224,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -251,7 +251,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -278,7 +278,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -305,7 +305,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -332,7 +332,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -359,7 +359,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -386,7 +386,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -413,7 +413,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -440,7 +440,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -467,7 +467,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -494,7 +494,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
@@ -521,7 +521,7 @@
     period1: 1597479263
     period2: 1629015263
     interval: 1d
-    adjusted_close: true
+    includeAdjustedClose: true
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
