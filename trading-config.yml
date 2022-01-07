@@ -14,11 +14,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: BTC-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: BTC-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -26,6 +28,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: ETH-USD
   group: E
   plugin:
@@ -41,11 +44,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: ETH-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: ETH-USD
     period: 5
+    data_provider: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -53,6 +58,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: BNB-USD
   group: B
   plugin:
@@ -68,11 +74,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: BNB-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: BNB-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -80,6 +88,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: USDT-USD
   group: U
   plugin:
@@ -95,11 +104,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: USDT-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: USDT-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -107,6 +118,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: ADA-USD
   group: A
   plugin:
@@ -122,11 +134,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: ADA-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: ADA-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -134,6 +148,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: XRP-USD
   group: X
   plugin:
@@ -149,11 +164,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: XRP-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: XRP-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -161,6 +178,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: DOGE-USD
   group: D
   plugin:
@@ -176,11 +194,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: DOGE-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: DOGE-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -188,6 +208,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: USDC-USD
   group: U
   plugin:
@@ -203,11 +224,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: USDC-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     instrument: USDC-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -215,6 +238,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: DOT-USD
   group: D
   plugin:
@@ -230,11 +254,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: DOT-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: DOT-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -242,6 +268,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: SOL-USD
   group: S
   plugin:
@@ -257,11 +284,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: SOL-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: SOL-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -269,6 +298,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: UNI1-USD
   group: U
   plugin:
@@ -284,11 +314,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: UNI1-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: UNI1-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -296,6 +328,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: BCH-USD
   group: B
   plugin:
@@ -311,11 +344,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: BCH-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     instrument: BCH-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -323,6 +358,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: BUSD-USD
   group: B
   plugin:
@@ -338,11 +374,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: BUSD-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: BUSD-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -350,6 +388,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: LINK-USD
   group: L
   plugin:
@@ -365,11 +404,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: LINK-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: LINK-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -377,6 +418,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: LTC-USD
   group: L
   plugin:
@@ -392,11 +434,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: LTC-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: LTC-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -404,6 +448,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: LUNA1-USD
   group: L
   plugin:
@@ -419,11 +464,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: LUNA1-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: LUNA1-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -431,6 +478,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: WBTC-USD
   group: W
   plugin:
@@ -446,11 +494,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: WBTC-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     instrument: WBTC
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -458,6 +508,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: MATIC-USD
   group: M
   plugin:
@@ -473,11 +524,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: MATIC-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: MATIC-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -485,6 +538,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: ETC-USD
   group: E
   plugin:
@@ -500,11 +554,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: ETC-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: ETC-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -512,6 +568,7 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
 - instrument: XLM-USD
   group: X
   plugin:
@@ -527,11 +584,13 @@
     group: "SMA: [ 50 Day ]"
     ticker: XLM-USD
     period: 50
+    data_format: yahoo_finance_data
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
     ticker: XLM-USD
     period: 5
+    data_format: yahoo_finance_data
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
@@ -539,3 +598,4 @@
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
+    data_format: yahoo_finance_data
