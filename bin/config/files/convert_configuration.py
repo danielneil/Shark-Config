@@ -85,7 +85,7 @@ def process_plugin_config(p_data, instrument):
 
             with open(scriptFile, "w") as f:
                 
-                f.write("--ticker=" + str(instrument) + " " + str(backtest_cmd_args))
+                f.write("--ticker=" + str(instrument) + " " + str(backtest_cmd_args) + "\n")
 
             services.Add("\tcheck_command " + cmd_name + "!" + backtestFileName + "!" + scriptFile + "\n")
 
