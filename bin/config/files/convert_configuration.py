@@ -86,7 +86,6 @@ def process_plugin_config(p_data, instrument):
             with open(scriptFile, "w") as f:
                 
 		f.write("--ticker=" + str(instrument) + "\n")
-		
 		splits = str(backtest_cmd_args).split()
                 
 		for btarg in splits:
