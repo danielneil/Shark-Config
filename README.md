@@ -46,7 +46,6 @@ The structure of the file is important (being yaml).
   - name: <name_of_plugin>
     desc: <description to appear on UI>
     group: <ui grouping of plugin>
-    ticker: <instrument>
     <arg> : <arg
     <arg> : <arg>
     <arg> : <arg>
@@ -73,17 +72,14 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
   - name: sma
     desc: "Simple Moving Average - 50 Days"
     group: "SMA: [ 50 Day ]"
-    ticker: BTC
     period: 50
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    ticker: BTC
     period: 5
   - name: backtest
     desc: "BACKTEST: [ Moving Averages ]"
     group: "Backtesting"
-    ticker: AMC
     file: backtest_moving_averages.py
     shares: 1000
     capital: 100000
