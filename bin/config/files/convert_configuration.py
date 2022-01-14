@@ -24,20 +24,20 @@ class StringBuilder:
 # Master process loop
 def process_instrument_config(i_data):
 
-    instrument = i_data['instrument']
-    group = i_data['group']
+	instrument = i_data['instrument']
+	group = i_data['group']
 
-    hosts.Add("\ndefine host {\n")
-    hosts.Add("\tuse instrument\n")
-    hosts.Add("\thost_name " + instrument + "\n")
-    hosts.Add("\thostgroups " + group + "\n")
-    hosts.Add("\taddress 127.0.0.1" + "\n")
-    hosts.Add("}\n")
+	hosts.Add("\ndefine host {\n")
+	hosts.Add("\tuse instrument\n")
+	hosts.Add("\thost_name " + instrument + "\n")
+	hosts.Add("\thostgroups " + group + "\n")
+	hosts.Add("\taddress 127.0.0.1" + "\n")
+	hosts.Add("}\n")
 
-    hostGroups.append(str(group))
+	hostGroups.append(str(group))
 
-    # Process the list of plugins,
-    process_plugin_config(i_data['plugin'], instrument)
+	# Process the list of plugins,
+	process_plugin_config(i_data['plugin'], instrument)
 
 ##############################################################    
 # Process the plugins
