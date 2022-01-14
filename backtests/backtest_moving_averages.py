@@ -29,7 +29,6 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-cmd_arg_help = "Example Backtest: Buy when a moving average cross above occurs, sell when a cross below happens."
 strategy_name = "Moving Averages Crossover Backtest"
 
 class MovingAverages(strategy.BacktestingStrategy):
@@ -197,7 +196,7 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports, strat_nam
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description=cmd_arg_help)
+    parser = argparse.ArgumentParser(fromfile_prefix_chars='@')
     
     parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the backtest against.")
     parser.add_argument("-s", "--shares", help="The number of imaginary shares to purchase.")
