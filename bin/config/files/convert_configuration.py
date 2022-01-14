@@ -72,9 +72,8 @@ def process_plugin_config(p_data, instrument):
                 
                     if argName == "file":
                         backtestFileName = argValue
-                else:
-                    
-                    backtest_cmd_args.Add("--" + argName + "=" + str(argValue) + " ")     
+                    else:
+                        backtest_cmd_args.Add("--" + argName + "=" + str(argValue) + " ")     
 
         services.Add("\thost_name " + instrument + "\n")
         services.Add("\tservice_description " + cmd_desc + "\n")
@@ -86,7 +85,7 @@ def process_plugin_config(p_data, instrument):
 
             with open(scriptFile, "w") as f:
                 
-                f.write(str(backtest_cmd_args) + "\n")
+                f.write(str(backtest_cmd_args))
 
             services.Add("\tcheck_command " + cmd_name + "!" + backtestFileName + "!" + scriptFile + "\n")
 
