@@ -79,7 +79,8 @@ def process_plugin_config(p_data, instrument):
             scriptFile = "/shark/.tmp/backtest.scriptFile." + str(instrument)
 
             with open(scriptFile, "w") as f:
-                f.write(str("[backtest_args]")
+                
+                f.write(str("[backtest_args]"))
                 f.write(str(backtest_cmd_args) + "\n")
 
             services.Add("\tcheck_command " + cmd_name + "!" + scriptFile)
