@@ -90,7 +90,8 @@ class MovingAverages(strategy.BacktestingStrategy):
             
         # END - THIS IS BASICALLY THE CRUX OF THE BACKTEST'S LOGIC
         ###############################################################
-def run_strategy(ticker, shares, capital, period, dataFile)
+        
+def run_strategy(ticker, shares, capital, period, dataFile):
 
     # Load the bar feed from the CSV file
     feed = yahoofeed.Feed()
