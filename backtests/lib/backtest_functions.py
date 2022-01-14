@@ -4,7 +4,7 @@ import subprocess
 
 def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken, strategy_name, nubmerOfBars):
 
-  with open("/shark/backtest/html/" + ticker + ".html", 'w') as htmlFile:
+  with open("/shark/report/" + ticker + ".html", 'w') as htmlFile:
 
         htmlFile.write("<html>")
         htmlFile.write("<head>")
@@ -12,19 +12,10 @@ def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAn
         htmlFile.write("</head>")
         htmlFile.write("<body>")
         htmlFile.write("<h1>Backtest Performance - "+ticker+"</h1><hr />") 
-
-        now = datetime.datetime.now()
-        generationTime = now.strftime("%H:%M:%S (%Y-%m-%d)")
-
-        htmlFile.write("<p><span class='bold'>Date generated:</span> " + generationTime + "</p>")
+        
         htmlFile.write("<p><span class='bold'>Strategy name:</span> " + strategy_name + "</p>")
         htmlFile.write("<p><span class='bold'>Bars:</span> " + str(nubmerOfBars) + "</p>")
-        htmlFile.write("<p><span class='bold'>CPU time:</span> " + str(time_taken) + " seconds.</p><hr/>")
-
-        # Only show the transaction log if transactions exist. 
-        if tradesAnalyzer.getCount():
-            htmlFile.write("<a href = '/shark/backtest/html/" + ticker + ".transaction.html'>Transaction Log (" + str(tradesAnalyzer.getCount()) + " items)</a>")
-        
+       
         htmlFile.write("<br />")
         htmlFile.write("<br />")
         htmlFile.write("<table border=1 style='width: 800px'>")
@@ -42,8 +33,6 @@ def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAn
         htmlFile.write("<tr><td style='text-align: right'>Losses:</td><td>%d</td></tr>" % (tradesAnalyzer.getUnprofitableCount()))
         htmlFile.write("</table>")
         htmlFile.write("<br />")
-
-        htmlFile.write("<img src = '/shark/backtest/images/" + ticker + ".png' />")
 
         if tradesAnalyzer.getCount() > 0:
 
