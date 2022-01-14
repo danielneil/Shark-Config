@@ -314,7 +314,6 @@
   - name: sma
     desc: "Simple Moving Average - 5 Days"
     group: "SMA: [ 5 Day ]"
-    instrument: BCH-USD
     period: 5
     data_format: yahoo_finance_data
   - name: backtest
