@@ -26,6 +26,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: ETH-USD
   group: E
   plugin:
@@ -53,6 +54,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: BNB-USD
   group: B
   plugin:
@@ -80,6 +82,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: USDT-USD
   group: U
   plugin:
@@ -107,6 +110,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: ADA-USD
   group: A
   plugin:
@@ -134,6 +138,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: XRP-USD
   group: X
   plugin:
@@ -161,6 +166,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: DOGE-USD
   group: D
   plugin:
@@ -188,6 +194,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: USDC-USD
   group: U
   plugin:
@@ -215,6 +222,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: DOT-USD
   group: D
   plugin:
@@ -242,6 +250,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: SOL-USD
   group: S
   plugin:
@@ -269,6 +278,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: UNI1-USD
   group: U
   plugin:
@@ -296,6 +306,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: BCH-USD
   group: B
   plugin:
@@ -323,6 +334,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: BUSD-USD
   group: B
   plugin:
@@ -350,6 +362,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: LINK-USD
   group: L
   plugin:
@@ -377,6 +390,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: LTC-USD
   group: L
   plugin:
@@ -404,6 +418,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: LUNA1-USD
   group: L
   plugin:
@@ -431,6 +446,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: WBTC-USD
   group: W
   plugin:
@@ -458,6 +474,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: MATIC-USD
   group: M
   plugin:
@@ -485,6 +502,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: ETC-USD
   group: E
   plugin:
@@ -512,6 +530,7 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
 - instrument: XLM-USD
   group: X
   plugin:
@@ -539,3 +558,4 @@
     shares: 1000
     capital: 100000
     data_format: yahoo_finance_data
+    period: 50
