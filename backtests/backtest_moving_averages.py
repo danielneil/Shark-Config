@@ -38,7 +38,7 @@ strategy_name = "Moving Averages Crossover Backtest"
 
 class MovingAverages(strategy.BacktestingStrategy):
 
-    def __init__(self, feed, instrument, shares, capital, smaPeriod, tradeLog, dataFile):
+    def __init__(self, feed, instrument, shares, capital, smaPeriod, dataFile):
 
         super(MovingAverages, self).__init__(feed, capital)
 
@@ -172,15 +172,6 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
         
         CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken, strat_name, nubmerOfBars)
 
-        # Check if there are even any trades to report on.
-        if tradesAnalyzer.getCount():
-        
-            # Generate the trade log json file.
-            CreateJSONTransactionLog(tradeLog, ticker)
-    
-            # Generate the trade log in HTML
-            CreateJSONTransactionLogHTML(ticker)
-
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
     if sharpeRatioAnalyzer.getSharpeRatio(0.05) > 0: 
@@ -196,8 +187,7 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the backtest against.")
     parser.add_argument("-s", "--shares", help="The number of imaginary shares to purchase.")
     parser.add_argument("-c", "--capital", help="The imaginary amount of capital available (in dollars).")
-    parser.add_argument("-n", "--noreport", help="Do not generate the back test report", action="store_false", default=True)
-    parser.add_argument("-n", "--datafile", help="The fully qualified path to the historical CSV file", action="store_false", default=True)
+    parser.add_argument("-n", "--provider", help="The provider of the historical data", action="store_false", default=True)
     
     args = parser.parse_args()
 
@@ -220,4 +210,4 @@ if __name__ == "__main__":
     
     smaPeriod = 50
 
-    run_strategy(ticker, shares, capital, smaPeriod, args.noreport, dataFile)
+    run_strategy(ticker, shares, capital, smaPeriod, dataFile)
