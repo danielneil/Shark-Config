@@ -127,20 +127,69 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports, strat_nam
 
     strat.run()
     
-    if not generate_reports:
-        
-        # Save the plot.
-        plot.savePlot("/shark/backtest/images/" + ticker + ".png") 
-        
-        # Get the number of bars in the dataframe - not ideal to load the dataframe again, so this needs to be looked at.
-        data = pd.read_csv("/shark/historical/yahoo_finance_data/"+ticker+".csv")
-        
-        index = data.index
-        nubmerOfBars = len(index)
-        
-        CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, strat_name, nubmerOfBars)
-
+    # Print out our findings.
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
+    
+    print("Final portfolio value: $%.2f" % strat.getResult())
+    print("Cumulative returns: %.2f %%" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
+ 
+    sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
+
+    print("Sharpe ratio: %.2f" % (sharpeRatio))
+    print("Max. drawdown:</td><td>%.2f %%</td></tr>" % (drawDownAnalyzer.getMaxDrawDown() * 100))
+    print("Longest drawdown duration:</td><td>%s</td></tr>" % (drawDownAnalyzer.getLongestDrawDownDuration()))
+    print("Total trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getCount()))
+    print("Wins:</td><td>%d</td></tr>" % (tradesAnalyzer.getProfitableCount()))
+    print("Losses:</td><td>%d</td></tr>" % (tradesAnalyzer.getUnprofitableCount()))
+    
+    if tradesAnalyzer.getCount() > 0:
+
+        profits = tradesAnalyzer.getAll()
+            
+        print("LAvg. profit:</td><td>$%2.f</td></tr>" % (profits.mean()))
+        print("LProfits std. dev.:</td><td>$%2.f</td></tr>" % (profits.std()))
+        print("LMax. profit:</td><td>$%2.f</td></tr>" % (profits.max()))
+        print("LMin. profit:</td><td>$%2.f</td></tr>" % (profits.min()))
+
+        returns = tradesAnalyzer.getAllReturns()
+
+        print("LAvg. return:</td><td>%2.f %%</td></tr>" % (returns.mean() * 100))
+        print("LReturns std. dev.:</td><td>%2.f %%</td></tr>" % (returns.std() * 100))
+        print("LMax. return:</td><td>%2.f %%</td></tr>" % (returns.max() * 100))
+        print("LMin. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100)) 
+            
+
+    if tradesAnalyzer.getProfitableCount() > 0:
+
+        profits = tradesAnalyzer.getProfits()
+            
+        print("Avg. profit:</td><td>$%2.f</td></tr>" % (profits.mean()))
+        print("Profits std. dev.:</td><td>$%2.f</td></tr>" % (profits.std()))
+        print("Max. profit:</td><td>$%2.f</td></tr>" % (profits.max()))
+        print("Min. profit:</td><td>$%2.f</td></tr>" % (profits.min()))
+
+        returns = tradesAnalyzer.getPositiveReturns()
+
+        print("Avg. return:</td><td>%2.f %%</td></tr>" % (returns.mean() * 100))
+        print("Returns std. dev.:</td><td>%2.f %%</td></tr>" % (returns.std() * 100))
+        print("Max. return:</td><td>%2.f %%</td></tr>" % (returns.max() * 100))
+        print("Min. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100))
+
+    if tradesAnalyzer.getUnprofitableCount() > 0:
+
+        losses = tradesAnalyzer.getLosses()
+            
+        print("Avg. loss:</td><td>$%2.f</td></tr>" % (losses.mean()))
+        print("Losses std. dev.:</td><td>$%2.f</td></tr>" % (losses.std()))
+        print("Max. loss:</td><td>$%2.f</td></tr>" % (losses.min()))
+        print("Min. loss:</td><td>$%2.f</td></tr>" % (losses.max()))
+
+        returns = tradesAnalyzer.getNegativeReturns()
+
+        print("Avg. return:</td><td>%2.f %%</td></tr>" % (returns.mean() * 100))
+        print("Returns std. dev.:</td><td>%2.f %%</td></tr>" % (returns.std() * 100))
+        print("Max. return:</td><td>%2.f %%</td></tr>" % (returns.max() * 100))
+        print("Min. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100))
 
     if sharpeRatioAnalyzer.getSharpeRatio(0.05) > 0: 
        sys.exit(OK)
