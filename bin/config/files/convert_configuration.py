@@ -43,64 +43,64 @@ def process_instrument_config(i_data):
 # Process the plugins
 def process_plugin_config(p_data, instrument):
 
-    for plugins in p_data:
+	for plugins in p_data:
 
-        services.Add("\ndefine service {\n")
-        services.Add("\tuse generic-service\n")
+        	services.Add("\ndefine service {\n")
+        	services.Add("\tuse generic-service\n")
 
-        serv_grp = "";
-        cmd_name = ""
-        cmd_desc = ""
-        cmd_args = StringBuilder();
-        backtest_cmd_args = StringBuilder();
-        backtestFileName = ""
+		serv_grp = "";
+		cmd_name = ""
+		cmd_desc = ""
+		cmd_args = StringBuilder();
+		backtest_cmd_args = StringBuilder();
+		backtestFileName = ""
 
-        for argName, argValue in plugins.items():
+		for argName, argValue in plugins.items():
 
-            if argName == "group":
-                serviceGroups.append(str(argValue))
-                serv_grp = str(argValue)
-            elif argName == "name":
-                cmd_name = argValue
-            elif argName == "desc":
-                cmd_desc = argValue
-            else:
-                arg_str = "!" + str(argValue)
-                cmd_args.Add(arg_str)
-                
-                if plugins["name"] == "backtest": 
-                
-                    if argName == "file":
-                        backtestFileName = argValue
-                    else:
-                        backtest_cmd_args.Add("--" + argName + "=" + str(argValue) + " ")     
+			if argName == "group":
+				serviceGroups.append(str(argValue))
+				serv_grp = str(argValue)
+			 elif argName == "name":
+				cmd_name = argValue
+			 elif argName == "desc":
+				cmd_desc = argValue
+			 else:
+				arg_str = "!" + str(argValue)
+				cmd_args.Add(arg_str)
 
-        services.Add("\thost_name " + instrument + "\n")
-        services.Add("\tservice_description " + cmd_desc + "\n")
-        
-        # If this is a back test, we need to write the arguments to a script file.
-	
-	if plugins["name"] == "backtest":
-		
-		scriptFile = "/shark/.tmp/backtest.scriptFile." + str(instrument)
+				if plugins["name"] == "backtest": 
 
-		with open(scriptFile, "w") as f:
-                
-			f.write("--ticker=" + str(instrument) + "\n")
-			splits = str(backtest_cmd_args).split()
-                
-			for btarg in splits:
-			
-				f.write(btarg + "\n")
-  
-            services.Add("\tcheck_command " + cmd_name + "!" + backtestFileName + "!" + scriptFile + "\n")
+				    if argName == "file":
+					backtestFileName = argValue
+				    else:
+					backtest_cmd_args.Add("--" + argName + "=" + str(argValue) + " ")     
 
-        else:
+		services.Add("\thost_name " + instrument + "\n")
+		services.Add("\tservice_description " + cmd_desc + "\n")
 
-            services.Add("\tcheck_command " + cmd_name + "!" + str(instrument) + str(cmd_args) + "\n")
+		# If this is a back test, we need to write the arguments to a script file.
 
-        services.Add("\tservicegroups " + serv_grp + "\n")
-        services.Add("}\n")
+		if plugins["name"] == "backtest":
+
+			scriptFile = "/shark/.tmp/backtest.scriptFile." + str(instrument)
+
+			with open(scriptFile, "w") as f:
+
+				f.write("--ticker=" + str(instrument) + "\n")
+				splits = str(backtest_cmd_args).split()
+
+				for btarg in splits:
+
+					f.write(btarg + "\n")
+
+		    services.Add("\tcheck_command " + cmd_name + "!" + backtestFileName + "!" + scriptFile + "\n")
+
+		else:
+
+		    services.Add("\tcheck_command " + cmd_name + "!" + str(instrument) + str(cmd_args) + "\n")
+
+		services.Add("\tservicegroups " + serv_grp + "\n")
+		services.Add("}\n")
 
 
 ##############################################################    
