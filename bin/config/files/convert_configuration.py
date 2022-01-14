@@ -68,9 +68,24 @@ def process_plugin_config(p_data, instrument):
 
         services.Add("\thost_name " + instrument + "\n")
         services.Add("\tservice_description " + cmd_desc + "\n")
-        services.Add("\tcheck_command " + cmd_name + "!" + str(instrument) + str(cmd_args) + "\n")
+        
+        # If this is a back test, we need to write the arguments to a script file.
+        if plugins["name"] == "backtest":
+
+            scriptFile = "/shark/.tmp/backtest.scriptFile." + str(instrument)
+
+            with open(scriptFile, "w") as f:
+                f.write(cmd_name + "!" + str(cmd_args))
+
+            services.Add("\tcheck_command " + cmd_name + "!" + scriptFile + "\n")
+
+        else:
+
+            services.Add("\tcheck_command " + cmd_name + "!" + str(instrument) + str(cmd_args) + "\n")
+
         services.Add("\tservicegroups " + serv_grp + "\n")
         services.Add("}\n")
+
 
 ##############################################################    
 # Process the yaml file - main entry point.
