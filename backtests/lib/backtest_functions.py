@@ -2,16 +2,6 @@ import datetime
 import json
 import subprocess
 
-def CreateJSONTransactionLog(transactionDict, ticker):
-
-    with open("/shark/backtest/transactions/" + ticker + ".transaction.json", 'w') as jsonFile:
-        json.dump(transactionDict, jsonFile)
-
-def CreateJSONTransactionLogHTML(ticker):
-
-    subprocess.call(["/shark/bin/ui_backtest_transactions_refresh.py", "--ticker", ticker, "--htmlFile", "/shark/backtest/html/"+ticker+".transaction.html"])
-    # This is pox, I need to rewrite this one day
-       
 def CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken, strategy_name, nubmerOfBars):
 
   with open("/shark/backtest/html/" + ticker + ".html", 'w') as htmlFile:
