@@ -60,11 +60,11 @@ def process_plugin_config(p_data, instrument):
 			if argName == "group":
 				serviceGroups.append(str(argValue))
 				serv_grp = str(argValue)
-			 elif argName == "name":
+			elif argName == "name":
 				cmd_name = argValue
-			 elif argName == "desc":
+			elif argName == "desc":
 				cmd_desc = argValue
-			 else:
+			else:
 				arg_str = "!" + str(argValue)
 				cmd_args.Add(arg_str)
 
