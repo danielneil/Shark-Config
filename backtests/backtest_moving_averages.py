@@ -22,8 +22,6 @@ import time
 
 import pandas as pd
 
-from backtest_functions import CreateHTMLReport
-
 # Nagios constants. 
 
 OK           = 0
