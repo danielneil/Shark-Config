@@ -45,10 +45,10 @@ def process_plugin_config(p_data, instrument):
 
 	for plugins in p_data:
 
-        	services.Add("\ndefine service {\n")
+		services.Add("\ndefine service {\n")
         	services.Add("\tuse generic-service\n")
-
-		serv_grp = "";
+	
+		serv_grp = ""
 		cmd_name = ""
 		cmd_desc = ""
 		cmd_args = StringBuilder();
