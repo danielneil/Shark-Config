@@ -68,7 +68,7 @@ def process_plugin_config(p_data, instrument):
                 cmd_args.Add(arg_str)
                 
                 # Back test args go into a file.
-                backtest_cmd_args.Add("--" + argName + " " + argValue + "\n")
+                backtest_cmd_args.Add(argName + " = " + str(argValue) + "\n")
 
         services.Add("\thost_name " + instrument + "\n")
         services.Add("\tservice_description " + cmd_desc + "\n")
@@ -79,6 +79,7 @@ def process_plugin_config(p_data, instrument):
             scriptFile = "/shark/.tmp/backtest.scriptFile." + str(instrument)
 
             with open(scriptFile, "w") as f:
+                f.write(str("[backtest_args]")
                 f.write(str(backtest_cmd_args) + "\n")
 
             services.Add("\tcheck_command " + cmd_name + "!" + scriptFile)
