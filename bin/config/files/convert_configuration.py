@@ -79,8 +79,9 @@ def process_plugin_config(p_data, instrument):
         services.Add("\tservice_description " + cmd_desc + "\n")
         
         # If this is a back test, we need to write the arguments to a script file.
-        if plugins["name"] == "backtest":
-
+	
+	if plugins["name"] == "backtest":
+		
 		scriptFile = "/shark/.tmp/backtest.scriptFile." + str(instrument)
 
 		with open(scriptFile, "w") as f:
