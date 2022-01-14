@@ -91,7 +91,7 @@ class MovingAverages(strategy.BacktestingStrategy):
         # END - THIS IS BASICALLY THE CRUX OF THE BACKTEST'S LOGIC
         ###############################################################
 
-def run_strategy(ticker, shares, capital, smaPeriod, generate_reports, strat_name):
+def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
 
     # Measure the execution time of the backtest.
     start_time = time.time()
