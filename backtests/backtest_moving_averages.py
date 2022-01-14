@@ -98,7 +98,7 @@ def run_strategy(ticker, shares, capital, smaPeriod, dataFile):
     feed.addBarsFromCSV(ticker, dataFile)
 
     # Evaluate the strategy with the feed.
-    strat = MovingAverages(feed, ticker, shares, capital, smaPeriod)
+    strat = MovingAverages(feed, ticker, shares, capital, smaPeriod, dataFile)
     
     # Attach  analyzers to the strategy before executing it.
     retAnalyzer = pyalgotrade.stratanalyzer.returns.Returns()
