@@ -177,8 +177,8 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the backtest against.")
     parser.add_argument("-s", "--shares", help="The number of imaginary shares to purchase.")
     parser.add_argument("-c", "--capital", help="The imaginary amount of capital available (in dollars).")
-    parser.add_argument("-p", "--smaPeriod", help="The sma period that we will use as the basis for the cross over threshold.")
-    parser.add_argument("-n", "--provider", help="The provider of the historical data.", action="store_false", default=True)
+    parser.add_argument("-p", "--peroid", help="The sma period that we will use as the basis for the cross over threshold.")
+    parser.add_argument("-n", "--data_format", help="The provider of the historical data.", action="store_false", default=True)
     
     args = parser.parse_args()
 
@@ -194,10 +194,18 @@ if __name__ == "__main__":
         print("UNKNOWN - No capital amount specified")
         sys.exit(UNKNOWN)
 
+    if not args.peroid:
+        print("UNKNOWN - No peroid specified")
+        sys.exit(UNKNOWN)
+
+    if not args.data_format:
+        print("UNKNOWN - No data_format specified")
+        sys.exit(UNKNOWN)       
+        
     ticker = args.ticker 
     shares = int(args.shares)
     capital = int(args.capital)
-    dataFile = args.datafile
-    smaPeriod = args.smaPeriod
-
-    run_strategy(ticker, shares, capital, smaPeriod, dataFile)
+    period = args.period
+    data_format = args.data_format
+    
+    run_strategy(ticker, shares, capital, period, data_format)
