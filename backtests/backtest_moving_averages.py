@@ -202,7 +202,7 @@ if __name__ == "__main__":
     parser.add_argument("-s", "--shares", help="The number of imaginary shares to purchase.")
     parser.add_argument("-c", "--capital", help="The imaginary amount of capital available (in dollars).")
     parser.add_argument("-p", "--peroid", help="The sma period that we will use as the basis for the cross over threshold.")
-    parser.add_argument("-n", "--data_format", help="The provider of the historical data.", action="store_false", default=True)
+    parser.add_argument("-n", "--data_format", help="The provider of the historical data.")
     
     args = parser.parse_args()
 
