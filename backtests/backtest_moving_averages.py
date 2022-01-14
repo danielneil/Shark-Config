@@ -116,7 +116,7 @@ class MovingAverages(strategy.BacktestingStrategy):
         # END - THIS IS BASICALLY THE CRUX OF THE BACKTEST'S LOGIC
         ###############################################################
 
-def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
+def run_strategy(ticker, shares, capital, smaPeriod, generate_reports, strat_name):
 
     # Measure the execution time of the backtest.
     start_time = time.time()
@@ -153,22 +153,14 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
         
         # Save the plot.
         plot.savePlot("/shark/backtest/images/" + ticker + ".png") 
-
-        # measure the execution time to here.
-        time_taken = ( time.time() - start_time )
         
         # Get the number of bars in the dataframe - not ideal to load the dataframe again, so this needs to be looked at.
-        data = pd.read_csv("/shark/ticker-data/"+ticker+".AX.txt")
-       
-        # Count the total number of rows in the DF (represents the number of BARS?)
-
+        data = pd.read_csv("/shark/historical/yahoo_finance_data/"+ticker+".csv")
+        
         index = data.index
         nubmerOfBars = len(index)
-
-        # Generate the HTML Report    
-        strat_name = "moving_averages" # It'd be nice to have this determined progmatically. 
         
-        CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, time_taken, strat_name, nubmerOfBars)
+        CreateHTMLReport(ticker, strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, strat_name, nubmerOfBars)
 
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
@@ -185,7 +177,8 @@ if __name__ == "__main__":
     parser.add_argument("-t", "--ticker", help="Ticker of the stock to run the backtest against.")
     parser.add_argument("-s", "--shares", help="The number of imaginary shares to purchase.")
     parser.add_argument("-c", "--capital", help="The imaginary amount of capital available (in dollars).")
-    parser.add_argument("-n", "--provider", help="The provider of the historical data", action="store_false", default=True)
+    parser.add_argument("-p", "--smaPeriod", help="The sma period that we will use as the basis for the cross over threshold.")
+    parser.add_argument("-n", "--provider", help="The provider of the historical data.", action="store_false", default=True)
     
     args = parser.parse_args()
 
@@ -205,7 +198,6 @@ if __name__ == "__main__":
     shares = int(args.shares)
     capital = int(args.capital)
     dataFile = args.datafile
-    
-    smaPeriod = 50
+    smaPeriod = args.smaPeriod
 
     run_strategy(ticker, shares, capital, smaPeriod, dataFile)
