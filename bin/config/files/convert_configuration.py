@@ -85,13 +85,13 @@ def process_plugin_config(p_data, instrument):
 
             with open(scriptFile, "w") as f:
                 
-                f.write("--ticker=" + str(instrument) + "\n")
+		f.write("--ticker=" + str(instrument) + "\n")
 		
 		splits = str(backtest_cmd_args).split()
                 
-                for btarg in splits:
+		for btarg in splits:
 			
-	                f.write(btarg + "\n")
+			f.write(btarg + "\n")
   
             services.Add("\tcheck_command " + cmd_name + "!" + backtestFileName + "!" + scriptFile + "\n")
 
