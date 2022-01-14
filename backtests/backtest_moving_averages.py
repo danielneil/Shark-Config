@@ -90,21 +90,14 @@ class MovingAverages(strategy.BacktestingStrategy):
             
         # END - THIS IS BASICALLY THE CRUX OF THE BACKTEST'S LOGIC
         ###############################################################
-
-def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
-
-    # Measure the execution time of the backtest.
-    start_time = time.time()
+def run_strategy(ticker, shares, capital, period, dataFile)
 
     # Load the bar feed from the CSV file
     feed = yahoofeed.Feed()
     feed.addBarsFromCSV(ticker, dataFile)
 
-    # Create a dict to store the trade log.
-    tradeLog = []
-
     # Evaluate the strategy with the feed.
-    strat = MovingAverages(feed, ticker, shares, capital, smaPeriod, tradeLog)
+    strat = MovingAverages(feed, ticker, shares, capital, smaPeriod)
     
     # Attach  analyzers to the strategy before executing it.
     retAnalyzer = pyalgotrade.stratanalyzer.returns.Returns()
@@ -133,60 +126,60 @@ def run_strategy(ticker, shares, capital, smaPeriod, generate_reports):
     sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
 
     print("Sharpe ratio: %.2f" % (sharpeRatio))
-    print("Max. drawdown:</td><td>%.2f %%</td></tr>" % (drawDownAnalyzer.getMaxDrawDown() * 100))
-    print("Longest drawdown duration:</td><td>%s</td></tr>" % (drawDownAnalyzer.getLongestDrawDownDuration()))
-    print("Total trades:</td><td>%d</td></tr>" % (tradesAnalyzer.getCount()))
-    print("Wins:</td><td>%d</td></tr>" % (tradesAnalyzer.getProfitableCount()))
-    print("Losses:</td><td>%d</td></tr>" % (tradesAnalyzer.getUnprofitableCount()))
+    print("Max. drawdown: %.2f %%" % (drawDownAnalyzer.getMaxDrawDown() * 100))
+    print("Longest drawdown duration: %s" % (drawDownAnalyzer.getLongestDrawDownDuration()))
+    print("Total trades: %d" % (tradesAnalyzer.getCount()))
+    print("Wins: %d" % (tradesAnalyzer.getProfitableCount()))
+    print("Losses: %d" % (tradesAnalyzer.getUnprofitableCount()))
     
     if tradesAnalyzer.getCount() > 0:
 
         profits = tradesAnalyzer.getAll()
             
-        print("LAvg. profit:</td><td>$%2.f</td></tr>" % (profits.mean()))
-        print("LProfits std. dev.:</td><td>$%2.f</td></tr>" % (profits.std()))
-        print("LMax. profit:</td><td>$%2.f</td></tr>" % (profits.max()))
-        print("LMin. profit:</td><td>$%2.f</td></tr>" % (profits.min()))
+        print("LAvg. profit: $%2.f</td></tr>" % (profits.mean()))
+        print("LProfits std. dev.: $%2.f</td></tr>" % (profits.std()))
+        print("LMax. profit: $%2.f</td></tr>" % (profits.max()))
+        print("LMin. profit: $%2.f</td></tr>" % (profits.min()))
 
         returns = tradesAnalyzer.getAllReturns()
 
-        print("LAvg. return:</td><td>%2.f %%</td></tr>" % (returns.mean() * 100))
-        print("LReturns std. dev.:</td><td>%2.f %%</td></tr>" % (returns.std() * 100))
-        print("LMax. return:</td><td>%2.f %%</td></tr>" % (returns.max() * 100))
-        print("LMin. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100)) 
+        print("LAvg. return: %2.f %%" % (returns.mean() * 100))
+        print("LReturns std. dev.: %2.f %%" % (returns.std() * 100))
+        print("LMax. return: %2.f %%" % (returns.max() * 100))
+        print("LMin. return: %2.f %%" % (returns.min() * 100)) 
             
 
     if tradesAnalyzer.getProfitableCount() > 0:
 
         profits = tradesAnalyzer.getProfits()
             
-        print("Avg. profit:</td><td>$%2.f</td></tr>" % (profits.mean()))
-        print("Profits std. dev.:</td><td>$%2.f</td></tr>" % (profits.std()))
-        print("Max. profit:</td><td>$%2.f</td></tr>" % (profits.max()))
-        print("Min. profit:</td><td>$%2.f</td></tr>" % (profits.min()))
+        print("Avg. profit: $%2.f" % (profits.mean()))
+        print("Profits std. dev.: $%2.f" % (profits.std()))
+        print("Max. profit: $%2.f" % (profits.max()))
+        print("Min. profit: $%2.f" % (profits.min()))
 
         returns = tradesAnalyzer.getPositiveReturns()
 
-        print("Avg. return:</td><td>%2.f %%</td></tr>" % (returns.mean() * 100))
-        print("Returns std. dev.:</td><td>%2.f %%</td></tr>" % (returns.std() * 100))
-        print("Max. return:</td><td>%2.f %%</td></tr>" % (returns.max() * 100))
-        print("Min. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100))
+        print("Avg. return: %2.f %%" % (returns.mean() * 100))
+        print("Returns std. dev.: %2.f %%" % (returns.std() * 100))
+        print("Max. return: %2.f %%" % (returns.max() * 100))
+        print("Min. return: %2.f %%" % (returns.min() * 100))
 
     if tradesAnalyzer.getUnprofitableCount() > 0:
 
         losses = tradesAnalyzer.getLosses()
             
-        print("Avg. loss:</td><td>$%2.f</td></tr>" % (losses.mean()))
-        print("Losses std. dev.:</td><td>$%2.f</td></tr>" % (losses.std()))
-        print("Max. loss:</td><td>$%2.f</td></tr>" % (losses.min()))
-        print("Min. loss:</td><td>$%2.f</td></tr>" % (losses.max()))
+        print("Avg. loss: $%2.f</td></tr>" % (losses.mean()))
+        print("Losses std. dev.: $%2.f</td></tr>" % (losses.std()))
+        print("Max. loss: $%2.f</td></tr>" % (losses.min()))
+        print("Min. loss: $%2.f</td></tr>" % (losses.max()))
 
         returns = tradesAnalyzer.getNegativeReturns()
 
-        print("Avg. return:</td><td>%2.f %%</td></tr>" % (returns.mean() * 100))
-        print("Returns std. dev.:</td><td>%2.f %%</td></tr>" % (returns.std() * 100))
-        print("Max. return:</td><td>%2.f %%</td></tr>" % (returns.max() * 100))
-        print("Min. return:</td><td>%2.f %%</td></tr>" % (returns.min() * 100))
+        print("Avg. return: %2.f %%" % (returns.mean() * 100))
+        print("Returns std. dev.: %2.f %%" % (returns.std() * 100))
+        print("Max. return: %2.f %%" % (returns.max() * 100))
+        print("Min. return: %2.f %%" % (returns.min() * 100))
 
     if sharpeRatioAnalyzer.getSharpeRatio(0.05) > 0: 
        sys.exit(OK)
@@ -232,4 +225,7 @@ if __name__ == "__main__":
     period = args.period
     data_format = args.data_format
     
-    run_strategy(ticker, shares, capital, period, data_format)
+    dataFile = ""
+    if data_format == "yahoo_finance_data":
+        dataFile = "/shark/historical/yahoo_finance_data/" + ticker + ".csv"
+    run_strategy(ticker, shares, capital, period, dataFile)
