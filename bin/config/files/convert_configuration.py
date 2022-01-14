@@ -53,6 +53,7 @@ def process_plugin_config(p_data, instrument):
         cmd_desc = ""
         cmd_args = StringBuilder();
         backtest_cmd_args = StringBuilder();
+        backtestFileName = ""
 
         for argName, argValue in plugins.items():
 
@@ -67,8 +68,13 @@ def process_plugin_config(p_data, instrument):
                 arg_str = "!" + str(argValue)
                 cmd_args.Add(arg_str)
                 
-                # Back test args go into a file.
-                backtest_cmd_args.Add("--" + argName + "=" + str(argValue) + " ")
+                if plugins["name"] == "backtest": 
+                
+                    if argName == "file":
+                        backtestFileName = argValue
+                else:
+                    
+                    backtest_cmd_args.Add("--" + argName + "=" + str(argValue) + " ")     
 
         services.Add("\thost_name " + instrument + "\n")
         services.Add("\tservice_description " + cmd_desc + "\n")
@@ -82,7 +88,7 @@ def process_plugin_config(p_data, instrument):
                 
                 f.write(str(backtest_cmd_args) + "\n")
 
-            services.Add("\tcheck_command " + cmd_name + "!" + scriptFile)
+            services.Add("\tcheck_command " + cmd_name + "!" + backtestFileName + "!" + scriptFile + "\n")
 
         else:
 
