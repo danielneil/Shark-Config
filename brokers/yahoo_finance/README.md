@@ -1,7 +1,7 @@
-Role Name
+Broker: yahoo_finance 
 =========
 
-A brief description of the role goes here.
+This broker is the demo broker. 
 
 Requirements
 ------------
