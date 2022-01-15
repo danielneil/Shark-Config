@@ -1,7 +1,7 @@
 Broker: yahoo_finance 
 =========
 
-This broker is the demo broker. 
+This is the demo broker. No trading occurs and it is only used for price and historial data. 
 
 Requirements
 ------------
