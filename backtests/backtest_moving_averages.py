@@ -170,4 +170,5 @@ if __name__ == "__main__":
     dataFile = ""
     if data_format == "yahoo_finance_data":
         dataFile = "/shark/historical/yahoo_finance_data/" + ticker + ".csv"
+        
     run_strategy(ticker, int(shares), int(capital), int(period), dataFile)
