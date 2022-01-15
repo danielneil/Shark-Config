@@ -6,7 +6,7 @@
 
 This is the demo configuration for the Shark algorithmic trading platform.
 
-For more information about Shark, see the its GitHub [repo](https://github.com/danielneil/Shark).
+For more information about Shark, see [here](https://github.com/danielneil/Shark).
 
 Out of the box it comes with configuration comprising of:
 
