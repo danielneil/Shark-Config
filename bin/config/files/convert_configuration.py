@@ -31,6 +31,7 @@ def process_instrument_config(i_data):
 	hosts.Add("\tuse instrument\n")
 	hosts.Add("\thost_name " + instrument + "\n")
 	hosts.Add("\thostgroups " + group + "\n")
+	hosts.Add("\check_command check_price\n")
 	hosts.Add("\taddress 127.0.0.1" + "\n")
 	hosts.Add("}\n")
 
