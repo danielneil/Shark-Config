@@ -18,11 +18,6 @@ Out of the box it comes with configuration comprising of:
  
 * [Sample Backtest code](https://github.com/danielneil/Shark-Config/blob/master/backtests/backtest_moving_averages.py) - Simple moving averages crossover.
 
-### Configuration resides in a git repo on the Shark server
-```
-# Check out the configuration.
-git clone http://<shark_server>/Shark-Config
-```
 ### Config Directory Structure
 ```
 trading-config.yml - Main configuration file, see sample above.
