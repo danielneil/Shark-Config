@@ -1,4 +1,8 @@
-# Shark-Config
+<p align="center">
+  <img src="https://github.com/danielneil/Shark/blob/main/shark/files/shark_ui_patches/logofullsize.png?raw=true">
+</p>
+
+# Shark Config - Configuration for Shark, An Algorithmic Trading Platform
 
 This is the demo configuration for the Shark algorithmic trading platform.
 
