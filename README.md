@@ -8,10 +8,10 @@ This is the demo configuration for the Shark algorithmic trading platform.
 
 For more information about Shark, see [here](https://github.com/danielneil/Shark).
 
-Out of the box it comes with configuration comprising of:
+Out of the box it comes with:
 
 * [Sample configuration](https://github.com/danielneil/Shark-Config/blob/master/trading-config.yml):
-    * The sample demostrates using various Shark plugins against the CRYPTO TOP 20 (by Market Cap), namely: 
+    * Demostrating using various Shark Plugins against the CRYPTO TOP 20 (by Market Cap), namely: 
         * yahoo_finance_data - Downloads and imports yahoo finance historical data into Shark.
         * sma - Alerts to various simple moving average (sma) specifics.
         * backtest - Demostrates the use of a simple back test associated with the above.  
