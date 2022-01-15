@@ -24,7 +24,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: ETH-USD
@@ -52,7 +52,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: BNB-USD
@@ -80,7 +80,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: USDT-USD
@@ -108,7 +108,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: ADA-USD
@@ -136,7 +136,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: XRP-USD
@@ -164,7 +164,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: DOGE-USD
@@ -192,7 +192,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: USDC-USD
@@ -220,7 +220,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: DOT-USD
@@ -248,7 +248,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: SOL-USD
@@ -276,7 +276,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: UNI1-USD
@@ -304,7 +304,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: BCH-USD
@@ -332,7 +332,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: BUSD-USD
@@ -360,7 +360,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: LINK-USD
@@ -388,7 +388,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: LTC-USD
@@ -416,7 +416,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: LUNA1-USD
@@ -444,7 +444,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: WBTC-USD
@@ -472,7 +472,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: MATIC-USD
@@ -500,7 +500,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: ETC-USD
@@ -528,7 +528,7 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
 - instrument: XLM-USD
@@ -556,6 +556,6 @@
     group: "Backtesting"
     file: backtest_moving_averages.py
     shares: 1000
-    capital: 100000
+    capital: 1000000
     data_format: yahoo_finance_data
     period: 50
