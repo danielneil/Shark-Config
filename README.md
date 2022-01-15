@@ -22,6 +22,7 @@ git clone http://<shark_server>/Shark-Config
 trading-config.yml - Main configuration file, see sample above.
 backtests/ - Backtest code directory, see sample above.
 strategies/ - Strategy code directory, see sample above.
+providers/ - Broker api code.
 bin/ - You have no power here (do not touch)
 ```
 ### Main configuration file - trading-config.yml
