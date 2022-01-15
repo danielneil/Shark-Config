@@ -45,6 +45,8 @@ class MovingAverages(strategy.BacktestingStrategy):
         self.setUseAdjustedValues(True)
 
         self.__sma = ma.SMA(self.__prices, smaPeriod)
+        
+        self.setDebugMode(False)
 
     def onEnterOk(self, position):
 
