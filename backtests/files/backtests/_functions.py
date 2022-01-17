@@ -21,7 +21,7 @@ import time
 
 import pandas as pd
 
-def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker):
+def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plotFileName, ticker):
 
     reportFileName = "/shark/reports/" + ticker + ".report.html"
     plotFileName = "/shark/reports/" + ticker + ".png"
@@ -230,11 +230,7 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
   
         report_file.write("</div>")
         
-        report_file.write("<div class='column'>")
-        
-        plt = plotter.StrategyPlotter(strat, True, False, True)
-        plt.getInstrumentSubplot(ticker).addDataSeries("sma", strat.getSMA())
-        plt.savePlot(plotFileName)
+        report_file.write("<div class='column'>")       
         
         report_file.write("<img src='" + plotFileName + "' />")   
     
