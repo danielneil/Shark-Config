@@ -4,7 +4,7 @@ import argparse
 import Shark
 import sys
 
-cmd_arg_help = "Strategy: Moving Averages - Cross Over. Alert when the share price goes above/below the specified simple moving average period."
+cmd_arg_help = "Strategy: Moving Average Cross Over. Alert when the share price goes above/below the specified simple moving average period."
 
 if __name__ == "__main__":
 
