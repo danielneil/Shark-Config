@@ -18,12 +18,14 @@ Out of the box it comes with:
  
 * [Sample Backtest code](https://github.com/danielneil/Shark-Config/blob/master/backtests/files/backtests/backtest_moving_averages.py) - Simple moving averages crossover.
 
-### Config Directory Structure
+### Config Structure
+
+Note: a working knowledge of ansible is required. 
+
 ```
-trading-config.yml - Main configuration file, see sample above.
-backtests/ - Backtest code directory, see sample above.
-strategies/ - Strategy code directory, see sample above.
-bin/ - You have no power here (do not touch)
+config/ - Configuration role, the main configuration file resides config/files/trading-config.yml
+backtests/ - Backtest code role, see sample above.
+strategies/ - Strategy code role, see sample above.
 ```
 ### Main configuration file - trading-config.yml
 
