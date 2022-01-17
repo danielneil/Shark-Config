@@ -95,6 +95,7 @@ def process_plugin_config(p_data, instrument):
 					f.write(btarg + "\n")
 
 			services.Add("\tcheck_command " + cmd_name + "!" + backtestFileName + "!" + scriptFile + "\n")
+			services.Add("\tnotes_url /shark/reports/" + instrument + ".report.html\n")
 		else:
 			services.Add("\tcheck_command " + cmd_name + "!" + str(instrument) + str(cmd_args) + "\n")
 
