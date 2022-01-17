@@ -16,7 +16,7 @@ Out of the box it comes with:
         * sma - Alerts to various simple moving average (sma) specifics.
         * backtest - Demostrates the use of a simple back test associated with the above.  
  
-* [Sample Backtest code](https://github.com/danielneil/Shark-Config/blob/master/backtests/files/backtests/moving_averages.py) - Simple moving averages crossover.
+* [Sample Backtest code](https://github.com/danielneil/Shark-Config/blob/master/backtests/files/backtests/moving_averages.py) - Simple moving average crossover.
 
 ### Config Structure
 
