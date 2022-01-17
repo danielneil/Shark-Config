@@ -41,7 +41,7 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         plt.getInstrumentSubplot(instrument).addDataSeries("Exit SMA", strat.getExitSMA())
         plt.savePlot(plotFileName)
         
-        report_file.write("<img src=" + plotFileName + "/>
+        report_file.write("<img src=" + plotFileName + "/>")
         
         report_file.write("<table>")
         report_file.write("<tr>")
