@@ -34,9 +34,17 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
 
         report_file.write("<h1>" + ticker + " - Backtest Report") 
         
-        report_file.write("Final portfolio value: $%.2f" % strat.getResult())
-        report_file.write("Cumulative returns: %.2f %%" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
-
+        report_file.write("<table>")
+        report_file.write("<tr>")
+        report_file.write("<th>Final portfolio value:</th>")
+        report_file.write("<th>Cumulative returns:</th>")
+        report_file.write("</tr>")
+        report_file.write("<tr>")
+        report_file.write("<td>$%.2f</td>" % strat.getResult())
+        report_file.write("<td>%.2f %%</td>" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
+        report_file.write("</tr>")
+        report_file.write("</table>")
+        
         sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
 
         report_file.write("Sharpe ratio: %.2f" % (sharpeRatio))
