@@ -34,7 +34,7 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         report_file.write("<head>")
         report_file.write("<title>Backtest Report - " + ticker + " </title>")
                         
-        report_file.write("<link rel='stylesheet' href='/shark/reports/report-style.css'>")
+        report_file.write("<link rel='stylesheet' href='/shark/Shark-Config/backtests/files/backtests/report-style.css'>")
         
         report_file.write("</head>")
         report_file.write("<body>")                
