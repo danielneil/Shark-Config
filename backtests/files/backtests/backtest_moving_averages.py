@@ -123,13 +123,17 @@ def run_strategy(ticker, shares, capital, smaPeriod, dataFile):
     # Attach the plotter
     plot = plotter.StrategyPlotter(strat)
 
+    plt = plotter.StrategyPlotter(strat, True, False, True)
+    plt.getInstrumentSubplot(ticker).addDataSeries("sma", strat.getSMA())
+    plt.getOrCreateSubplot("returns").addDataSeries("Simple returns", returnsAnalyzer.getReturns())
+    
     strat.run()
     
     # Print out our findings.
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
     # Generate the report
-    GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker)
+    GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plt, ticker)
     
     if sharpeRatioAnalyzer.getSharpeRatio(0.05) > 0: 
        sys.exit(OK)
