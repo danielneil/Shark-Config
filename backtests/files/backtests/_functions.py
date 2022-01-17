@@ -80,8 +80,7 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
 
         if tradesAnalyzer.getCount() > 0:
 
-            profits = tradesAnalyzer.getAll()
-            
+            profits = tradesAnalyzer.getAll()          
             
             report_file.write("<table>")
             report_file.write("<tr>")
@@ -106,11 +105,24 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
 
             returns = tradesAnalyzer.getAllReturns()
 
-            report_file.write("LAvg. return: %2.f %%" % (returns.mean() * 100))
-            report_file.write("LReturns std. dev.: %2.f %%" % (returns.std() * 100))
-            report_file.write("LMax. return: %2.f %%" % (returns.max() * 100))
-            report_file.write("LMin. return: %2.f %%" % (returns.min() * 100))
-
+            report_file.write("<table>")
+            report_file.write("<tr>")
+            
+            report_file.write("<th>LAvg. return</th>")
+            report_file.write("<th>LReturns std. dev.</th>")
+            report_file.write("<th>LMax. return</th>")
+            report_file.write("<th>LMin. return</th>")
+            
+            report_file.write("</tr>")
+            report_file.write("<tr>")                 
+            
+            report_file.write("<td>%2.f</td>" % (returns.mean() * 100))
+            report_file.write("<td>%2.f %%</td>" % (returns.std() * 100))
+            report_file.write("<td>%2.f %%</td>" % (returns.max() * 100))
+            report_file.write("<td>%2.f %%</td>" % (returns.min() * 100))
+            
+            report_file.write("</tr>")
+            report_file.write("</table>") 
 
         if tradesAnalyzer.getProfitableCount() > 0:
 
