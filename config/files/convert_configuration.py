@@ -109,7 +109,7 @@ hostGroups = []
 serviceGroups = []
 services = StringBuilder();
 
-with open ("/var/www/git/trading-config.yml", "r") as f:
+with open ("/shark/Shark-Config/config/files/trading-config.yml", "r") as f:
 
     # Load YAML data from the file
 
