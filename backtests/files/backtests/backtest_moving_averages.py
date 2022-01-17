@@ -50,6 +50,9 @@ class MovingAverages(strategy.BacktestingStrategy):
         
         self.setDebugMode(False)
 
+    def getSMA(self):
+        return self.__sma
+        
     def onEnterOk(self, position):
 
         execInfo = position.getEntryOrder().getExecutionInfo()
