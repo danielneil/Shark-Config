@@ -65,9 +65,7 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
 
         report_file.write("</tr>")
         report_file.write("<tr>")
-        
-        report_file.write("Losses: %d" % (tradesAnalyzer.getUnprofitableCount()))
-
+     
         report_file.write("<td>%.2f</td>" % (sharpeRatio))
         report_file.write("<td>%.2f %%</td>" % (drawDownAnalyzer.getMaxDrawDown() * 100))
         report_file.write("<td>%s</td>" % (drawDownAnalyzer.getLongestDrawDownDuration()))
