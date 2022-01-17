@@ -127,39 +127,95 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         if tradesAnalyzer.getProfitableCount() > 0:
 
             profits = tradesAnalyzer.getProfits()
-
-            report_file.write("Avg. profit: $%2.f" % (profits.mean()))
-            report_file.write("Profits std. dev.: $%2.f" % (profits.std()))
-            report_file.write("Max. profit: $%2.f" % (profits.max()))
-            report_file.write("Min. profit: $%2.f" % (profits.min()))
             
+            report_file.write("<table>")
+            report_file.write("<tr>")
+
+            report_file.write("<th>Avg. profit</th>")
+            report_file.write("<th>Profits std. dev.</th>")
+            report_file.write("<th>Max. profit</th>")
+            report_file.write("<th>Min. profit</th>")
+
+            report_file.write("</tr>")
+            report_file.write("<tr>")           
+            
+            report_file.write("<td>$%2.f</td>" % (profits.mean()))
+            report_file.write("<td>$%2.f</td>" % (profits.std()))
+            report_file.write("<td>$%2.f</td>" % (profits.max()))
+            report_file.write("<td>$%2.f</td>" % (profits.min()))
+        
+            report_file.write("</tr>")
+            report_file.write("</table>")
+                        
             report_file.write("<br />")
 
             returns = tradesAnalyzer.getPositiveReturns()
+                       
+            report_file.write("<table>")
+            report_file.write("<tr>")
 
-            report_file.write("Avg. return: %2.f %%" % (returns.mean() * 100))
-            report_file.write("Returns std. dev.: %2.f %%" % (returns.std() * 100))
-            report_file.write("Max. return: %2.f %%" % (returns.max() * 100))
-            report_file.write("Min. return: %2.f %%" % (returns.min() * 100))
+            report_file.write("<th>Avg. return</th>")
+            report_file.write("<th>Returns std. dev.</th>")
+            report_file.write("<th>Max. return</th>")
+            report_file.write("<th>Min. return</th>")
 
+            report_file.write("</tr>")
+            report_file.write("<tr>")           
+            
+            report_file.write("<td>%2.f %%</td>" % (returns.mean() * 100))
+            report_file.write("<td>%2.f %%</td>" % (returns.std() * 100))
+            report_file.write("<td>%2.f %%</td>" % (returns.max() * 100))
+            report_file.write("<td>%2.f %%</td>" % (returns.min() * 100))
+        
+            report_file.write("</tr>")
+            report_file.write("</table>")
+                                 
         if tradesAnalyzer.getUnprofitableCount() > 0:
             
             report_file.write("<br />")
 
             losses = tradesAnalyzer.getLosses()
+                                    
+            report_file.write("<table>")
+            report_file.write("<tr>")
 
-            report_file.write("Avg. loss: $%2.f</td></tr>" % (losses.mean()))
-            report_file.write("Losses std. dev.: $%2.f</td></tr>" % (losses.std()))
-            report_file.write("Max. loss: $%2.f</td></tr>" % (losses.min()))
-            report_file.write("Min. loss: $%2.f</td></tr>" % (losses.max()))
+            report_file.write("<th>Avg. loss</th>")
+            report_file.write("<th>Losses std. dev.</th>")
+            report_file.write("<th>Max. loss</th>")
+            report_file.write("<th>Min. loss</th>")
+
+            report_file.write("</tr>")
+            report_file.write("<tr>")           
             
+            report_file.write("<td>$%2.f</td>" % (losses.mean()))
+            report_file.write("<td>$%2.f</td>" % (losses.std()))
+            report_file.write("<td>$%2.f</td>" % (losses.min()))
+            report_file.write("<td>$%2.f</td>" % (losses.max()))
+        
+            report_file.write("</tr>")
+            report_file.write("</table>")
+                                              
             report_file.write("<br />")
 
             returns = tradesAnalyzer.getNegativeReturns()
+  
+            report_file.write("<table>")
+            report_file.write("<tr>")
 
-            report_file.write("Avg. return: %2.f %%" % (returns.mean() * 100))
-            report_file.write("Returns std. dev.: %2.f %%" % (returns.std() * 100))
-            report_file.write("Max. return: %2.f %%" % (returns.max() * 100))
-            report_file.write("Min. return: %2.f %%" % (returns.min() * 100))
+            report_file.write("<th>Avg. return</th>")
+            report_file.write("<th>Returns std. dev.</th>")
+            report_file.write("<th>Max. return</th>")
+            report_file.write("<th>Min. return</th>")
+
+            report_file.write("</tr>")
+            report_file.write("<tr>")           
+            
+            report_file.write("<td> %2.f %%</td>" % (returns.mean() * 100))
+            report_file.write("<td> %2.f %%</td>" % (returns.std() * 100))
+            report_file.write("<td> %2.f %%</td>" % (returns.max() * 100))
+            report_file.write("<td> %2.f %%</td>" % (returns.min() * 100))
+        
+            report_file.write("</tr>")
+            report_file.write("</table>")
     
         report_file.write("</html>")
