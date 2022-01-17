@@ -37,8 +37,10 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         report_file.write("<h1>" + ticker + " - Backtest Report</h1>") 
         
         plt = plotter.StrategyPlotter(strat, True, False, True)
-        plt.getInstrumentSubplot(instrument).addDataSeries("sma", strat.getSMA())
+        plt.getInstrumentSubplot(ticker).addDataSeries("sma", strat.getSMA())
         plt.savefig(plotFileName)
+        
+        report_file.write("<img src = " + plotFileName + " />")
         
         report_file.write("<table>")
         report_file.write("<tr>")
