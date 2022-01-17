@@ -45,6 +45,8 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         report_file.write("</tr>")
         report_file.write("</table>")
         
+        report_file.write("<br />")
+        
         sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
 
         report_file.write("Sharpe ratio: %.2f" % (sharpeRatio))
@@ -53,6 +55,8 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         report_file.write("Total trades: %d" % (tradesAnalyzer.getCount()))
         report_file.write("Wins: %d" % (tradesAnalyzer.getProfitableCount()))
         report_file.write("Losses: %d" % (tradesAnalyzer.getUnprofitableCount()))
+        
+        report_file.write("<br />")
 
         if tradesAnalyzer.getCount() > 0:
 
@@ -62,6 +66,8 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
             report_file.write("LProfits std. dev.: $%2.f</td></tr>" % (profits.std()))
             report_file.write("LMax. profit: $%2.f</td></tr>" % (profits.max()))
             report_file.write("LMin. profit: $%2.f</td></tr>" % (profits.min()))
+            
+            report_file.write("<br />")
 
             returns = tradesAnalyzer.getAllReturns()
 
@@ -79,6 +85,8 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
             report_file.write("Profits std. dev.: $%2.f" % (profits.std()))
             report_file.write("Max. profit: $%2.f" % (profits.max()))
             report_file.write("Min. profit: $%2.f" % (profits.min()))
+            
+            report_file.write("<br />")
 
             returns = tradesAnalyzer.getPositiveReturns()
 
@@ -88,6 +96,8 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
             report_file.write("Min. return: %2.f %%" % (returns.min() * 100))
 
         if tradesAnalyzer.getUnprofitableCount() > 0:
+            
+            report_file.write("<br />")
 
             losses = tradesAnalyzer.getLosses()
 
@@ -95,6 +105,8 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
             report_file.write("Losses std. dev.: $%2.f</td></tr>" % (losses.std()))
             report_file.write("Max. loss: $%2.f</td></tr>" % (losses.min()))
             report_file.write("Min. loss: $%2.f</td></tr>" % (losses.max()))
+            
+            report_file.write("<br />")
 
             returns = tradesAnalyzer.getNegativeReturns()
 
