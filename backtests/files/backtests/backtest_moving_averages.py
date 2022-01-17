@@ -123,7 +123,7 @@ def run_strategy(ticker, shares, capital, smaPeriod, dataFile):
     # Attach the plotter
     plot = plotter.StrategyPlotter(strat)
 
-    plt = plotter.StrategyPlotter(strat, True, False, True)
+    plt = plotter.StrategyPlotter(strat, True, True, True)
     plt.getInstrumentSubplot(ticker).addDataSeries("sma", strat.getSMA())
     plt.getOrCreateSubplot("returns").addDataSeries("Simple returns", retAnalyzer.getReturns())
     
