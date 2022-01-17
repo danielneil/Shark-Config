@@ -103,4 +103,4 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
             report_file.write("Max. return: %2.f %%" % (returns.max() * 100))
             report_file.write("Min. return: %2.f %%" % (returns.min() * 100))
     
-    report_file.write("</html>")
+        report_file.write("</html>")
