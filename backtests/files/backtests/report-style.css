@@ -1,7 +1,4 @@
-.row {
-  display: flex;
-}
-
-.column {
-  flex: 50%;
-}
+th { 
+  background-color: grey;
+  color: white; 
+  }
