@@ -37,8 +37,8 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         report_file.write("<table>")
         report_file.write("<tr>")
         
-        report_file.write("<th>Final portfolio value:</th>")
-        report_file.write("<th>Cumulative returns:</th>")
+        report_file.write("<th>Final portfolio value</th>")
+        report_file.write("<th>Cumulative returns</th>")
         
         report_file.write("</tr>")
         report_file.write("<tr>")
@@ -56,12 +56,12 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         report_file.write("<table>")
         report_file.write("<tr>")
 
-        report_file.write("<th>Sharpe ratio:</th>")
-        report_file.write("<th>Max. drawdown:</th>")
-        report_file.write("<th>Longest drawdown duration:</th>")
-        report_file.write("<th>Total trades:</th>")
-        report_file.write("<th>Wins:</th>")
-        report_file.write("<th>Losses:</th>")
+        report_file.write("<th>Sharpe ratio</th>")
+        report_file.write("<th>Max. drawdown</th>")
+        report_file.write("<th>Longest drawdown duration</th>")
+        report_file.write("<th>Total trades</th>")
+        report_file.write("<th>Wins</th>")
+        report_file.write("<th>Losses</th>")
 
         report_file.write("</tr>")
         report_file.write("<tr>")
@@ -81,12 +81,27 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         if tradesAnalyzer.getCount() > 0:
 
             profits = tradesAnalyzer.getAll()
-
-            report_file.write("LAvg. profit: $%2.f</td></tr>" % (profits.mean()))
-            report_file.write("LProfits std. dev.: $%2.f</td></tr>" % (profits.std()))
-            report_file.write("LMax. profit: $%2.f</td></tr>" % (profits.max()))
-            report_file.write("LMin. profit: $%2.f</td></tr>" % (profits.min()))
             
+            
+            report_file.write("<table>")
+            report_file.write("<tr>")
+
+            report_file.write("<th>LAvg. profit</th>")
+            report_file.write("<th>LProfits std. dev.</th>")
+            report_file.write("<th>LMax. profit</th>")
+            report_file.write("<th>LMin. profit</th>")
+
+            report_file.write("</tr>")
+            report_file.write("<tr>")           
+            
+            report_file.write("<td>$%2.f</td>" % (profits.mean()))
+            report_file.write("<td>$%2.f</td>" % (profits.std()))
+            report_file.write("<td>$%2.f</td>" % (profits.max()))
+            report_file.write("<td>$%2.f</td>" % (profits.min()))
+        
+            report_file.write("</tr>")
+            report_file.write("</table>")
+                      
             report_file.write("<br />")
 
             returns = tradesAnalyzer.getAllReturns()
