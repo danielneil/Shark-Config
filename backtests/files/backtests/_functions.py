@@ -36,12 +36,16 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         
         report_file.write("<table>")
         report_file.write("<tr>")
+        
         report_file.write("<th>Final portfolio value:</th>")
         report_file.write("<th>Cumulative returns:</th>")
+        
         report_file.write("</tr>")
         report_file.write("<tr>")
+        
         report_file.write("<td>$%.2f</td>" % strat.getResult())
         report_file.write("<td>%.2f %%</td>" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
+        
         report_file.write("</tr>")
         report_file.write("</table>")
         
@@ -49,12 +53,30 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         
         sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
 
-        report_file.write("Sharpe ratio: %.2f" % (sharpeRatio))
-        report_file.write("Max. drawdown: %.2f %%" % (drawDownAnalyzer.getMaxDrawDown() * 100))
-        report_file.write("Longest drawdown duration: %s" % (drawDownAnalyzer.getLongestDrawDownDuration()))
-        report_file.write("Total trades: %d" % (tradesAnalyzer.getCount()))
-        report_file.write("Wins: %d" % (tradesAnalyzer.getProfitableCount()))
+        report_file.write("<table>")
+        report_file.write("<tr>")
+
+        report_file.write("<th>Sharpe ratio:</th>")
+        report_file.write("<th>Max. drawdown:</th>")
+        report_file.write("<th>Longest drawdown duration:</th>")
+        report_file.write("<th>Total trades:</th>")
+        report_file.write("<th>Wins:</th>")
+        report_file.write("<th>Losses:</th>")
+
+        report_file.write("</tr>")
+        report_file.write("<tr>")
+        
         report_file.write("Losses: %d" % (tradesAnalyzer.getUnprofitableCount()))
+
+        report_file.write("<td>%.2f</td>" % (sharpeRatio))
+        report_file.write("<td>%.2f %%</td>" % (drawDownAnalyzer.getMaxDrawDown() * 100))
+        report_file.write("<td>%s</td>" % (drawDownAnalyzer.getLongestDrawDownDuration()))
+        report_file.write("<td>%d</td>" % (tradesAnalyzer.getCount()))
+        report_file.write("<td>%d</td>" % (tradesAnalyzer.getProfitableCount()))
+        report_file.write("<td>%d</td>"  % (tradesAnalyzer.getUnprofitableCount()))
+        
+        report_file.write("</tr>")
+        report_file.write("</table>")
         
         report_file.write("<br />")
 
