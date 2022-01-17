@@ -42,9 +42,7 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         report_file.write("<h1>" + ticker + " - Backtest Report</h1>") 
         
         report_file.write("<div class='row'>")
-        report_file.write("<div class='column'>")
-                                
-        report_file.write("</div>")
+        report_file.write("<div class='column'>")                               
          
         report_file.write("<table>")
         report_file.write("<tr>")
