@@ -31,20 +31,8 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         report_file.write("<html>")
         report_file.write("<head>")
         report_file.write("<title>Backtest Report - " + ticker + " </title>")
-        
-        report_file.write("<style>")
-        report_file.write(".column {")
-        report_file.write("float: left;")
-        report_file.write("width: 50%;")
-        report_file.write("}")
-
-        report_file.write(".row:after {")
-        report_file.write("content: '';")
-        report_file.write("display: table;")
-        report_file.write("clear: both;")
-       report_file.write(" }v
-       report_file.write(" </style>")
-                
+                        
+        report_file.write("<link rel='stylesheet' href='report-style.css'>")
         
         report_file.write("</head>")
         report_file.write("<body>")                
