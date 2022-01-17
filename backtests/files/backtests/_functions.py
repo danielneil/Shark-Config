@@ -31,17 +31,31 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         report_file.write("<html>")
         report_file.write("<head>")
         report_file.write("<title>Backtest Report - " + ticker + " </title>")
+        
+        report_file.write("<style>")
+        report_file.write(".column {")
+        report_file.write("float: left;")
+        report_file.write("width: 50%;")
+        report_file.write("}")
+
+        report_file.write(".row:after {")
+        report_file.write("content: '';")
+        report_file.write("display: table;")
+        report_file.write("clear: both;")
+       report_file.write(" }v
+       report_file.write(" </style>")
+                
+        
         report_file.write("</head>")
         report_file.write("<body>")                
 
         report_file.write("<h1>" + ticker + " - Backtest Report</h1>") 
         
-        plt = plotter.StrategyPlotter(strat, True, False, True)
-        plt.getInstrumentSubplot(ticker).addDataSeries("sma", strat.getSMA())
-        plt.savePlot(plotFileName)
-        
-        report_file.write("<img src='" + plotFileName + "' />")
-        
+        report_file.write("<div class='row'>")
+        report_file.write("<div class='column'>
+                                
+        report_file.write("</div>")
+         
         report_file.write("<table>")
         report_file.write("<tr>")
         
@@ -225,5 +239,18 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         
             report_file.write("</tr>")
             report_file.write("</table>")
+  
+        report_file.write("</div>")
+        
+        report_file.write("<div class='column'>")
+        
+        plt = plotter.StrategyPlotter(strat, True, False, True)
+        plt.getInstrumentSubplot(ticker).addDataSeries("sma", strat.getSMA())
+        plt.savePlot(plotFileName)
+        
+        report_file.write("<img src='" + plotFileName + "' />")   
     
+        report_file.write("</div>")      
+        report_file.write("</div>")                  
+                          
         report_file.write("</html>")
