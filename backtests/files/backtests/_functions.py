@@ -21,10 +21,12 @@ import time
 
 import pandas as pd
 
-def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plotFileName, ticker):
+def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker):
 
     reportFileName = "/shark/reports/" + ticker + ".report.html"
+          
     plotFileName = "/shark/reports/" + ticker + ".png"
+    plot.savePlot(plotFileName)
     
     with open(reportFileName, 'w') as report_file:
         
@@ -232,7 +234,7 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         
         report_file.write("<div class='column'>")       
         
-        report_file.write("<img src='" + plotFileName + "' />")   
+        report_file.write("<img src='" + plotFileName + "' />")  
     
         report_file.write("</div>")      
         report_file.write("</div>")                  
