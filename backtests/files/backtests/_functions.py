@@ -41,6 +41,8 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
 
         report_file.write("<h1>" + ticker + " - Backtest Report</h1>")               
          
+        report_file.write("<img src='" + plotFileName + "' />")   
+            
         report_file.write("<table>")
         report_file.write("<tr>")
         
@@ -55,8 +57,6 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         
         report_file.write("</tr>")
         report_file.write("</table>")
-        
-        report_file.write("<img src='" + plotFileName + "' />")   
         
         report_file.write("<br />")
         
