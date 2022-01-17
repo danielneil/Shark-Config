@@ -23,9 +23,17 @@ import pandas as pd
 def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker):
 
     reportFileName = "/shark/reports/" + ticker + ".report.html"
-
+    
     with open(reportFileName, 'w') as report_file:
+        
+        report_file.write("<html>")
+        report_file.write("<head>")
+        report_file.write("<title>Backtest Report - " + ticker + " </title>")
+        report_file.write("</head>")
+        report_file.write("<body>")                
 
+        report_file.write("<h1>" + ticker + " - Backtest Report") 
+        
         report_file.write("Final portfolio value: $%.2f" % strat.getResult())
         report_file.write("Cumulative returns: %.2f %%" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
 
@@ -86,4 +94,5 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
             report_file.write("Returns std. dev.: %2.f %%" % (returns.std() * 100))
             report_file.write("Max. return: %2.f %%" % (returns.max() * 100))
             report_file.write("Min. return: %2.f %%" % (returns.min() * 100))
-
+    
+    report_file.write("</html>")
