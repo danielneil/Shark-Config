@@ -11,6 +11,7 @@ from pyalgotrade.stratanalyzer import drawdown
 from pyalgotrade.stratanalyzer import trades
 from pyalgotrade import plotter
 import pyalgotrade
+from pyalgotrade import plotter
 
 import argparse
 import sys
@@ -23,6 +24,7 @@ import pandas as pd
 def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker):
 
     reportFileName = "/shark/reports/" + ticker + ".report.html"
+    plotFileName = "/shark/reports/" + ticker + ".jpg"
     
     with open(reportFileName, 'w') as report_file:
         
@@ -33,6 +35,10 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         report_file.write("<body>")                
 
         report_file.write("<h1>" + ticker + " - Backtest Report</h1>") 
+        
+        plt = plotter.StrategyPlotter(strat, True, False, True)
+        plt.getInstrumentSubplot(instrument).addDataSeries("sma", strat.getSMA())
+        plt.savefig(plotFileName)
         
         report_file.write("<table>")
         report_file.write("<tr>")
