@@ -10,13 +10,13 @@ For more information about Shark, see [here](https://github.com/danielneil/Shark
 
 Out of the box it comes with:
 
-* [Sample configuration](https://github.com/danielneil/Shark-Config/blob/master/trading-config.yml):
+* [Sample configuration](https://github.com/danielneil/Shark-Config/blob/master/config/files/trading-config.yml):
     * Demostrating using various Shark Plugins against the CRYPTO TOP 20 (by Market Cap), namely: 
         * yahoo_finance_data - Downloads and imports yahoo finance historical data into Shark.
         * sma - Alerts to various simple moving average (sma) specifics.
         * backtest - Demostrates the use of a simple back test associated with the above.  
  
-* [Sample Backtest code](https://github.com/danielneil/Shark-Config/blob/master/backtests/backtest_moving_averages.py) - Simple moving averages crossover.
+* [Sample Backtest code](https://github.com/danielneil/Shark-Config/blob/master/backtests/files/backtests/backtest_moving_averages.py) - Simple moving averages crossover.
 
 ### Config Directory Structure
 ```
