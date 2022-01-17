@@ -1,3 +1,29 @@
+#!/usr/bin/python3.9
+
+from __future__ import print_function
+
+from pyalgotrade import strategy
+from pyalgotrade.barfeed import yahoofeed
+
+from pyalgotrade.technical import ma
+from pyalgotrade.technical import cross
+
+from pyalgotrade.stratanalyzer import sharpe
+from pyalgotrade.stratanalyzer import drawdown
+from pyalgotrade.stratanalyzer import trades
+from pyalgotrade import plotter
+import pyalgotrade
+
+import argparse
+import sys
+import os
+
+import time
+
+import pandas as pd
+
+def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot):
+
     print("Final portfolio value: $%.2f" % strat.getResult())
     print("Cumulative returns: %.2f %%" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
 
