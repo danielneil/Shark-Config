@@ -45,6 +45,7 @@ def process_instrument_config(i_data):
 def process_plugin_config(p_data, instrument):
 	
 	global total_capital
+	global total_shares
 
 	for plugins in p_data:
 		
@@ -80,6 +81,10 @@ def process_plugin_config(p_data, instrument):
 						
 					if argName == "capital":
 						total_capital += int(argValue)
+						
+					if argName == "shares":
+						total_shares += int (argValue)
+						
 
 		services.Add("\thost_name " + instrument + "\n")
 		services.Add("\tservice_description " + cmd_desc + "\n")
@@ -107,7 +112,29 @@ def process_plugin_config(p_data, instrument):
 		services.Add("\tservicegroups " + serv_grp + "\n")
 		services.Add("}\n")
 
+##############################################################    
+# MySQL Stuff
+def InsertIntoDB(total_capital, total_shares):
+	mydb = mysql.connector.connect(
+	  host="localhost",
+	  user="root",
+	  password="shark",
+	  database="portfolio"
+	)
 
+	mycursor = mydb.cursor()	
+	
+	sql = "INSERT INTO portfolio (total_capital) VALUES (%s)"
+	val = (total_capital)
+	mycursor.execute(sql, val)
+
+	sql = "INSERT INTO portfolio (total_shares) VALUES (%s)"
+	val = (total_shares)
+	mycursor.execute(sql, val)
+	
+	mydb.commit()	
+);
+		
 ##############################################################    
 # Process the yaml file - main entry point.
 hosts = StringBuilder();
@@ -117,6 +144,7 @@ services = StringBuilder();
 
 # Portfolio info
 total_capital = 0
+total_shares = 0
 
 with open ("/shark/Shark-Config/config/files/trading-config.yml", "r") as f:
 
@@ -159,3 +187,6 @@ print (hosts)
 ##############################################################
 # Print the services
 print (services)
+
+# Insert into the dateabase
+InsertIntoDB(total_capital, total_shares)
