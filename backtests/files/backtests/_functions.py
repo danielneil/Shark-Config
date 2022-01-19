@@ -25,7 +25,7 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
 
     reportFileName = "/shark/reports/" + ticker + ".report.html"          
     plotFileName = "/shark/reports/" + ticker + ".png"
-    plotHTML = "/shark-web/reports/" + ticker + ".report.html"          
+    plotHTML = "/shark-web/reports/" + ticker + ".png"          
     
     plot.savePlot(plotFileName)
     
