@@ -74,7 +74,10 @@ def process_plugin_config(p_data, instrument):
 					if argName == "file":
 						backtestFileName = argValue
 					else:
-						backtest_cmd_args.Add("--" + argName + "=" + str(argValue) + " ")     
+						backtest_cmd_args.Add("--" + argName + "=" + str(argValue) + " ")
+						
+					if argName == "capital":
+						total_capital += int(argValue)
 
 		services.Add("\thost_name " + instrument + "\n")
 		services.Add("\tservice_description " + cmd_desc + "\n")
@@ -109,6 +112,9 @@ hosts = StringBuilder();
 hostGroups = []
 serviceGroups = []
 services = StringBuilder();
+
+# Portfolio info
+total_capital = 0
 
 with open ("/shark/Shark-Config/config/files/trading-config.yml", "r") as f:
 
