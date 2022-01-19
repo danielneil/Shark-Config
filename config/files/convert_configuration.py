@@ -126,14 +126,15 @@ def InsertIntoDB(total_capital, total_shares):
 	
 	sql = "INSERT INTO portfolio (total_capital) VALUES (%s)"
 	val = (total_capital)
+	
 	mycursor.execute(sql, val)
 
 	sql = "INSERT INTO portfolio (total_shares) VALUES (%s)"
 	val = (total_shares)
+	
 	mycursor.execute(sql, val)
 	
-	mydb.commit()	
-);
+	mydb.commit()
 		
 ##############################################################    
 # Process the yaml file - main entry point.
