@@ -43,6 +43,8 @@ def process_instrument_config(i_data):
 ##############################################################    
 # Process the plugins
 def process_plugin_config(p_data, instrument):
+	
+	global total_capital
 
 	for plugins in p_data:
 		
