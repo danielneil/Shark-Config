@@ -83,7 +83,7 @@ def process_plugin_config(p_data, instrument):
 
 		if plugins["name"] == "backtest":
 
-			scriptFile = "/shark-web/.tmp/backtest.scriptFile." + str(instrument)
+			scriptFile = "/shark/.tmp/backtest.scriptFile." + str(instrument)
 
 			with open(scriptFile, "w") as f:
 
