@@ -23,8 +23,9 @@ import pandas as pd
 
 def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker):
 
-    reportFileName = "/shark-web/reports/" + ticker + ".report.html"          
-    plotFileName = "/shark-web/reports/" + ticker + ".png"
+    reportFileName = "/shark/reports/" + ticker + ".report.html"          
+    plotFileName = "/shark/reports/" + ticker + ".png"
+    plotHTML = "/shark-web/reports" + ticker + ".report.html"          
     
     plot.savePlot(plotFileName)
     
@@ -227,7 +228,7 @@ def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
             report_file.write("</tr>")
             report_file.write("</table>")
             
-            report_file.write("</td><td><img src='" + plotFileName + "' /></td>")   
+            report_file.write("</td><td><img src='" + plotHTML + "' /></td>")   
             report_file.write("</tr><table>")
                                                        
         report_file.write("</html>")
