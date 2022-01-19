@@ -3,6 +3,7 @@
 # Process the yaml configuration file, so we can regenerate it into native Nagios configuration.
 
 import yaml
+import mysql.connector
 
 ##############################################################    
 from io import StringIO
