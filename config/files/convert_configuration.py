@@ -120,7 +120,7 @@ def InsertIntoDB(total_capital, total_shares):
 	  host="localhost",
 	  user="root",
 	  password="shark",
-	  database="portfolio"
+	  database="shark"
 	)
 
 	mycursor = mydb.cursor()	
