@@ -83,7 +83,7 @@ def process_plugin_config(p_data, instrument):
 
 		if plugins["name"] == "backtest":
 
-			scriptFile = "/shark/.tmp/backtest.scriptFile." + str(instrument)
+			scriptFile = "/shark-web/.tmp/backtest.scriptFile." + str(instrument)
 
 			with open(scriptFile, "w") as f:
 
@@ -95,7 +95,7 @@ def process_plugin_config(p_data, instrument):
 					f.write(btarg + "\n")
 
 			services.Add("\tcheck_command " + cmd_name + "!" + backtestFileName + "!" + scriptFile + "\n")
-			services.Add("\taction_url /shark/reports/" + instrument + ".report.html\n")
+			services.Add("\taction_url /shark-web/reports/" + instrument + ".report.html\n")
 		else:
 			services.Add("\tcheck_command " + cmd_name + "!" + str(instrument) + str(cmd_args) + "\n")
 
