@@ -189,4 +189,4 @@ print (hosts)
 print (services)
 
 # Insert into the dateabase
-#InsertIntoDB(total_capital, total_shares)
+InsertIntoDB(total_capital, total_shares)
