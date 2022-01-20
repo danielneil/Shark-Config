@@ -125,12 +125,8 @@ def InsertIntoDB(total_capital, total_shares):
 
 	mycursor = mydb.cursor()	
 	
-	sql = "INSERT INTO portfolio (total_capital) VALUES ("+str(total_capital)+")"
-	
-	mycursor.execute(sql)
-
-	sql = "INSERT INTO portfolio (total_shares) VALUES ("+str(total_shares)+")"
-	
+	sql = "INSERT INTO portfolio (total_capital, total_shares) VALUES (" + str(total_capital) + "," + str(total_shares) + ")"
+		
 	mycursor.execute(sql)
 	
 	mydb.commit()
