@@ -3,7 +3,9 @@
 # Process the yaml configuration file, so we can regenerate it into native Nagios configuration.
 
 import yaml
+import os
 import mysql.connector
+from datetime import datetime
 
 ##############################################################    
 from io import StringIO
@@ -25,21 +27,23 @@ class StringBuilder:
 # Master process loop
 def process_instrument_config(i_data):
 
-	instrument = i_data['instrument']
-	group = i_data['group']
+    instrument = i_data['instrument']
+    group = i_data['group']
 
-	hosts.Add("\ndefine host {\n")
-	hosts.Add("\tuse instrument\n")
-	hosts.Add("\thost_name " + instrument + "\n")
-	hosts.Add("\thostgroups " + group + "\n")
-	hosts.Add("\tcheck_command check_price\n")
-	hosts.Add("\taddress 127.0.0.1" + "\n")
-	hosts.Add("}\n")
+    hosts.Add("\ndefine host {\n")
+    hosts.Add("\tuse instrument\n")
+    hosts.Add("\thost_name " + instrument + "\n")
+    hosts.Add("\thostgroups " + group + "\n")
+    hosts.Add("\tcheck_command check_price\n")
+    hosts.Add("\taddress 127.0.0.1" + "\n")
+    hosts.Add("}\n")
+        
+    WriteLogFile("Created instrument: " + instrument)
 
-	hostGroups.append(str(group))
+    hostGroups.append(str(group))
 
-	# Process the list of plugins,
-	process_plugin_config(i_data['plugin'], instrument)
+    # Process the list of plugins,
+    process_plugin_config(i_data['plugin'], instrument)
 
 ##############################################################    
 # Process the plugins
@@ -112,6 +116,8 @@ def process_plugin_config(p_data, instrument):
 
 		services.Add("\tservicegroups " + serv_grp + "\n")
 		services.Add("}\n")
+		
+		WriteLogFile("Attached plugin: " + cmd_name)
 
 ##############################################################    
 # MySQL Stuff
@@ -130,6 +136,18 @@ def InsertIntoDB(total_capital, total_shares):
 	mycursor.execute(sql)
 	
 	mydb.commit()
+
+##############################################################    
+# Log file - records a log of the config gen for the web interface.
+def WriteLogFile(string):
+
+    now = datetime.now()
+
+    dt_string = now.strftime("%b %d %H:%M:%S")
+
+    with open(logFile, "a") as f:
+        f.write(dt_string  + " " + string + "\n")
+
 		
 ##############################################################    
 # Process the yaml file - main entry point.
@@ -141,6 +159,15 @@ services = StringBuilder();
 # Portfolio info
 total_capital = 0
 total_shares = 0
+
+
+# log file - if it exists, delete.
+logFile = "/shark/log/config_gen.log"
+if os.path.exists(logFile):
+    os.remove(logFile)
+
+WriteLogFile("Starting")
+WriteLogFile("Reading yaml file")
 
 with open ("/shark/Shark-Config/config/files/trading-config.yml", "r") as f:
 
@@ -160,6 +187,8 @@ sorted_host_groups = sorted(set(hostGroups))
 
 for ig in sorted_host_groups:
 
+    WriteLogFile("Created instrument group: " + ig)
+
     print ("\ndefine hostgroup {")
     print ("\thostgroup_name " + ig )
     print ("\talias " + ig )
@@ -170,6 +199,8 @@ for ig in sorted_host_groups:
 sorted_service_groups = sorted(set(serviceGroups))
 
 for sg in sorted_service_groups:
+
+    WriteLogFile("Created plugin group: " + sg)
 
     print("\ndefine servicegroup {")
     print("\tservicegroup_name " + sg)
@@ -186,3 +217,6 @@ print (services)
 
 # Insert into the dateabase
 InsertIntoDB(total_capital, total_shares)
+
+# Finished!
+WriteLogFile("Finished")
