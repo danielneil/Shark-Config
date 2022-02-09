@@ -166,8 +166,7 @@ logFile = "/shark/log/config_gen.log"
 if os.path.exists(logFile):
     os.remove(logFile)
 
-WriteLogFile("Starting")
-WriteLogFile("Reading yaml file")
+WriteLogFile("Starting - Reading yaml file")
 
 with open ("/shark/Shark-Config/config/files/trading-config.yml", "r") as f:
 
