@@ -4,7 +4,6 @@
 
 import yaml
 import os
-import mysql.connector
 from datetime import datetime
 
 ##############################################################    
@@ -213,9 +212,6 @@ print (hosts)
 ##############################################################
 # Print the services
 print (services)
-
-# Insert into the dateabase
-InsertIntoDB(total_capital, total_shares)
 
 # Finished!
 WriteLogFile("Finished")
