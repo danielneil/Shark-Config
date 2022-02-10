@@ -87,12 +87,12 @@ def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
             json_obj['profitable_trades'].append({
                 'avg_profit':  profits.mean(),
                 'profits_std_dev': profits.std(), 
-                'max. profit': profits.max(),
-                'min. profit': profits.min(),
-                'avg. return': (returns.mean() * 100),
-                'returns std. dev': (returns.std() * 100),
-                'max. return': (returns.max() * 100),
-                'min. return': (returns.min() * 100)
+                'max_profit': profits.max(),
+                'min_profit': profits.min(),
+                'avg_return': (returns.mean() * 100),
+                'returns_std_dev': (returns.std() * 100),
+                'max_return': (returns.max() * 100),
+                'min_return': (returns.min() * 100)
                 })
 
             json.dump(json_obj, f)
@@ -109,14 +109,14 @@ def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
             json_obj['unprofitable_trades'] = []
 
             json_obj['unprofitable_trades'].append({
-                'avg. loss': losses.mean(),
-                'losses std. dev': losses.std(),
-                'max. loss': losses.min(),
-                'min. loss': losses.max(),
-                'avg. return': (returns.mean() * 100),
-                'returns std. dev': (returns.std() * 100),
-                'max. return': (returns.max() * 100),
-                'min. return': (returns.min() * 100)
+                'avg_loss': losses.mean(),
+                'losses_std_dev': losses.std(),
+                'max_loss': losses.min(),
+                'min_loss': losses.max(),
+                'avg_return': (returns.mean() * 100),
+                'returns_std_dev': (returns.std() * 100),
+                'max_return': (returns.max() * 100),
+                'min_return': (returns.min() * 100)
                 })
 
             json.dump(json_obj, f)
