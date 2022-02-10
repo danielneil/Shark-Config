@@ -28,7 +28,7 @@ def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
     plot.savePlot(plotFileName)
     
     jsonBacktestSummary = "/shark/reports/" + ticker + ".backtest.summary.json"          
-    with open(jsonBacktestSummary, 'w') as report_file:
+    with open(jsonBacktestSummary, 'w', encoding='utf-8') as f:
 
         sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
 
@@ -41,16 +41,16 @@ def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
             'cumulative_returns': (retAnalyzer.getCumulativeReturns()[-1] * 100),
             'sharpe_ratio': sharpeRatio,
             'max_drawdown': (drawDownAnalyzer.getMaxDrawDown() * 100),
-            'longest_drawdown_duration': drawDownAnalyzer.getLongestDrawDownDuration(),
-            'total_trades': tradesAnalyzer.getCount(), 
-            'wins': tradesAnalyzer.getProfitableCount(),
-            'losses': tradesAnalyzer.getUnprofitableCount()
+            'longest_drawdown_duration': str(drawDownAnalyzer.getLongestDrawDownDuration()),
+            'total_trades': str(tradesAnalyzer.getCount()), 
+            'wins': str(tradesAnalyzer.getProfitableCount()),
+            'losses': str(tradesAnalyzer.getUnprofitableCount())
             })
 
-        json.dump(json_obj, report_file)
+        json.dump(json_obj, f)
 
     jsonBacktestTotalTrades = "/shark/reports/" + ticker + ".backtest.totaltrades.json"
-    with open(jsonBacktestTotalTrades, 'w') as report_file:
+    with open(jsonBacktestTotalTrades, 'w', encoding='utf-8') as f:
 
         if tradesAnalyzer.getCount() > 0:
 
@@ -71,10 +71,10 @@ def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
                 'min_return': (returns.min() * 100)
                 })
 
-            json.dump(json_obj, report_file)
+            json.dump(json_obj, f)
 
     jsonBacktestProfitableTrades = "/shark/reports/" + ticker + ".backtest.profitabletrades.json"
-    with open(jsonBacktestProfitableTrades, 'w') as report_file:
+    with open(jsonBacktestProfitableTrades, 'w', encoding='utf-8') as f:
 
         if tradesAnalyzer.getProfitableCount() > 0:
 
@@ -95,10 +95,10 @@ def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
                 'min. return': (returns.min() * 100)
                 })
 
-            json.dump(json_obj, report_file)
+            json.dump(json_obj, f)
 
     jsonBacktestUnprofitableTrades = "/shark/reports/" + ticker + ".backtest.unprofitabletrades.json"
-    with open(jsonBacktestUnprofitableTrades, 'w') as report_file:
+    with open(jsonBacktestUnprofitableTrades, 'w', encoding='utf-8') as f:
 
         if tradesAnalyzer.getUnprofitableCount() > 0:
             
@@ -119,5 +119,5 @@ def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
                 'min. return': (returns.min() * 100)
                 })
 
-            json.dump(json_obj, report_file)
+            json.dump(json_obj, f)
 
