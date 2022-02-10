@@ -14,7 +14,7 @@ from pyalgotrade.stratanalyzer import trades
 from pyalgotrade import plotter
 import pyalgotrade
 
-from _functions import GenerateHTMLReport 
+from _functions import GenerateJSONReport 
 
 import argparse
 import sys
@@ -132,8 +132,8 @@ def run_strategy(ticker, shares, capital, smaPeriod, dataFile):
     # Print out our findings.
     print("Sharpe Ratio: %.2f" % sharpeRatioAnalyzer.getSharpeRatio(0.05))
 
-    # Generate the report
-    GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plt, ticker)
+    # Generate the JSON report
+    GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plt, ticker)
     
     if sharpeRatioAnalyzer.getSharpeRatio(0.05) > 0: 
        sys.exit(OK)

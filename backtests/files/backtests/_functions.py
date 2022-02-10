@@ -20,215 +20,104 @@ import os
 import time
 
 import pandas as pd
+import json
 
-def GenerateHTMLReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker):
+def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker):
 
-    reportFileName = "/shark/reports/" + ticker + ".report.html"          
     plotFileName = "/shark/reports/" + ticker + ".png"
-    plotHTML = "/shark-web/reports/" + ticker + ".png"          
-    
     plot.savePlot(plotFileName)
     
-    with open(reportFileName, 'w') as report_file:
-        
-        report_file.write("<html>")
-        report_file.write("<head>")
-        report_file.write("<title>Backtest Report - " + ticker + " </title>")
-                        
-        report_file.write("<link rel='stylesheet' href='/shark-web/Shark-Config/backtests/files/backtests/report-style.css'>")
-        
-        report_file.write("</head>")
-        report_file.write("<body>")                
+    jsonBacktestSummary = "/shark/reports/" + ticker + ".backtest.summary.json"          
+    with open(jsonBacktestSummary, 'w') as report_file:
 
-        report_file.write("<h1>" + ticker + " - Backtest Report</h1>")               
-         
-        report_file.write("<table><tr>")
-                     
-        report_file.write("<td><table>")
-        report_file.write("<tr>")
-        
-        report_file.write("<th>Final portfolio value</th>")
-        report_file.write("<th>Cumulative returns</th>")
-        
-        report_file.write("</tr>")
-        report_file.write("<tr>")
-        
-        report_file.write("<td>$%.2f</td>" % strat.getResult())
-        report_file.write("<td>%.2f %%</td>" % (retAnalyzer.getCumulativeReturns()[-1] * 100))
-        
-        report_file.write("</tr>")
-        report_file.write("</table>")
-        
-        report_file.write("<br />")
-        
         sharpeRatio = sharpeRatioAnalyzer.getSharpeRatio(0.05)
 
-        report_file.write("<table>")
-        report_file.write("<tr>")
+        json_obj = {}
+        json_obj['backtest_summary'] = []
 
-        report_file.write("<th>Sharpe ratio</th>")
-        report_file.write("<th>Max. drawdown</th>")
-        report_file.write("<th>Longest drawdown duration</th>")
-        report_file.write("<th>Total trades</th>")
-        report_file.write("<th>Wins</th>")
-        report_file.write("<th>Losses</th>")
+        json_obj['backtest_summary'].append({
+            'ticker': ticker,
+            'final_portfolio_value': strat.getResult(),
+            'cumulative_returns': (retAnalyzer.getCumulativeReturns()[-1] * 100),
+            'sharpe_ratio': sharpeRatio,
+            'max_drawdown': (drawDownAnalyzer.getMaxDrawDown() * 100),
+            'longest_drawdown_duration': drawDownAnalyzer.getLongestDrawDownDuration(),
+            'total_trades': tradesAnalyzer.getCount(), 
+            'wins': tradesAnalyzer.getProfitableCount(),
+            'losses': tradesAnalyzer.getUnprofitableCount()
+            })
 
-        report_file.write("</tr>")
-        report_file.write("<tr>")
-     
-        report_file.write("<td>%.2f</td>" % (sharpeRatio))
-        report_file.write("<td>%.2f %%</td>" % (drawDownAnalyzer.getMaxDrawDown() * 100))
-        report_file.write("<td>%s</td>" % (drawDownAnalyzer.getLongestDrawDownDuration()))
-        report_file.write("<td>%d</td>" % (tradesAnalyzer.getCount()))
-        report_file.write("<td>%d</td>" % (tradesAnalyzer.getProfitableCount()))
-        report_file.write("<td>%d</td>"  % (tradesAnalyzer.getUnprofitableCount()))
-        
-        report_file.write("</tr>")
-        report_file.write("</table>")
-        
-        report_file.write("<br />")
+        json.dump(json_obj, report_file)
+
+    jsonBacktestTotalTrades = "/shark/reports/" + ticker + ".backtest.totaltrades.json"
+    with open(jsonBacktestTotalTrades, 'w') as report_file:
 
         if tradesAnalyzer.getCount() > 0:
 
             profits = tradesAnalyzer.getAll()          
-            
-            report_file.write("<table>")
-            report_file.write("<tr>")
-
-            report_file.write("<th>LAvg. profit</th>")
-            report_file.write("<th>LProfits std. dev.</th>")
-            report_file.write("<th>LMax. profit</th>")
-            report_file.write("<th>LMin. profit</th>")
-
-            report_file.write("</tr>")
-            report_file.write("<tr>")           
-            
-            report_file.write("<td>$%2.f</td>" % (profits.mean()))
-            report_file.write("<td>$%2.f</td>" % (profits.std()))
-            report_file.write("<td>$%2.f</td>" % (profits.max()))
-            report_file.write("<td>$%2.f</td>" % (profits.min()))
-        
-            report_file.write("</tr>")
-            report_file.write("</table>")
-                      
-            report_file.write("<br />")
-
             returns = tradesAnalyzer.getAllReturns()
 
-            report_file.write("<table>")
-            report_file.write("<tr>")
-            
-            report_file.write("<th>LAvg. return</th>")
-            report_file.write("<th>LReturns std. dev.</th>")
-            report_file.write("<th>LMax. return</th>")
-            report_file.write("<th>LMin. return</th>")
-            
-            report_file.write("</tr>")
-            report_file.write("<tr>")                 
-            
-            report_file.write("<td>%2.f</td>" % (returns.mean() * 100))
-            report_file.write("<td>%2.f %%</td>" % (returns.std() * 100))
-            report_file.write("<td>%2.f %%</td>" % (returns.max() * 100))
-            report_file.write("<td>%2.f %%</td>" % (returns.min() * 100))
-            
-            report_file.write("</tr>")
-            report_file.write("</table>") 
+            json_obj = {}
+            json_obj['total_trades'] = []
+
+            json_obj['total_trades'].append({
+                'avg_profit': profits.mean(),
+                'profits_std_dev': profits.std(),
+                'max_profit': profits.max(),
+                'min_profit': profits.min(),
+                'avg_return': (returns.mean() * 100),
+                'returns_std_dev': (returns.std() * 100),
+                'max_return': (returns.max() * 100),
+                'min_return': (returns.min() * 100)
+                })
+
+            json.dump(json_obj, report_file)
+
+    jsonBacktestProfitableTrades = "/shark/reports/" + ticker + ".backtest.profitabletrades.json"
+    with open(jsonBacktestProfitableTrades, 'w') as report_file:
 
         if tradesAnalyzer.getProfitableCount() > 0:
 
             profits = tradesAnalyzer.getProfits()
-            
-            report_file.write("<table>")
-            report_file.write("<tr>")
-
-            report_file.write("<th>Avg. profit</th>")
-            report_file.write("<th>Profits std. dev.</th>")
-            report_file.write("<th>Max. profit</th>")
-            report_file.write("<th>Min. profit</th>")
-
-            report_file.write("</tr>")
-            report_file.write("<tr>")           
-            
-            report_file.write("<td>$%2.f</td>" % (profits.mean()))
-            report_file.write("<td>$%2.f</td>" % (profits.std()))
-            report_file.write("<td>$%2.f</td>" % (profits.max()))
-            report_file.write("<td>$%2.f</td>" % (profits.min()))
-        
-            report_file.write("</tr>")
-            report_file.write("</table>")
-                        
-            report_file.write("<br />")
-
             returns = tradesAnalyzer.getPositiveReturns()
-                       
-            report_file.write("<table>")
-            report_file.write("<tr>")
 
-            report_file.write("<th>Avg. return</th>")
-            report_file.write("<th>Returns std. dev.</th>")
-            report_file.write("<th>Max. return</th>")
-            report_file.write("<th>Min. return</th>")
+            json_obj = {}
+            json_obj['profitable_trades'] = []
 
-            report_file.write("</tr>")
-            report_file.write("<tr>")           
-            
-            report_file.write("<td>%2.f %%</td>" % (returns.mean() * 100))
-            report_file.write("<td>%2.f %%</td>" % (returns.std() * 100))
-            report_file.write("<td>%2.f %%</td>" % (returns.max() * 100))
-            report_file.write("<td>%2.f %%</td>" % (returns.min() * 100))
-        
-            report_file.write("</tr>")
-            report_file.write("</table>")
-                                 
+            json_obj['profitable_trades'].append({
+                'avg_profit':  profits.mean(),
+                'profits_std_dev': profits.std(), 
+                'max. profit': profits.max(),
+                'min. profit': profits.min(),
+                'avg. return': (returns.mean() * 100),
+                'returns std. dev': (returns.std() * 100),
+                'max. return': (returns.max() * 100),
+                'min. return': (returns.min() * 100)
+                })
+
+            json.dump(json_obj, report_file)
+
+    jsonBacktestUnprofitableTrades = "/shark/reports/" + ticker + ".backtest.unprofitabletrades.json"
+    with open(jsonBacktestUnprofitableTrades, 'w') as report_file:
+
         if tradesAnalyzer.getUnprofitableCount() > 0:
             
-            report_file.write("<br />")
-
             losses = tradesAnalyzer.getLosses()
-                                    
-            report_file.write("<table>")
-            report_file.write("<tr>")
-
-            report_file.write("<th>Avg. loss</th>")
-            report_file.write("<th>Losses std. dev.</th>")
-            report_file.write("<th>Max. loss</th>")
-            report_file.write("<th>Min. loss</th>")
-
-            report_file.write("</tr>")
-            report_file.write("<tr>")           
-            
-            report_file.write("<td>$%2.f</td>" % (losses.mean()))
-            report_file.write("<td>$%2.f</td>" % (losses.std()))
-            report_file.write("<td>$%2.f</td>" % (losses.min()))
-            report_file.write("<td>$%2.f</td>" % (losses.max()))
-        
-            report_file.write("</tr>")
-            report_file.write("</table>")
-                                              
-            report_file.write("<br />")
-
             returns = tradesAnalyzer.getNegativeReturns()
-  
-            report_file.write("<table>")
-            report_file.write("<tr>")
 
-            report_file.write("<th>Avg. return</th>")
-            report_file.write("<th>Returns std. dev.</th>")
-            report_file.write("<th>Max. return</th>")
-            report_file.write("<th>Min. return</th>")
+            json_obj = {}
+            json_obj['unprofitable_trades'] = []
 
-            report_file.write("</tr>")
-            report_file.write("<tr>")           
-            
-            report_file.write("<td> %2.f %%</td>" % (returns.mean() * 100))
-            report_file.write("<td> %2.f %%</td>" % (returns.std() * 100))
-            report_file.write("<td> %2.f %%</td>" % (returns.max() * 100))
-            report_file.write("<td> %2.f %%</td>" % (returns.min() * 100))
-        
-            report_file.write("</tr>")
-            report_file.write("</table>")
-            
-            report_file.write("</td><td><img src='" + plotHTML + "' /></td>")   
-            report_file.write("</tr><table>")
-                                                       
-        report_file.write("</html>")
+            json_obj['unprofitable_trades'].append({
+                'avg. loss': losses.mean(),
+                'losses std. dev': losses.std(),
+                'max. loss': losses.min(),
+                'min. loss': losses.max(),
+                'avg. return': (returns.mean() * 100),
+                'returns std. dev': (returns.std() * 100),
+                'max. return': (returns.max() * 100),
+                'min. return': (returns.min() * 100)
+                })
+
+            json.dump(json_obj, report_file)
+
