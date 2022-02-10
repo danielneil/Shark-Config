@@ -119,24 +119,6 @@ def process_plugin_config(p_data, instrument):
 		WriteLogFile("Attached plugin: " + cmd_name)
 
 ##############################################################    
-# MySQL Stuff
-def InsertIntoDB(total_capital, total_shares):
-	mydb = mysql.connector.connect(
-	  host="localhost",
-	  user="root",
-	  password="shark",
-	  database="shark"
-	)
-
-	mycursor = mydb.cursor()	
-	
-	sql = "INSERT INTO portfolio (total_capital, total_shares) VALUES (" + str(total_capital) + "," + str(total_shares) + ")"
-		
-	mycursor.execute(sql)
-	
-	mydb.commit()
-
-##############################################################    
 # Log file - records a log of the config gen for the web interface.
 def WriteLogFile(string):
 
