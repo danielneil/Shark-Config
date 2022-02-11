@@ -128,6 +128,7 @@ def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
                 'frequency': "Daily",
                 'start_date': df['Date'].iloc[0],
                 'end_date': df['Date'].iloc[-1],
+                'adjusted_close': "true",
                 'provider': "yahoo_finance"
                 })
         
