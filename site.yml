@@ -1,6 +1,7 @@
 ---
 - name: Reloading shark configuration
-  hosts: shark_server
+  hosts: localhost
+  connection: local 
   become: true
 
   roles:
