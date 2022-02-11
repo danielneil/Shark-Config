@@ -5,8 +5,8 @@
   - name: yahoo_finance_data
     desc: "Yahoo Finance [ BTC-USD Historical Data File ]"
     group: "Yahoo Finance [ Historical Data ]"
-    period1: 1597479263
-    period2: 1629015263
+    period1: 1410912000
+    period2: 1644537600
     interval: 1d
     includeAdjustedClose: true
   - name: sma
