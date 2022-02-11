@@ -32,7 +32,7 @@ WARNING      = 1
 CRITICAL     = 2
 UNKNOWN      = 3
 
-strategy_name = "Moving Averages Crossover Backtest"
+strategy_name = "RSI2"
 
 class RSI2(strategy.BacktestingStrategy):
 
