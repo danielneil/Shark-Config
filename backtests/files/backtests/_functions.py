@@ -125,8 +125,10 @@ def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
         
         json_obj['dataframe_info'].append({
                 'rows': df.shape[0],
+                'frequency': "Daily",
                 'start_date': df['Date'].iloc[0],
-                'end_date': df['Date'].iloc[-1]
+                'end_date': df['Date'].iloc[-1],
+                'provider': "yahoo_finance"
                 })
         
         json.dump(json_obj, f)        
