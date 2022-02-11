@@ -10,7 +10,6 @@ from pyalgotrade import plotter
 import argparse
 import sys
 import os
-
 import time
 
 import pandas as pd
@@ -115,4 +114,19 @@ def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
                 })
 
             json.dump(json_obj, f)
+            
+    dataFrameInfo = "/shark/reports/" + ticker + ".backtest.dataFrameInfo.json"
+    with open(dataFrameInfo, 'w', encoding='utf-8') as f:
+            
+        df = pd.read_csv(dataFile)
 
+        json_obj = {}
+        json_obj['dataframe_info'] = []
+        
+        json_obj['dataframe_info'].append({
+                'rows': df.shape[0],
+                'start_date': df['Date'].iloc[0],
+                'end_date': df['Date'].iloc[-1]
+                })
+        
+        json.dump(json_obj, f)        
