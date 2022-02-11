@@ -1,5 +1,7 @@
 #!/usr/bin/python3.9
 
+# Based on https://www.investopedia.com/articles/trading/07/bollinger.asp
+
 from __future__ import print_function
 
 from pyalgotrade import strategy
