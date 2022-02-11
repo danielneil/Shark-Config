@@ -1,16 +1,10 @@
 #!/usr/bin/python3.9
 
 from pyalgotrade import strategy
-from pyalgotrade.barfeed import yahoofeed
-
-from pyalgotrade.technical import ma
-from pyalgotrade.technical import cross
-
 from pyalgotrade.stratanalyzer import sharpe
 from pyalgotrade.stratanalyzer import drawdown
 from pyalgotrade.stratanalyzer import trades
 from pyalgotrade import plotter
-import pyalgotrade
 from pyalgotrade import plotter
 
 import argparse
