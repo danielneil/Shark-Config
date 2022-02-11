@@ -16,7 +16,7 @@ import time
 import pandas as pd
 import json
 
-def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker):
+def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker, capital):
 
     plotFileName = "/shark/reports/" + ticker + ".png"
     plot.savePlot(plotFileName)
@@ -31,6 +31,7 @@ def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer
 
         json_obj['backtest_summary'].append({
             'ticker': ticker,
+            'starting_capital': capital,
             'final_portfolio_value': "{:.2f}".format(strat.getResult()),
             'cumulative_returns': "{:.2f}".format((retAnalyzer.getCumulativeReturns()[-1] * 100)),
             'sharpe_ratio': "{:.2f}".format(sharpeRatio),
