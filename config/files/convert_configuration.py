@@ -109,7 +109,7 @@ def process_plugin_config(p_data, instrument):
 					f.write(btarg + "\n")
 
 			services.Add("\tcheck_command " + cmd_name + "!" + backtestFileName + "!" + scriptFile + "\n")
-			services.Add("\taction_url /framework/public/index.php/BacktestReports?ticker=" + instrument + "\n")
+			services.Add("\taction_url /framework/public/index.php/BacktestReport?ticker=" + instrument + "\n")
 		else:
 			services.Add("\tcheck_command " + cmd_name + "!" + str(instrument) + str(cmd_args) + "\n")
 
