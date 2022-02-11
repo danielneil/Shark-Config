@@ -79,3 +79,6 @@ See the [plugins](https://github.com/danielneil/Shark/blob/main/doc/README.PLUGI
     shares: 1000
     capital: 100000
 ```
+
+Notes: 
+ period1 and period2 are of type unix epoch time.
