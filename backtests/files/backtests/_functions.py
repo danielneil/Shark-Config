@@ -16,7 +16,7 @@ import time
 import pandas as pd
 import json
 
-def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker, capital):
+def GenerateJSONReport(strat, retAnalyzer, sharpeRatioAnalyzer, drawDownAnalyzer, tradesAnalyzer, plot, ticker, capital, dataFile):
 
     plotFileName = "/shark/reports/" + ticker + ".png"
     plot.savePlot(plotFileName)
